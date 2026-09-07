@@ -95,15 +95,24 @@ git pull upstream main        # for a plain clone with no private repo use: git 
 
 ## 6. Working on Google Colab
 
-Open the pset's notebook straight from GitHub, e.g. for ps1:
+**First time**: open the pset's notebook straight from GitHub, e.g. for ps1:
 
 > https://colab.research.google.com/github/tlpmit/6.4210-2-fall26-handouts/blob/main/ps1/ps1_colab.ipynb
 
-The first cell clones the course code into your **Google Drive**
-(`MyDrive/6.4210/repo`), so the code — and your edits — survive Colab runtime
-resets.  The second cell installs Drake (the slow one, ~2 min on a fresh
-runtime) and configures git — a default identity and merge-style pulls — so
-the git commands below just work.
+Run the first two cells: one mounts your **Google Drive**, the next fetches
+the course code into it (`MyDrive/6.4210/repo`) — the code and your edits
+live in Drive, so they survive Colab runtime resets.  Then **switch to the
+notebook inside your Drive**: on [drive.google.com](https://drive.google.com)
+open `My Drive → 6.4210 → repo → ps1` and double-click `ps1_colab.ipynb` —
+it opens in Colab.  Work in that copy from then on: it lives inside your
+repo, so everything you do in the notebook is saved to Drive and can be
+committed with git.  The GitHub copy you started from is *not* part of your
+repo, and notebook work done there is easy to lose.
+
+**Every session after that**: open the notebook from your Drive (double-click
+it on drive.google.com, or in Colab use File → Open notebook → Google Drive)
+and run the setup cells at the top.  The mount and fetch are no-ops once
+done; the `setup()` cell installs Drake and configures git (a default identity and merge-style pulls) so that the git commands below work.
 
 **Recommended one-time setup** so Colab uses your private repo from §2: in
 Colab, open the key icon (Secrets) in the left sidebar and add, with notebook
