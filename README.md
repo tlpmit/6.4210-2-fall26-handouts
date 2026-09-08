@@ -40,7 +40,7 @@ Instead, clone it and point it at a private repo of your own (one-time setup):
 ```sh
 git clone https://github.com/tlpmit/6.4210-2-fall26-handouts.git 64210
 cd 64210
-git config pull.rebase false    # so `git pull` merges (see §5)
+git config pull.rebase false    # so `git pull` merges
 git remote rename origin upstream
 # on github.com: create an empty PRIVATE repository (no README), then:
 git remote add origin git@github.com:<you>/<your-private-repo>.git
@@ -99,7 +99,7 @@ git pull upstream main        # for a plain clone with no private repo use: git 
 
 > https://colab.research.google.com/github/tlpmit/6.4210-2-fall26-handouts/blob/main/ps1/ps1_colab.ipynb
 
-Run the first two cells: one mounts your **Google Drive**, the next fetches
+Run the first two code cells: one mounts your **Google Drive**, the next fetches
 the course code into it (`MyDrive/6.4210/repo`) — the code and your edits
 live in Drive, so they survive Colab runtime resets.  Then **switch to the
 notebook inside your Drive**: on [drive.google.com](https://drive.google.com)
@@ -156,9 +156,6 @@ Day to day on Colab:
   ```
   !git pull upstream main
   ```
-
-  If the pull reports a conflict, resolve it as in §5, editing the conflicted
-  files in the file browser.
 
 ---
 

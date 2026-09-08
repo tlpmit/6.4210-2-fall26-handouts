@@ -217,8 +217,3 @@ class DTSystem(LeafSystem):
 
     def UpdateAbstract(self, context, state):
         state.get_mutable_abstract_state(0).set_value(self._next_state(context))
-
-
-# ps1 describes everything by width alone, which DTSystem already accepts, so
-# the vector-only name is just the general one under its old spelling.
-DTVectorSystem = DTSystem

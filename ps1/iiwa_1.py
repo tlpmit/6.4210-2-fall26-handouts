@@ -40,6 +40,10 @@ IIWA14_URL = (
 
 Q_START = np.array([0, 1.0, 0.3, 0.7, 0, 0, 0])
 
+# The joint-space step used in the PD-controller question: drive the arm from
+# Q_START to Q_START + Q_STEP (a step on joints 1, 2 and 4).
+Q_STEP = np.array([0.5, -0.3, 0, 0.4, 0, 0, 0])
+
 
 def iiwa_s0(q0: np.ndarray) -> list[np.ndarray]:
     """

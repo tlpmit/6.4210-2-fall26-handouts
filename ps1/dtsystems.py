@@ -37,7 +37,6 @@ from utils.viz import (  # noqa: F401
     IN_COLAB,
     current_meshcat,
     get_meshcat,
-    keep_meshcat_open,
     publish_recording,
     show_meshcat,
     start_recording,
@@ -47,9 +46,6 @@ _NO_STATE = np.zeros(0)
 
 # Frame rate that simulate() records at, for show_meshcat() to play back.
 RECORDING_FPS = 32
-
-# Seconds between the samples series_composition's loggers keep for plot_log().
-# PLOT_PERIOD = 0.1
 
 
 ######################################################################
