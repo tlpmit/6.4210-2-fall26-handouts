@@ -28,6 +28,7 @@ from pydrake.all import (
     plot_system_graphviz,
 )
 
+from utils.drake_models import explain_model_download_error
 from utils.plotting import plt
 
 ######################################################################
@@ -84,7 +85,13 @@ def create_IIWA14_diagram(
     builder = DiagramBuilder()
     plant, scene_graph = AddMultibodyPlantSceneGraph(builder, time_step=1e-4)
     parser = Parser(plant, scene_graph)
-    parser.AddModelsFromUrl(IIWA14_URL)
+    try:
+        parser.AddModelsFromUrl(IIWA14_URL)
+    except RuntimeError as e:
+        # The first load downloads the models; this explains the one common
+        # way that fails (a space or such in the venv's path) before re-raising.
+        explain_model_download_error(e)
+        raise
     plant.WeldFrames(plant.world_frame(), plant.GetFrameByName("iiwa_link_0"))
     plant.Finalize()
 
