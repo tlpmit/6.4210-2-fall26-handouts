@@ -60,7 +60,7 @@ def shell_splits(path: str) -> bool:
 
     Asked of the shell itself rather than of a list of special characters,
     because the list is not the whole story: `a*b` is fine when it matches only
-    itself and not when it matches its neighbours.
+    itself and not when it matches its neighbors.
     """
     result = subprocess.run(
         ["/bin/sh", "-c", f"printf '%s\\n' {path}"],

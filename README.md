@@ -1,4 +1,5 @@
-# 6.4210/6.4212 — Robotic Manipulation, Fall 2026: problem set handouts
+# 6.4210/6.4212 — Robotic Manipulation, Fall 2026: 
+# staff staging site for problem set handouts
 
 This repository holds the problem sets: for each pset, a directory `psN/` with
 the assignment PDF (`psN.pdf`), the Python code you will read and extend, and

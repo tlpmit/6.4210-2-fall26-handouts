@@ -13,7 +13,7 @@ vector of floats.
 Several of the systems in `pick_and_place.py` want to pass a `RigidTransform`
 from one to the next, and a pose is not naturally a vector -- writing it as one
 would mean packing and unpacking a quaternion at both ends of every wire.  So
-`DTSystem` below generalises the same idea: anywhere `DTVectorSystem` wants a
+`DTSystem` below generalizes the same idea: anywhere `DTVectorSystem` wants a
 width, `DTSystem` also accepts `Abstract(prototype)`, and the port, the state or
 the output then carries whatever type `prototype` is.
 

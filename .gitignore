@@ -25,6 +25,9 @@ venv/
 *.synctex.gz
 comment.cut
 auto/
+# latexmk writes a zero-byte tmpN.tmp probe into the build directory;
+# through device_bash it cannot unlink it afterwards, so it is left behind
+*.tmp
 
 # Emacs backups, autosaves and lock files
 *~
