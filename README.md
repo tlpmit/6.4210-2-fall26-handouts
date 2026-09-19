@@ -88,6 +88,7 @@ cd 64210
 uv python install 3.13
 uv venv --python 3.13
 uv pip install drake
+uv pip install manipulation
 ```
 
 > **Put the venv on a path with no spaces or special characters.**  Drake
@@ -103,6 +104,7 @@ uv pip install drake
 > ```sh
 > uv venv --python 3.13 ~/venv64210
 > uv pip install --python ~/venv64210 drake
+> uv pip install --python ~/venv64210 manipulation
 > source ~/venv64210/bin/activate
 > ```
 

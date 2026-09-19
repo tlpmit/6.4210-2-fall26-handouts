@@ -121,64 +121,31 @@ X_WA = X2D(1, 2, np.pi / 6)
 X_WB = X2D(2, 3, -np.pi / 4)
 X_WC = X2D(6, 4, -np.pi * 2 / 3)
 
-X_BW = X_WB.inverse()
-X_CW = X_WC.inverse()
-X_BC = X_BW @ X_WC
-
-p_BC_B = X2p(X_BC)
-# print(p_BC_B)
-
 
 # Use Drake tools!
 def forward_kinematics(q: np.ndarray) -> np.ndarray:
-    (q0, q1) = q
-    X_a0 = X2D(0, 0, 0)
-    X_0b = lambda q: X2D(0, 0, q)  # noqa: E731
-    X_b1 = X2D(1, 0, 0)
-    X_1c = lambda q: X2D(0, 0, q)  # noqa: E731
-    X_cC = X2D(1, 0, 0)
-    return X2p(X_a0 @ X_0b(q0) @ X_b1 @ X_1c(q1) @ X_cC)
+    """Position of the two-link arm's end-effector frame C in base frame a."""
+    raise NotImplementedError("your code here")
 
 
 def inverse_kinematics(x: float, y: float) -> tuple[np.ndarray, np.ndarray]:
-    r2 = x**2 + y**2
-    q1_1 = np.arccos(r2 / 2 - 1)
-    q2_1 = -q1_1
-
-    # The solution for q_0 has been implemented for you
-    q1_0 = np.arctan2(y, x) - np.arctan2(np.sin(q1_1), 1 + np.cos(q1_1))
-    q2_0 = np.arctan2(y, x) - np.arctan2(np.sin(q2_1), 1 + np.cos(q2_1))
-
-    return (np.array([q1_0, q1_1]), np.array([q2_0, q2_1]))
+    """The two joint configurations that put the end effector at (x, y)."""
+    raise NotImplementedError("your code here")
 
 
 def Jacobian(q: np.ndarray) -> np.ndarray:
-    q0 = q[0]
-    q1 = q[1]
-    s0 = np.sin(q0)
-    s1 = np.sin(q1)
-    c0 = np.cos(q0)
-    c1 = np.cos(q1)
-    dxdq0 = -s0 - c1 * s0 - c0 * s1
-    dxdq1 = -s1 * c0 - s0 * c1
-    dydq0 = c0 + c0 * c1 - s0 * s1
-    dydq1 = -s0 * s1 + c0 * c1
-    J = np.array(
-        [
-            [dxdq0, dxdq1],
-            [dydq0, dydq1],
-        ]
-    )
-    return J
+    """The 2 x 2 translational Jacobian of the two-link arm at q."""
+    raise NotImplementedError("your code here")
 
 
 def manipulability(J):
+    """Yoshikawa manipulability measure for a 2 x 2 Jacobian."""
     return np.abs(np.linalg.det(J))
 
 
 if __name__ == "__main__":
     # test_plot_fk()
     # test_plot_ik()
-    test_plot_manipulability()
-    test_plot_manipulability_task_space()
+    # test_plot_manipulability()
+    # test_plot_manipulability_task_space()
     plt.show()

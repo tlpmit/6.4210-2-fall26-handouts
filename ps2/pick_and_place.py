@@ -454,73 +454,19 @@ def waypoint_times(stops, speed: float) -> list[float]:
 def make_overhead_box_grasp() -> RigidTransform:
     """Where to hold the gripper, in a block's frame, to grasp it from above.
 
-    In the gripper's own frame G the fingers close along +/-x and reach out
-    along +y, meeting at the middle of the pads GRIPPER_REACH away.  So to take
-    a block from above, G's y axis has to point straight down, and G's x axis
-    has to lie across the block's *short* axis -- the long axis is wider than
-    the gripper can open.
+    Return X_OG, the pose of the gripper frame G relative to the block frame O.
+    The constants above describe the block dimensions, the gripper opening, and
+    how far the middle of the finger pads sits from frame G.
     """
-    # The columns of a rotation matrix are the axes of the frame it describes,
-    # written in the frame it maps into.  So we can just name them.
-    Gx_O = np.array([0.0, 1.0, 0.0])  # close across the block's short (y) axis
-    Gy_O = np.array([0.0, 0.0, -1.0])  # reach down onto the block
-    R_OG = RotationMatrix(np.column_stack([Gx_O, Gy_O, np.cross(Gx_O, Gy_O)]))
-
-    # Put the middle of the pads at the center of the block.  The block's frame
-    # is at the center of its bottom face, so its center is half a height up,
-    # and G itself sits GRIPPER_REACH back along the direction it reaches.
-    p_OG = np.array([0, 0, BLOCK_SIZE[2] / 2]) - GRIPPER_REACH * Gy_O
-    return RigidTransform(R_OG, p_OG)
+    raise NotImplementedError("your code here")
 
 
 def target_conf_to_pick(block_name) -> np.ndarray:
     """Arm joint angles that put the open gripper around the red block."""
-    X_OG = make_overhead_box_grasp()
-    X_WO = block_pose(block_name)
-    X_WG = X_WO @ X_OG
-    return inv_kin(X_WG)
+    raise NotImplementedError("your code here")
 
 
 ## ---- test3: a timed trajectory, and following it ------------------
-
-
-## note for the TAs: nothing calls what follows.  It is one answer to "the
-## timing above is not very good -- do better", which is worth having written
-## down somewhere even though the students should arrive at it themselves.
-##
-## Giving every leg the same two seconds means the speed of the gripper is
-## whatever the geometry happens to make it.  Over the sixteen-waypoint plan
-## the legs run from 0 m to 0.54 m long, so the hand is asked to crawl on some
-## and to move at 0.27 m/s on others, and five of the seventeen legs are the
-## arm standing still for two seconds while the fingers, which take about a
-## third of a second, close.  Nothing in the plan says how fast to go, and
-## nothing checks that what has been asked for is possible: at 2 s a keyframe
-## the stack still gets built, at 1 s it still does, and at 0.5 s the arm
-## throws the last block across the table.
-##
-## The rule below fixes the speed instead of the duration.  A leg takes as
-## long as the slower of its two jobs, which happen at the same time: carrying
-## the hand there at `speed`, and moving the fingers.
-
-
-# How long to allow for the fingers to travel, whenever a leg opens or closes
-# them.  They move on their own time, not the arm's, and take only a fraction
-# of a second, so this is mostly margin.
-FINGER_SETTLE = 1.0
-
-# No leg is shorter than this, so that a repeated waypoint -- which is how a
-# plan is made to stand still -- still gets a segment of its own.
-MINIMUM_LEG = 1.0
-
-
-def waypoint_times_at_a_fixed_speed(stops, speed: float) -> list[float]:
-    """When to be at each of `stops`, if the gripper is to travel at `speed`."""
-    times = [0.0]
-    for a, b in zip(stops, stops[1:]):
-        travel = pose_distance(pose_delta(a.X_WG, b.X_WG)) / speed
-        fingers = FINGER_SETTLE if a.opening != b.opening else 0.0
-        times.append(times[-1] + max(travel, fingers, MINIMUM_LEG))
-    return times
 
 
 def timed_trajectories(waypoints, X_WG_start, speed: float):
@@ -546,15 +492,7 @@ def timed_trajectories(waypoints, X_WG_start, speed: float):
     the fingers have a controller of their own, and what we owe them is a width
     to go to, held from the moment the plan asks for it.
     """
-    stops = trajectory_stops(waypoints, X_WG_start)
-    times = waypoint_times(stops, speed)
-
-    traj_X_G = PiecewisePose.MakeLinear(times, [stop.X_WG for stop in stops])
-    traj_V_G = traj_X_G.MakeDerivative()
-    traj_wsg = PiecewisePolynomial.ZeroOrderHold(
-        times, np.array([[stop.opening for stop in stops]])
-    )
-    return traj_V_G, traj_wsg
+    raise NotImplementedError("your code here")
 
 
 def JointVelocity(plant):
@@ -582,8 +520,7 @@ def JointVelocity(plant):
             plant_context, JacobianWrtVariable.kV, G, [0, 0, 0], W, W
         )
 
-        # note from lpk to TAs: I would probably give them all but the line below
-        return np.linalg.pinv(J_G[:, arm_columns]) @ V_WG
+        raise NotImplementedError("your code here")
 
     return DTSystem(
         [6, 7],
@@ -604,107 +541,17 @@ def compose_jacobian_control(waypoints, speed):
     together: the trajectory is built in here, and it is the only thing that
     knows when it ends.
     """
-    builder = DiagramBuilder()
-    station = builder.AddSystem(
-        MakeHardwareStation(make_scenario(), meshcat=get_meshcat())
-    )
-    plant = station.GetSubsystemByName("plant")
-    add_all_triads(station)
-    start_the_fingers_open(plant)
-
-    X_WG_start = plant.EvalBodyPoseInWorld(
-        plant.CreateDefaultContext(),
-        plant.GetBodyByName("body", plant.GetModelInstanceByName("wsg")),
-    )
-    traj_V_G, traj_wsg = timed_trajectories(waypoints, X_WG_start, speed)
-    gripper_velocity = builder.AddSystem(TrajectorySource(traj_V_G))
-    gripper_velocity.set_name("GripperVelocity")
-    finger_command = builder.AddSystem(TrajectorySource(traj_wsg))
-    finger_command.set_name("FingerCommand")
-    joint_velocity = builder.AddSystem(JointVelocity(plant))
-    command = builder.AddSystem(Integrator(7))
-    command.set_name(JOINT_INTEGRATOR)
-
-    builder.Connect(
-        gripper_velocity.get_output_port(), joint_velocity.GetInputPort("V_WG")
-    )
-    builder.Connect(
-        station.GetOutputPort("iiwa.position_measured"),
-        joint_velocity.GetInputPort("iiwa.position"),
-    )
-    builder.Connect(joint_velocity.get_output_port(), command.get_input_port())
-    builder.Connect(command.get_output_port(), station.GetInputPort("iiwa.position"))
-    builder.Connect(
-        finger_command.get_output_port(), station.GetInputPort("wsg.position")
-    )
-    return builder.Build(), traj_V_G.end_time()
+    raise NotImplementedError("your code here")
 
 
 ## ---- test4: walking a whole plan ----------------------------------
-
-
-def X_AB_for_A_exactly_on_B() -> RigidTransform:
-    """Where B goes to rest squarely on top of A, keeping its resting faces."""
-    return RigidTransform(p=[0, 0, BLOCK_SIZE[2]])
-
-
-def X_AB_for_A_standing_upright_on_B() -> RigidTransform:
-    """Where B goes to stand on end, centered on top of A."""
-    length, _, height = BLOCK_SIZE
-    return RigidTransform(
-        RotationMatrix.MakeYRotation(-np.pi / 2), [height / 2, 0, height + length / 2]
-    )
-
-
-def pregrasp_X(offset=0.10) -> RigidTransform:
-    """A transform that will put the hand offset above a given pose"""
-    return RigidTransform(p=[0, 0, offset])
-
-
-def pick_and_prepick(X_WO):
-    pick = X_WO @ make_overhead_box_grasp()
-    prepick = pregrasp_X() @ pick
-    return pick, prepick
 
 
 def plan(a, b, c):
     """Waypoints to stack b squarely on a, then stand c upright on b.
     Each waypoint includes a gripper pose and a finger opening.
     """
-    X_WA_init = block_pose(a)
-    X_WB_init = block_pose(b)
-    X_WC_init = block_pose(c)
-    X_WG_pickB, X_WG_prepickB = pick_and_prepick(X_WB_init)
-    X_WG_pickC, X_WG_prepickC = pick_and_prepick(X_WC_init)
-    X_WB_place = X_WA_init @ X_AB_for_A_exactly_on_B()
-    X_WC_place = X_WB_place @ X_AB_for_A_standing_upright_on_B()
-    X_WG_placeB, X_WG_preplaceB = pick_and_prepick(X_WB_place)
-    X_WG_placeC, X_WG_preplaceC = pick_and_prepick(X_WC_place)
-
-    def pick_up(pregrasp, grasp):
-        """Reach in with the fingers open, close them, and lift what is held."""
-        return [
-            Waypoint(pregrasp),
-            Waypoint(grasp),
-            Waypoint(grasp, FINGER_CLOSED),
-            Waypoint(pregrasp, FINGER_CLOSED),
-        ]
-
-    def put_down(preplace, place):
-        """Carry it in still gripped, let go, and back away empty-handed."""
-        return [
-            Waypoint(preplace, FINGER_CLOSED),
-            Waypoint(place, FINGER_CLOSED),
-            Waypoint(place),
-            Waypoint(preplace),
-        ]
-
-    return (
-        pick_up(X_WG_prepickB, X_WG_pickB)
-        + put_down(X_WG_preplaceB, X_WG_placeB)
-        + pick_up(X_WG_prepickC, X_WG_pickC)
-        + put_down(X_WG_preplaceC, X_WG_placeC)
-    )
+    raise NotImplementedError("your code here")
 
 
 ######################################################################
