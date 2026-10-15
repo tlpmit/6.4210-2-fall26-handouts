@@ -106,6 +106,10 @@ def bootstrap() -> None:
 # ps4's letter meshes need manipulation's `letter` extra (trimesh, shapely,
 # coacd, manifold3d, mapbox-earcut) and scipy, which trimesh uses there.
 # rtree is not in that extra, but trimesh's ray casting (mesh.ray) needs it.
+# ps5's diffusion policy needs torch (already on Colab) and diffusers for the
+# network and its noise schedule, einops for the authors' network code, zarr
+# for their demonstrations, gdown to fetch those and the checkpoint from
+# Google Drive, and pymunk for the Push-T physics.
 PACKAGES = {
     "pydrake": "drake",
     "manipulation": "manipulation",
@@ -113,6 +117,25 @@ PACKAGES = {
     "coacd": "manipulation[letter]",
     "scipy": "scipy",
     "rtree": "rtree",
+    "torch": "torch",
+    "diffusers": "diffusers",
+    "einops": "einops",
+    "zarr": "zarr",
+    "gdown": "gdown",
+    "pymunk": "pymunk",
+    "shapely": "shapely",
+}
+
+# Preserve the earlier psets' default install list; ps6 requests its own set.
+DEFAULT_PACKAGES = tuple(PACKAGES)
+PACKAGES.update({"gymnasium": "gymnasium", "numpy": "numpy>=2",
+                 "pandas": "pandas", "matplotlib": "matplotlib"})
+
+PSET_PACKAGES = {
+    "ps6": ("pydrake", "torch", "gymnasium", "numpy", "scipy", "pandas", "matplotlib"),
+    "ps5": (
+        "torch", "diffusers", "einops", "zarr", "gdown", "pymunk", "shapely",
+    ),
 }
 
 
@@ -120,23 +143,24 @@ def setup(pset: str) -> None:
     """
     Make this session ready to work on the given pset (e.g. setup("ps1")):
     put <repo>/<pset> on the import path so its modules import as top-level
-    names, install Drake and the other PACKAGES this session lacks, and configure
-    git so that `!git commit` and `!git pull` work on a fresh runtime: an
-    identity if it has none, and merge-style pulls (without that, git refuses
-    to pull once you have local commits and upstream has moved).
+    names, install the packages this pset needs, and configure git so that
+    `!git commit` and `!git pull` work on a fresh runtime: an identity if it
+    has none, and merge-style pulls (without that, git refuses to pull once
+    you have local commits and upstream has moved).
 
-    Drake is a ~1 GB wheel, so this is the slow cell; it survives Restart
-    session but not Disconnect and delete runtime.  The iiwa meshes are not in
-    the wheel --- Drake fetches `package://drake_models` on first use, which
-    adds a pause to the first test that draws the arm.
+    For psets that use Drake, its ~1 GB wheel makes this the slow cell; it
+    survives Restart session but not Disconnect and delete runtime. The iiwa
+    meshes are not in the wheel --- Drake fetches `package://drake_models` on
+    first use, which adds a pause to the first test that draws the arm.
     """
     pset_dir = ROOT / pset
     if not pset_dir.is_dir():
         raise ValueError(f"no pset directory {pset_dir}; is the clone healthy?")
     if str(pset_dir) not in sys.path:
         sys.path.insert(0, str(pset_dir))
+    package_names = PSET_PACKAGES.get(pset, DEFAULT_PACKAGES)
     missing = list(dict.fromkeys(
-        pkg for mod, pkg in PACKAGES.items()
+        PACKAGES[mod] for mod in package_names
         if importlib.util.find_spec(mod) is None
     ))
     if missing:

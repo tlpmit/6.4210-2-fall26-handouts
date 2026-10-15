@@ -48,3 +48,10 @@ misc/ps4_plan_place_letter/assets/
 # Handout build area: dist/public is the instructor's clone of the public
 # handouts repo (make handout writes into it), dist/build is LaTeX aux
 dist/
+
+# Grading runs: keep the raw export, its staged/derived copies, and the
+# per-student reports out of git; rubric, scores and entry files are tracked.
+grading/ps*/assignment_*_export/
+grading/ps*/prep_*/
+grading/ps*/to_grade/
+grading/ps*/reports/

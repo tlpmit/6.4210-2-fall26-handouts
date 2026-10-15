@@ -1,9 +1,9 @@
 # 6.4210/6.4212 — Robotic Manipulation, Fall 2026: 
 # staff staging site for problem set handouts
 
-This repository holds the problem sets: for each pset, a directory `psN/` with
-the assignment PDF (`psN.pdf`), the Python code you will read and extend, and
-a Colab notebook (`psN_colab.ipynb`).
+This repository holds the problem sets: each `psN/` directory has its
+assignment PDF and any code or Colab notebook needed for that pset. Some
+notebooks contain their own support code.
 `utils/` holds code shared across psets.
 New psets, and fixes to released ones, appear here as ordinary git
 commits, and you get them with `git pull`.
@@ -90,7 +90,12 @@ uv venv --python 3.13
 uv pip install drake
 uv pip install "manipulation[letter]"
 uv pip install scipy rtree
+uv pip install torch diffusers einops zarr gdown pymunk
 ```
+
+If you made the venv before ps5, add its packages now (ps5 needs them; without
+them it fails with `No module named 'torch'`):
+`uv pip install torch diffusers einops zarr gdown pymunk`.
 
 If you made the venv before ps4, add the letter-mesh packages now (ps4 needs
 them; without them it fails with `No module named 'shapely'`):
@@ -111,6 +116,7 @@ them; without them it fails with `No module named 'shapely'`):
 > uv pip install --python ~/venv64210 drake
 > uv pip install --python ~/venv64210 "manipulation[letter]"
 > uv pip install --python ~/venv64210 scipy rtree
+> uv pip install --python ~/venv64210 torch diffusers einops zarr gdown pymunk
 > source ~/venv64210/bin/activate
 > ```
 
@@ -162,21 +168,22 @@ Open the pset's notebook straight from GitHub, e.g. for ps1:
 
 Run the first two code cells: one mounts your **Google Drive**, the next fetches
 the course code into it (`MyDrive/6.4210/repo`) — the code and your edits
-live in Drive, so they survive Colab runtime resets.  Then **switch to the
+live in Drive, so they survive Colab runtime resets. Then **switch to the
 notebook inside your Drive**: on [drive.google.com](https://drive.google.com)
-open `My Drive → 6.4210 → repo → ps1` and double-click `ps1_colab.ipynb` —
-it opens in Colab.  Work in that copy from then on: it lives inside your
-repo, so everything you do in the notebook is saved to Drive and can be
-committed with git.  The GitHub copy you started from is *not* part of your
-repo, and notebook work done there is easy to lose.
+open `My Drive → 6.4210 → repo → psN` and double-click that pset's notebook
+(for PS5, `diffusion_policy_pusht_state.ipynb`) — it opens in Colab. Work in
+that copy from then on: it lives inside your repo, so everything you do in
+the notebook is saved to Drive and can be committed with git. The GitHub copy
+you started from is *not* part of your repo, and notebook work done there is
+easy to lose.
 
 ### 4.3 Start each later session
 
 Open the notebook from your Drive (double-click it on drive.google.com, or in
 Colab use File → Open notebook → Google Drive) and run the setup cells at the
-top.  The mount and fetch are no-ops once done; the `setup()` cell installs
-Drake and configures git (a default identity and merge-style pulls) so that the
-git commands below work.
+top. The mount and fetch are no-ops once done; the `setup()` cell installs the
+packages needed for that pset and configures git (a default identity and
+merge-style pulls) so that the git commands below work.
 
 ### 4.4 Edit and reload Python files
 
