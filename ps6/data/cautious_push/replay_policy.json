@@ -1,0 +1,11 @@
+{
+  "cohort": "confirmatory",
+  "seed": 253,
+  "steps": 8199,
+  "success": 1.0,
+  "reward": 2.3810534997125474,
+  "theta": 1.2088582515716553,
+  "checkpoint": "checkpoints/seed253_best.pt",
+  "goal_seed": 9460000,
+  "selection": "Best monitoring success then reward, earlier step then lower seed on ties; no test-goal or replay-outcome selection. Illustrative replay only; the primary comparison still uses all fixed final policies."
+}

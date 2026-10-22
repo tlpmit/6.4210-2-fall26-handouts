@@ -1,0 +1,607 @@
+{
+  "description": "Supplied experimental data with current and historical studies labeled separately; paths below are provenance, not runtime dependencies. Local runs write results/, never data/.",
+  "origins": {
+    "cartpole.py": {
+      "source": "misc/ps6_rl/cartpole.py",
+      "source_sha256": "7416380c13e34af6702130ad9a835460d27521edba297d222048f47783f10dfd"
+    },
+    "reinforce.py": {
+      "source": "misc/ps6_rl/reinforce.py",
+      "source_sha256": "9deb6b85c317978e7f26b35803ce58f4db34b91bb3ac87b35752a4a257c567e5"
+    },
+    "learning_curves.py": {
+      "source": "misc/ps6_rl/learning_curves.py",
+      "source_sha256": "e26df406c204948e6bdc6d8ddc56a18b4e545c1a4421b73b6317b1aee28db162"
+    },
+    "multi_push.py": {
+      "source": "misc/ps6_rl/multi_push.py",
+      "source_sha256": "9b55e1035fc71fc84ba2657c0d29385ea7ad3bb666cf2a9a0378bfa501eea0ce"
+    },
+    "push_primitive.py": {
+      "source": "misc/ps6_rl/push_primitive.py",
+      "source_sha256": "f754a149130bc02f0d00e83014f59a8d1a2e16d6cf39dd0ecc6590e37e4e5903"
+    },
+    "push_mass.py": {
+      "source": "misc/ps6_rl/push_mass.py",
+      "source_sha256": "9a360414ed5d85c7167ffcdf77ac00a3d2bb4aca72ffe13815b85561e009fb3e"
+    },
+    "push_physics.py": {
+      "source": "misc/ps6_rl/push_physics.py",
+      "source_sha256": "0535b95e3156e3c9966176abd55354bade3e0d32801bc2e08c3f9ecb29934902"
+    },
+    "push_reward.py": {
+      "source": "misc/ps6_rl/push_reward.py",
+      "source_sha256": "28c1d727dfd07463211aeb298eaa9dd21717bf52ff7e08f5d0a584dc090ae162"
+    },
+    "train_hybrid_push.py": {
+      "source": "misc/ps6_rl/train_hybrid_push.py",
+      "source_sha256": "df1f5697959f3841616dc34b000f970849173e73a65ce542e7e163adae7f47ab"
+    },
+    "clone_multi_push.py": {
+      "source": "misc/ps6_rl/clone_multi_push.py",
+      "source_sha256": "6fecb0f2b2bd3517d4b2f78a0461a4fa18b93aef091d69ad0f71ca0bc25a18a2"
+    },
+    "model_based_push.py": {
+      "source": "misc/ps6_rl/model_based_push.py",
+      "source_sha256": "1d7b7fd54d31ffb01813510f753645255c85e43fd2010a28d6ab9b72227e7daa"
+    },
+    "watch_push.py": {
+      "source": "misc/ps6_rl/watch_push.py",
+      "source_sha256": "e721a9860fbceceaf8f1590c0a73213324edf1c15da04a34254f91f034a8d308"
+    },
+    "visualization.py": {
+      "source": "misc/ps6_rl/visualization.py",
+      "source_sha256": "0ccd9e27241c2565ee528cdd62b8752ed709f4fd1efb0f7d96c56fe7adcd82f5"
+    },
+    "push_env.py": {
+      "source": "misc/ps6_rl/train_multi_push.py",
+      "adaptation": "Environment and summaries only; no SB3 training."
+    },
+    "push_geometry.py": {
+      "sources": [
+        "misc/pusher.py",
+        "misc/scene.py"
+      ],
+      "adaptation": "Evaluated SDF strings; no imports or student code from earlier assignments."
+    },
+    "data/cartpole/comparison.json": {
+      "source": "misc/ps6_rl/results/study/comparison.json",
+      "source_sha256": "f83daff1081b46539d215020a0806954719bc08dce4d694f2dec8819b06533fb"
+    },
+    "data/cartpole/reinforce_baseline_seed100.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed100.json",
+      "source_sha256": "4f598ecab636617ec567f8a9626c07a453817f90e56f61c42540c9c9bb668b68"
+    },
+    "data/cartpole/reinforce_baseline_seed101.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed101.json",
+      "source_sha256": "d9bed01876a15b27432e46ad312718eb4d4d40659c1d0f8d7f4ed53432179007"
+    },
+    "data/cartpole/reinforce_baseline_seed102.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed102.json",
+      "source_sha256": "bab2970b041e42c37f8574d104218832653a6d47518d01893d0b532c65142813"
+    },
+    "data/cartpole/reinforce_baseline_seed103.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed103.json",
+      "source_sha256": "6788fb6a333551c8abbca12b3cba3c3a785edea0153a58304be95ab2db1a1a37"
+    },
+    "data/cartpole/reinforce_baseline_seed104.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed104.json",
+      "source_sha256": "65d98e4c964f8fa7087d9a21f69d73eb68590f755b5dcb95d5f1ac6834cb36ba"
+    },
+    "data/cartpole/reinforce_baseline_seed105.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed105.json",
+      "source_sha256": "2f18b9a6615a81d73a5b58dd0401aee9b913f7089a4223ce299b8b0b43e4ac9b"
+    },
+    "data/cartpole/reinforce_baseline_seed106.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed106.json",
+      "source_sha256": "16328719eef73792d603750163ff71f1da006e0d5a20e1800a14f9a6ba1c549e"
+    },
+    "data/cartpole/reinforce_baseline_seed107.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed107.json",
+      "source_sha256": "cdf9d59bcfe106899a5afd9d14918713227bf42ed8ab6c1d4071c8744e748579"
+    },
+    "data/cartpole/reinforce_baseline_seed108.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed108.json",
+      "source_sha256": "906f18ccf56438d9380eb520808a35f3ab41b57d981cd1ed8a7c1687ade5e781"
+    },
+    "data/cartpole/reinforce_baseline_seed109.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed109.json",
+      "source_sha256": "b3cc5e1e378fc0a9100a88fc114f2449b94fd684369ee6c2ba59a5d4666965a7"
+    },
+    "data/cartpole/reinforce_baseline_seed110.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed110.json",
+      "source_sha256": "c1b98d7f3ca403f13242a45a0bdc81fe2176e90323599c970d05278e235e181c"
+    },
+    "data/cartpole/reinforce_baseline_seed111.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed111.json",
+      "source_sha256": "cf990fd3631aab3504f147abf085f6044672244aa37db92ee426f626039ccc02"
+    },
+    "data/cartpole/reinforce_baseline_seed112.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed112.json",
+      "source_sha256": "c2b2b9e224632e6205c418d5f62575f6187b0d3c43438778f0648e60a427c1bf"
+    },
+    "data/cartpole/reinforce_baseline_seed113.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed113.json",
+      "source_sha256": "904e2257703e2ee360544b73335258098b35bb27d984d4e89bacf6b46808c097"
+    },
+    "data/cartpole/reinforce_baseline_seed114.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed114.json",
+      "source_sha256": "d26aa5eb10c11e26ce33d2292749bfa29f668e4606af9bec97edb4b9499accbe"
+    },
+    "data/cartpole/reinforce_baseline_seed115.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed115.json",
+      "source_sha256": "8cf6c0c8d4659f281eedd7e0b3a73b579954988fa53d329478add660e2dab8a6"
+    },
+    "data/cartpole/reinforce_baseline_seed116.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed116.json",
+      "source_sha256": "bc0e4621357be8e186970b5941cd2ad604ee1fa8ad58455a0ec94068cbc555ea"
+    },
+    "data/cartpole/reinforce_baseline_seed117.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed117.json",
+      "source_sha256": "13b28b349b2704ac8e3efead10a30c74d372e5654f0652470e9a48bfd658081b"
+    },
+    "data/cartpole/reinforce_baseline_seed118.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed118.json",
+      "source_sha256": "3e54290758428f013477848a43cd24f250c9b8308287d95871534d896adf80e3"
+    },
+    "data/cartpole/reinforce_baseline_seed119.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed119.json",
+      "source_sha256": "5ee04b6ad990ed1117e8dac8a45687cf2484d13e1278413e58d8910c46de9577"
+    },
+    "data/cartpole/reinforce_baseline_seed120.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed120.json",
+      "source_sha256": "4aaf256802cfe410f7db446459217e6f9f91ef785c3af3206ef57e70073e2223"
+    },
+    "data/cartpole/reinforce_baseline_seed121.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed121.json",
+      "source_sha256": "67f3363be09fc02f27f12fd7eee43e046434bb5881d1a3c0abe2be09b921c5b6"
+    },
+    "data/cartpole/reinforce_baseline_seed122.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed122.json",
+      "source_sha256": "20c637840af21817fd523b302fb498a310c94782ae09a5c77cfd0099ff24a2be"
+    },
+    "data/cartpole/reinforce_baseline_seed123.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed123.json",
+      "source_sha256": "1a511977147a98f95829ce9b08e6e0f87ad95624a2cd3b295f9e00277250867c"
+    },
+    "data/cartpole/reinforce_baseline_seed124.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed124.json",
+      "source_sha256": "3fe178f98261a44fb15f77da03890f491df4ddc1921bc936ca1eb7a3234c635f"
+    },
+    "data/cartpole/reinforce_baseline_seed125.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed125.json",
+      "source_sha256": "43b31ad3ba54540a5341e2c3f63c217aa222af3701c27a681d2fa3962ada8afb"
+    },
+    "data/cartpole/reinforce_baseline_seed126.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed126.json",
+      "source_sha256": "fdcd9a6d37fcbd916a80fe5875a44296f3e5a26afe37e8fe7eaaea737cc1f024"
+    },
+    "data/cartpole/reinforce_baseline_seed127.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed127.json",
+      "source_sha256": "bebc9d6b8840d3a14465a46722b60944d79df01934a7417ef70784eacf8d8e94"
+    },
+    "data/cartpole/reinforce_baseline_seed128.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed128.json",
+      "source_sha256": "40ea52fe5ca362488551c9ff26c20a37b210d159c64d1e7bba997d860163ae62"
+    },
+    "data/cartpole/reinforce_baseline_seed129.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed129.json",
+      "source_sha256": "0adc1e2b020c73a6a154469572d361c2f692712732d57532aebfcf45696d2252"
+    },
+    "data/cartpole/reinforce_plain_seed100.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed100.json",
+      "source_sha256": "e3b3c1981e11dce984f951c41155e5748bc58d389bf3c8376deb5d35d5f6a804"
+    },
+    "data/cartpole/reinforce_plain_seed101.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed101.json",
+      "source_sha256": "593901cb222f0b4d4550426274594c87955dca342e342c80b31bffe4104fba49"
+    },
+    "data/cartpole/reinforce_plain_seed102.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed102.json",
+      "source_sha256": "f87a3879469a11e1c842239a74442bdc339246969fe963ece99439e361b517fd"
+    },
+    "data/cartpole/reinforce_plain_seed103.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed103.json",
+      "source_sha256": "53b983fae2edc52e2626021e83666684909431d745752fb986d6ba5ff44be8b6"
+    },
+    "data/cartpole/reinforce_plain_seed104.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed104.json",
+      "source_sha256": "c208992d9d5ef109bf825eaea702edde566748f7c4e3f4f29ade65f5cdf8f1ad"
+    },
+    "data/cartpole/reinforce_plain_seed105.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed105.json",
+      "source_sha256": "cffac3247362f09bd3f020a7852a6f2041c0ebc37a07877ed7757d62861ab853"
+    },
+    "data/cartpole/reinforce_plain_seed106.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed106.json",
+      "source_sha256": "8a0cf21bfb61cfcf5a94bed0f32fba8782c7c3770fd4604aca016636b039a2f5"
+    },
+    "data/cartpole/reinforce_plain_seed107.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed107.json",
+      "source_sha256": "78578de3d2e412616083d5398ea90fa2975cdde6d03bb89c5e0b360b079fffa6"
+    },
+    "data/cartpole/reinforce_plain_seed108.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed108.json",
+      "source_sha256": "94bbd67984e1632fed68cb422543950aee1a37c529655dc9ab8a7a2d5328060f"
+    },
+    "data/cartpole/reinforce_plain_seed109.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed109.json",
+      "source_sha256": "206e11155f07aba1edb8249b7aa453c284895c15cb49eb8dde144d0eaf32ab48"
+    },
+    "data/cartpole/reinforce_plain_seed110.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed110.json",
+      "source_sha256": "dd32d94e507b5a6b4458987ed8062de59e1d8be40bf2f38ff6bb66fb2760cc9a"
+    },
+    "data/cartpole/reinforce_plain_seed111.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed111.json",
+      "source_sha256": "ba85d2cb3eb3f080af09cc8489361ee1484a5ad379f1769161bf9f01033fa82f"
+    },
+    "data/cartpole/reinforce_plain_seed112.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed112.json",
+      "source_sha256": "6db09975aa21af4e42095c7c736f45dd8c3a8ab66b33c722bbbfab9357298cf7"
+    },
+    "data/cartpole/reinforce_plain_seed113.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed113.json",
+      "source_sha256": "58b34ac2712e8880a5c6a98c646563eb92ebcb66ba5a662724b5648dd7d76e89"
+    },
+    "data/cartpole/reinforce_plain_seed114.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed114.json",
+      "source_sha256": "180c58fedb3654ce411fc13a7b223d5a0b7ec9bce2da698d015cadd2d3c75c47"
+    },
+    "data/cartpole/reinforce_plain_seed115.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed115.json",
+      "source_sha256": "efeecb7810b7e67f1ed5aea7642f2f7d0820ec1909d7e3d3b2ba33e06523aded"
+    },
+    "data/cartpole/reinforce_plain_seed116.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed116.json",
+      "source_sha256": "4df4e70cabc8d258b6503c4edbb7e6e5d9d0b3c84c056cde3e1e98f1dff03ed5"
+    },
+    "data/cartpole/reinforce_plain_seed117.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed117.json",
+      "source_sha256": "35b044e80fa3d11f5012f353779ca0b245d1f987298a495643fa3cc4931a7615"
+    },
+    "data/cartpole/reinforce_plain_seed118.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed118.json",
+      "source_sha256": "6782f72bed827d140aa5a1824e398e0881f7c8f72179d1a6ddda30daa8449807"
+    },
+    "data/cartpole/reinforce_plain_seed119.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed119.json",
+      "source_sha256": "b13381f0a6ef44a555ab534760a861f8ca78fbcb9f9795bfd1a90f22b7d3690f"
+    },
+    "data/cartpole/reinforce_plain_seed120.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed120.json",
+      "source_sha256": "68cacfb4893064c51d95683b434bf0d91cfecc386e81206b1755d08ff58b7e12"
+    },
+    "data/cartpole/reinforce_plain_seed121.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed121.json",
+      "source_sha256": "5d49724494669b7c601b498500da969227b76e2feb17a5d4c5bd1b388c7a1109"
+    },
+    "data/cartpole/reinforce_plain_seed122.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed122.json",
+      "source_sha256": "72904200e321dbdf7341f53eae269afa12258aff17a78d621f70d211075239cc"
+    },
+    "data/cartpole/reinforce_plain_seed123.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed123.json",
+      "source_sha256": "575a9ea32ad58addbb9ab000c704b274cf10deb5f6667b9f6afc007e98ae352d"
+    },
+    "data/cartpole/reinforce_plain_seed124.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed124.json",
+      "source_sha256": "24da8464380f8fef68b83437ab793fe0768de573323dc4cefe33055f72b39868"
+    },
+    "data/cartpole/reinforce_plain_seed125.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed125.json",
+      "source_sha256": "b6e7139e1c9fc4b3c3411c9ac47d605ffb0a86ab83ed3b95e6e41cf9a538af29"
+    },
+    "data/cartpole/reinforce_plain_seed126.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed126.json",
+      "source_sha256": "168e5ab23df99be203cedf6d6094c11a226c65a5cd104f424aa9060131c6f3b9"
+    },
+    "data/cartpole/reinforce_plain_seed127.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed127.json",
+      "source_sha256": "f5029408f127aa5cfaea40c1a50739e8069ec0cdbeb9791dabcec0b1a5d808e2"
+    },
+    "data/cartpole/reinforce_plain_seed128.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed128.json",
+      "source_sha256": "2fca7eae527fa3267f153e734e666220f4d26e5f6e9e3d653c92f5c7a80ba963"
+    },
+    "data/cartpole/reinforce_plain_seed129.json": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed129.json",
+      "source_sha256": "2425473df6142039da90c0163e0e692ce46da0ce6ad53d870ea5913e3865c795"
+    },
+    "data/cartpole/runtime_summary.json": {
+      "source": "misc/ps6_rl/results/study/runtime_summary.json",
+      "source_sha256": "65dc4f92bf2d55316b04938ba9f34935ee44a1429a2f6aa96a5921b71a438af3"
+    },
+    "data/cartpole/study_plan.json": {
+      "source": "misc/ps6_rl/results/study/study_plan.json",
+      "source_sha256": "9326f298f187c63812e49cbf8e21782a8bcdcc2e208b8d281bfbede8e65c87c8"
+    },
+    "data/cartpole/reinforce_plain_seed100.pt": {
+      "source": "misc/ps6_rl/results/study/reinforce_plain_seed100.pt",
+      "source_sha256": "8d8d4a36451db5c9c45e2befc98e94d73c5a3a9d44500464e679f24ddf0730aa"
+    },
+    "data/cartpole/reinforce_baseline_seed100.pt": {
+      "source": "misc/ps6_rl/results/study/reinforce_baseline_seed100.pt",
+      "source_sha256": "d852ba77689c280612d411a06ba24d4c4203ed59d075041f314eca5640d97569"
+    },
+    "data/push/demonstrations.npz": {
+      "source": "misc/ps6_rl/results/push_guidance/demonstrations.npz",
+      "source_sha256": "3ee3927c2b48a7cd54d4e7fee99b0f0ea71b2cc0b15ecb581afaf6357278e2db"
+    },
+    "data/push/validation_demonstrations.npz": {
+      "source": "misc/ps6_rl/results/push_guidance/validation_demonstrations.npz",
+      "source_sha256": "ec4871182447c01a12e38101ef7b72b44880f6e137669b71d27a84117ee05153"
+    },
+    "data/push/demonstrations.json": {
+      "source": "misc/ps6_rl/results/push_guidance/demonstrations.json",
+      "source_sha256": "075301aeb42bad596372868858524575a68779380e6b75fca088271b816b9b78"
+    },
+    "data/push/validation_demonstrations.json": {
+      "source": "misc/ps6_rl/results/push_guidance/validation_demonstrations.json",
+      "source_sha256": "ba1a7dddad7b43c6c61f7ff8324ac0d137460d35c173127d809dfd397b5aac2b"
+    },
+    "data/push/bc.pt": {
+      "source": "misc/ps6_rl/results/push_total_time/bc.pt",
+      "source_sha256": "f3e9fa1d578494693d47ea5b95ff50feb18a6b4de18aacd37920be0742f4d718"
+    },
+    "data/push/bc_provenance.json": {
+      "source": "misc/ps6_rl/results/push_total_time/bc_provenance.json",
+      "source_sha256": "795c979724fc6e1fe38509630fe187abdc7359cef0e3f56155bd13a91805c93e"
+    },
+    "data/push/plan.json": {
+      "source": "misc/ps6_rl/results/push_total_time/plan.json",
+      "source_sha256": "dce85ccd698367b727d58520e0628cbddcef59f007cb0086de1f05132878f57c"
+    },
+    "data/push/ppo_raw/seed150.json": {
+      "source": "misc/ps6_rl/results/push_total_time/ppo_raw/seed150/result.json",
+      "source_sha256": "38e35d143a7d203e1318a30dfe285d10268de3f91d8e77320132dc1af0f8d3d6"
+    },
+    "data/push/ppo_raw_best.pt": {
+      "source": "misc/ps6_rl/results/push_total_time/ppo_raw/seed150/hybrid_seed150_best.pt",
+      "source_sha256": "5d1acbf47704755826f1cabcfba8dd36c6fad7998b61e1012d50748e74b01ff4"
+    },
+    "data/push/ppo_raw/seed151.json": {
+      "source": "misc/ps6_rl/results/push_total_time/ppo_raw/seed151/result.json",
+      "source_sha256": "e336af675f05f35e7c131abf12e415a16d5c9200d86b4f47b804de7a4ed62622"
+    },
+    "data/push/ppo_raw/seed152.json": {
+      "source": "misc/ps6_rl/results/push_total_time/ppo_raw/seed152/result.json",
+      "source_sha256": "a35298a9f591f012ddc8a70f6273c2a203c16c91f6080e7f1069eceb432c11c1"
+    },
+    "data/push/ppo_finetune/seed150.json": {
+      "source": "misc/ps6_rl/results/push_total_time/ppo_finetune/seed150/result.json",
+      "source_sha256": "073fb471907adef5bde5b11f363c3b2475041b19ffe74a4b1b45b678b3b37a7b"
+    },
+    "data/push/ppo_finetune_best.pt": {
+      "source": "misc/ps6_rl/results/push_total_time/ppo_finetune/seed150/hybrid_seed150_best.pt",
+      "source_sha256": "9a1bd582b3f8520e3f3198950a8410906e991da43d8cfe88aa8e6d76d1e20cf2"
+    },
+    "data/push/ppo_finetune/seed151.json": {
+      "source": "misc/ps6_rl/results/push_total_time/ppo_finetune/seed151/result.json",
+      "source_sha256": "d2a6f33d6f29ef71091f64af6ba9e824fc9b65ecb4dccc6488800dc7c42b25cb"
+    },
+    "data/push/ppo_finetune/seed152.json": {
+      "source": "misc/ps6_rl/results/push_total_time/ppo_finetune/seed152/result.json",
+      "source_sha256": "798c36268a604b181153b785633e9b1796f68e053a0ff90fa942c70fb55847b1"
+    },
+    "data/push/analytic_scores.json": {
+      "source": "misc/ps6_rl/results/push_total_time/analytic/result.json",
+      "source_sha256": "ae6956014d736e03701fc3d61b0144ae883fb873d175fecd1abfdc7d358f8035"
+    },
+    "data/push/bc_scores.json": {
+      "source": "misc/ps6_rl/results/push_total_time/bc/result.json",
+      "source_sha256": "51cdc62ed4f1d009441afd72a33fa1a877a7a1f0d072231aef286d36fd1316d4"
+    },
+    "data/model_based/plan.json": {
+      "source": "misc/ps6_rl/results/push_model_based/plan.json",
+      "source_sha256": "33c9799b5f700e5ab15e9713ade6169b418f8ae53319b45d1028e60773ff02ec"
+    },
+    "data/model_based/calibration.json": {
+      "source": "misc/ps6_rl/results/push_model_based/calibration.json",
+      "source_sha256": "9e613646874348ba1a80f9a4ab4cc928b0767f15d88a461f750d884450fa73bd"
+    },
+    "data/model_based/collection_summary.json": {
+      "source": "misc/ps6_rl/results/push_model_based/collection_summary.json",
+      "source_sha256": "32ccb606de18ffb79143315195b02c559f560189ad7689891af70c3d6f7ca279"
+    },
+    "data/model_based/model_fit.json": {
+      "source": "misc/ps6_rl/results/push_model_based/model_fit.json",
+      "source_sha256": "b388defb941f4efed72dd8f3f7a9816c83b0eb165094609e892dd79ef3f732b4"
+    },
+    "data/model_based/supplementary_analysis.json": {
+      "source": "misc/ps6_rl/results/push_model_based/supplementary_analysis.json",
+      "source_sha256": "acebeee3a572d28426d4576c835148efd07fb63bd86ff2bf1e0fc5e46da63bcc"
+    },
+    "data/model_based/comparison.json": {
+      "source": "misc/ps6_rl/results/push_model_based/comparison.json",
+      "source_sha256": "441254d0f10ac477bfdac61fe2d74d42823c3474689448e9e8c7902dfb03d35e"
+    },
+    "data/model_based/dynamics.pt": {
+      "source": "misc/ps6_rl/results/push_model_based/dynamics.pt",
+      "source_sha256": "ff403eb99c9284717198e7a61bd8e7941e9e7eb67686cd8702e832ebad0b032b"
+    },
+    "data/model_based/data/probes.json": {
+      "source": "misc/ps6_rl/results/push_model_based/data/probes.json",
+      "source_sha256": "6c841314ecee104cce7bdb00889ec64cde542a5eb294bbb4bb5db7f81c42e5e7"
+    },
+    "data/model_based/data/rollouts_0.json": {
+      "source": "misc/ps6_rl/results/push_model_based/data/rollouts_0.json",
+      "source_sha256": "0f52ca4924f6ba8242ead899f813c53ad814fcb2fdf26da451a12bee74a7f708"
+    },
+    "data/model_based/data/rollouts_1.json": {
+      "source": "misc/ps6_rl/results/push_model_based/data/rollouts_1.json",
+      "source_sha256": "ab3a51c082d440aebe4e4bd9f544e842700f3c16285a635c22f8a61c3f9a77ff"
+    },
+    "data/model_based/data/rollouts_2.json": {
+      "source": "misc/ps6_rl/results/push_model_based/data/rollouts_2.json",
+      "source_sha256": "2ba22f3f91c77e113be83262fe4ae016c793dcecd61cfb3bf1e432a512ede966"
+    },
+    "data/model_based/data/rollouts_3.json": {
+      "source": "misc/ps6_rl/results/push_model_based/data/rollouts_3.json",
+      "source_sha256": "5075ce7fb27f3d861477d7353b68dd020fde4d4e3246452cb5405936a19b6173"
+    },
+    "data/model_based/data/rollouts_4.json": {
+      "source": "misc/ps6_rl/results/push_model_based/data/rollouts_4.json",
+      "source_sha256": "f74db4e8c4d4a3be3d27dc6a4c1b931407d94569f00e246ed59100452b2a9a50"
+    },
+    "data/model_based/data/rollouts_5.json": {
+      "source": "misc/ps6_rl/results/push_model_based/data/rollouts_5.json",
+      "source_sha256": "4961870d60d42051d72461f79a2cc4b93fe5a456f09e70abf5ebba22ccfd5a11"
+    },
+    "data/model_based/evaluation/analytic.json": {
+      "source": "misc/ps6_rl/results/push_model_based/evaluation/analytic.json",
+      "source_sha256": "b876abb0f01b1823b66e693fbf2af83c30017a69af8dc15c8549fb8c9867aa5f"
+    },
+    "data/model_based/evaluation/calibrated.json": {
+      "source": "misc/ps6_rl/results/push_model_based/evaluation/calibrated.json",
+      "source_sha256": "6b0d61f48222467bf73128293b8785a5e8eba3e86b2907ade1c7f3a7252fdea8"
+    },
+    "data/model_based/evaluation/mppi.json": {
+      "source": "misc/ps6_rl/results/push_model_based/evaluation/mppi.json",
+      "source_sha256": "1e2aa1997530a9670f89d0863a595d839014496842a6806c48efc86492360eb8"
+    },
+    "data/model_based/evaluation/ppo_150.json": {
+      "source": "misc/ps6_rl/results/push_model_based/evaluation/ppo_150.json",
+      "source_sha256": "228a81f6fb7aaefa6cdcbd165988791206df29c6a87524c7bc9ffd1e47f54166"
+    },
+    "data/model_based/evaluation/ppo_151.json": {
+      "source": "misc/ps6_rl/results/push_model_based/evaluation/ppo_151.json",
+      "source_sha256": "7efb633cc73a14ecb390000c840a38f47f3c0ca8639e8944f0f9b5ded4516650"
+    },
+    "data/model_based/evaluation/ppo_152.json": {
+      "source": "misc/ps6_rl/results/push_model_based/evaluation/ppo_152.json",
+      "source_sha256": "6a0df53f3466e84888a410beb479173ba7449fae461add6083fe9d543cf7c6cd"
+    },
+    "data/resting_push_reference/plan.json": {
+      "source": "misc/ps6_rl/results/push_resting/plan.json",
+      "source_sha256": "f4535f8b6c773e512ab0be2661046ed77cfb2031b6208f235cc00b6c0123c554"
+    },
+    "data/resting_push_reference/analytic.json": {
+      "source": "misc/ps6_rl/results/push_resting/baselines/analytic.json",
+      "source_sha256": "ec00d424937eddea5a23e99e9c5f3e0ce50c1e4fb6c8b86a7a10cf6442ac5307"
+    },
+    "data/resting_push_reference/bc.json": {
+      "source": "misc/ps6_rl/results/push_resting/baselines/bc.json",
+      "source_sha256": "6430df5fb326c3c4abf02bfef9c1fd56e143162c79b5d4b228c338109fd85315"
+    },
+    "data/resting_push_reference/ppo_raw/seed150.json": {
+      "source": "misc/ps6_rl/results/push_resting/ppo_raw/seed150/hybrid_seed150.json",
+      "source_sha256": "204eadc78d7846a4c7fe8a97c2f630ef321384a7672cdd7cb3e2342c4855d687"
+    },
+    "data/resting_push_reference/ppo_raw/seed151.json": {
+      "source": "misc/ps6_rl/results/push_resting/ppo_raw/seed151/hybrid_seed151.json",
+      "source_sha256": "b53510f6248a6f9b5d84d8957409640623f680331b461d859c42178d3d4be9dd"
+    },
+    "data/resting_push_reference/ppo_raw/seed152.json": {
+      "source": "misc/ps6_rl/results/push_resting/ppo_raw/seed152/hybrid_seed152.json",
+      "source_sha256": "94870e0fc826e5f14eef05b4c0da6acacc346495c63407e1e6b2f3e8420e7366"
+    },
+    "data/resting_push_reference/ppo_finetune/seed150.json": {
+      "source": "misc/ps6_rl/results/push_resting/ppo_finetune/seed150/hybrid_seed150.json",
+      "source_sha256": "f9d2516aa3b0225093cf8d28a85b2dd027a9eeebcb5af553c77611adf1c2fb18"
+    },
+    "data/resting_push_reference/ppo_finetune/seed151.json": {
+      "source": "misc/ps6_rl/results/push_resting/ppo_finetune/seed151/hybrid_seed151.json",
+      "source_sha256": "e3b0763dcec7990427f9968445641334a6cb061d61dc0c73d34968e3914cd071"
+    },
+    "data/resting_push_reference/ppo_finetune/seed152.json": {
+      "source": "misc/ps6_rl/results/push_resting/ppo_finetune/seed152/hybrid_seed152.json",
+      "source_sha256": "0dea671d937426132c55f6f673361e9c95f7e918ba65b6758ec12cd731e9a26d"
+    },
+    "data/zero_minimum_push_reference/analytic.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/baselines/analytic.json",
+      "sha256": "ec43d96683d983eeb8d46f90c67a9eb8a4e2fe158cb373ae596259ede7050594"
+    },
+    "data/zero_minimum_push_reference/bc.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/baselines/bc.json",
+      "sha256": "94553882ed23e1036bce62dce43bd9142e0aaaf612addd90a1367b130a9cddeb"
+    },
+    "data/zero_minimum_push_reference/comparison.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/comparison.json",
+      "sha256": "d08623c79f7ab643b59325a1442fff6066a3c3a9bce74ac2599374ef7f635a72"
+    },
+    "data/zero_minimum_push_reference/comparison.png": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/comparison.png",
+      "sha256": "be3f6b3a42852cbc971c09cb490d856b3b67fc3adb8b24a248579621658c7c3f"
+    },
+    "data/zero_minimum_push_reference/learning.png": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/learning.png",
+      "sha256": "b67a1416295ac6632e9b443b6d73c596f35b774452576322b14a8d29d1f9076c"
+    },
+    "data/zero_minimum_push_reference/plan.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/plan.json",
+      "sha256": "d9fcc7032db7a34c2eca763b9b7c2cf31edc8720255bf0258310c875ee4db1f3"
+    },
+    "data/zero_minimum_push_reference/ppo_finetune/seed150.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/ppo_finetune/seed150/hybrid_seed150.json",
+      "sha256": "24c2a26a85210d92c71f26fe032200b480354df243631526e51aae10f00acca7"
+    },
+    "data/zero_minimum_push_reference/ppo_finetune/seed151.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/ppo_finetune/seed151/hybrid_seed151.json",
+      "sha256": "7b06d759218f59ec7f700f30d27f46ebbc8003d8d3d5133ac06816971cddd6e2"
+    },
+    "data/zero_minimum_push_reference/ppo_finetune/seed152.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/ppo_finetune/seed152/hybrid_seed152.json",
+      "sha256": "d88932beaca39a3f5959c68caac304e205eab2e55832641e37c266d438f14f1d"
+    },
+    "data/zero_minimum_push_reference/ppo_raw/seed150.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/ppo_raw/seed150/hybrid_seed150.json",
+      "sha256": "764907c509c54306a419a1c44d72c1ff499e0a046baea0d9b89fba9f51d06f9e"
+    },
+    "data/zero_minimum_push_reference/ppo_raw/seed151.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/ppo_raw/seed151/hybrid_seed151.json",
+      "sha256": "85ea5bae8556aa48d8547173e12b0e89e651f18927f89769ae06d272fe7abcb1"
+    },
+    "data/zero_minimum_push_reference/ppo_raw/seed152.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/ppo_raw/seed152/hybrid_seed152.json",
+      "sha256": "06be13a9c7f2ebd0a36346c39b43b7d943e7ec41f40402145bc1bd70758bce48"
+    },
+    "data/zero_minimum_push_reference/provenance.json": {
+      "source": "Derived report/provenance for misc/ps6_rl/results/push_zero_minimum_reference",
+      "sha256": "de3e429d1807e8fedb66b26579cae543ee2773732f6c24044c24527247a708d3"
+    },
+    "data/zero_minimum_push_reference/report.md": {
+      "source": "Derived report/provenance for misc/ps6_rl/results/push_zero_minimum_reference",
+      "sha256": "cc9f62cfdcf68df8568eb9f80714bbaa2371759e0f2464abf89d747a10eb75fe"
+    },
+    "data/cautious_push": {
+      "source": "misc/ps6_rl/results/push_cautious_gae8192 and push_cautious_confirm10",
+      "description": "Cautious demonstrations, portable reference actors, one genuine on-policy update batch, and independent PPO run records; nested provenance/checksums included."
+    }
+  },
+  "resting_configuration_v1": {
+    "description": "Earlier positive-minimum study: 13 configuration inputs, explicit block/finger settling, total execution cost including settling, critic continuation at 16-command cutoffs.",
+    "adapted_bc": "push/bc_resting.json",
+    "current_model_collection": "resting_model_based/collection_summary.json",
+    "current_model_fit": "resting_model_based/model_fit.json",
+    "current_local_baselines": "Historical resting_push/{analytic,bc}.json; superseded for local homework by zero_minimum_push.",
+    "historical_comparisons": "push/*_scores.json and push/ppo_* plus model_based/evaluation retain their old executor/velocity inputs/terminal deadline; analyze separately.",
+    "current_ppo_reference": "resting_push_reference/provenance.json: Q11.7, three seeds per method, previous positive minimum and weight-5 adapted BC; not the new local initializer."
+  },
+  "zero_minimum_configuration_v1": {
+    "description": "Current homework: same rest-to-rest dynamics and total-time objective; nonnegative commands up to 0.125 m; unweighted BC fit with fresh PPO critics.",
+    "initializer": "zero_minimum_push/bc_seed130.pt",
+    "local_baselines": "zero_minimum_push/{analytic,bc}.json",
+    "provenance": "zero_minimum_push/provenance.json",
+    "historical_ppo_reference": "resting_push_reference: retained earlier range and initializer, labeled in handout/notebooks."
+  },
+  "zero_minimum_reference_v1": {
+    "reference_directory": "data/zero_minimum_push_reference",
+    "question": "12.7",
+    "verified": true,
+    "history_preserved": "data/resting_push_reference"
+  },
+  "cautious_model_based": {
+    "description": "Q13 shared-Q12 task: original seed200 plus fixed ten-fit dynamics replication",
+    "path": "cautious_model_based",
+    "goals": 64,
+    "model_fits": 11,
+    "original_model_fits": 1,
+    "replication_model_fits": 10
+  },
+  "relocated_to_ps7": [
+    "cautious_model_based",
+    "model_based",
+    "resting_model_based"
+  ]
+}

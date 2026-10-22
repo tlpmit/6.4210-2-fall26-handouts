@@ -1,0 +1,157 @@
+{
+  "probes": [
+    {
+      "face": 0,
+      "length": 0.0,
+      "motion": 2.341353592516693e-17,
+      "seconds": 5.4599999999999715
+    },
+    {
+      "face": 0,
+      "length": 0.001,
+      "motion": 2.90265983396264e-07,
+      "seconds": 5.439999999999972
+    },
+    {
+      "face": 0,
+      "length": 0.005,
+      "motion": 1.2559908616088281e-05,
+      "seconds": 6.219999999999955
+    },
+    {
+      "face": 0,
+      "length": 0.125,
+      "motion": 0.08269926888699256,
+      "seconds": 7.219999999999934
+    },
+    {
+      "face": 1,
+      "length": 0.0,
+      "motion": 3.474970480338398e-17,
+      "seconds": 7.85999999999992
+    },
+    {
+      "face": 1,
+      "length": 0.001,
+      "motion": 3.474970480338398e-17,
+      "seconds": 7.85999999999992
+    },
+    {
+      "face": 1,
+      "length": 0.005,
+      "motion": 2.2066022021374468e-17,
+      "seconds": 7.8999999999999195
+    },
+    {
+      "face": 1,
+      "length": 0.125,
+      "motion": 0.07843893621907948,
+      "seconds": 9.619999999999884
+    },
+    {
+      "face": 2,
+      "length": 0.0,
+      "motion": 1.872440896274472e-17,
+      "seconds": 5.659999999999967
+    },
+    {
+      "face": 2,
+      "length": 0.001,
+      "motion": 1.8471675433114076e-17,
+      "seconds": 5.679999999999967
+    },
+    {
+      "face": 2,
+      "length": 0.005,
+      "motion": 8.894668573399061e-06,
+      "seconds": 6.419999999999951
+    },
+    {
+      "face": 2,
+      "length": 0.125,
+      "motion": 0.08032974123836417,
+      "seconds": 7.41999999999993
+    },
+    {
+      "face": 3,
+      "length": 0.0,
+      "motion": 3.323293128550103e-17,
+      "seconds": 7.639999999999925
+    },
+    {
+      "face": 3,
+      "length": 0.001,
+      "motion": 3.323293128550103e-17,
+      "seconds": 7.639999999999925
+    },
+    {
+      "face": 3,
+      "length": 0.005,
+      "motion": 8.907793743695741e-06,
+      "seconds": 8.39999999999991
+    },
+    {
+      "face": 3,
+      "length": 0.125,
+      "motion": 0.08031903736896541,
+      "seconds": 9.399999999999888
+    }
+  ],
+  "bc_successes": 8.0,
+  "goals": [
+    122000,
+    122001,
+    122002,
+    122003,
+    122004,
+    122005,
+    122006,
+    122007
+  ],
+  "analytic_matches_previous": true,
+  "mppi_command_length": 0.12499999999999997,
+  "old_checkpoint_rejected": true,
+  "seconds": 159.81757700024173,
+  "ppo_update_checks": {
+    "raw": {
+      "requested_commands": 32,
+      "actual_commands": 32,
+      "policy_batches": 1,
+      "online_monitoring_test_invalid": 0,
+      "finite_checkpoints_reloaded": true,
+      "checkpoint_mapping": [
+        0.0,
+        0.125
+      ],
+      "training_and_monitoring_seconds": 46.82528420910239,
+      "total_seconds": 71.44861470907927,
+      "checkpoint_sha256": {
+        "hybrid_seed150.pt": "d8aa407f8706c1621178a2417044751536daba9f2aa847cd80e220d2d2eb1a0e",
+        "hybrid_seed150_step32.pt": "4ded5dfe06ad51f1419f4e3a9390604b1bb69e4ae3d4128412178b9d6907a30a",
+        "hybrid_seed150_step0.pt": "36fd0c25dc5a5832fb2a875bb400e98acfaf0eb1801d5c6d78597beb2d647ace",
+        "hybrid_seed150_best.pt": "c7acb2816dedbcd416b1eb96fab04bdeb4375f80a3e093e25cf7d731eacfed5f"
+      }
+    },
+    "fine": {
+      "requested_commands": 32,
+      "actual_commands": 34,
+      "policy_batches": 1,
+      "online_monitoring_test_invalid": 0,
+      "finite_checkpoints_reloaded": true,
+      "checkpoint_mapping": [
+        0.0,
+        0.125
+      ],
+      "training_and_monitoring_seconds": 44.096788042224944,
+      "total_seconds": 67.37557212496176,
+      "checkpoint_sha256": {
+        "hybrid_seed150.pt": "d8ee54342680b03bb8d3837a306c028e1389600b97e562a8601b50e1a16aaa43",
+        "hybrid_seed150_step0.pt": "30a0624d747b38113875746096a4ed0284095dd704df370bd6b287cbd76bc07b",
+        "hybrid_seed150_best.pt": "ed4e6b360b28002b15def1ac1d9a6a014282c4b80d64391870764cb9617e5286",
+        "hybrid_seed150_step34.pt": "172bbd0ff904ea363587b399e790176e69dfa08e8dc704f272837036ca7296de"
+      }
+    }
+  },
+  "notebook_math_checks": "Student and solution PPO/model-based mathematical cells passed; all Python/notebook code parsed.",
+  "limitation": "Software smoke checks and eight reused local goals, not full-budget training or fresh confirmation."
+}

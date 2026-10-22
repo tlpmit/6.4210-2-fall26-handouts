@@ -1,0 +1,29 @@
+{
+  "algorithm": "BC of original analytic in qualified physics",
+  "horizon": 16,
+  "physics": {
+    "mass_scale": 2.15625,
+    "friction": null,
+    "tilt_deg": 0.0,
+    "bump_x": 0.0,
+    "bump_y": 0.0,
+    "bump_radius": 0.0,
+    "bump_height": 0.0,
+    "bump_friction": 0.8,
+    "bump_resolution": 0.003
+  },
+  "timestep": 0.001,
+  "free_time_cost": 0.0,
+  "epochs": 300,
+  "seed": 130,
+  "selection": "Validation imitation loss only",
+  "train_file": "/Users/lpk/Documents/lpkmac/git/fall26_64210/misc/ps6_rl/results/push_guidance/demonstrations.npz",
+  "validation_file": "/Users/lpk/Documents/lpkmac/git/fall26_64210/misc/ps6_rl/results/push_guidance/validation_demonstrations.npz",
+  "observation_version": "resting_configuration_v1",
+  "observation_dim": 13,
+  "adaptation": "Original BC actor restricted to zero velocities and countdown=1; critic reset",
+  "source_sha256": "f3e9fa1d578494693d47ea5b95ff50feb18a6b4de18aacd37920be0742f4d718",
+  "total_time_cost": 0.02,
+  "push_penalty": 0.0,
+  "cutoff_semantics": "Computational rollout cutoff, not a task deadline"
+}

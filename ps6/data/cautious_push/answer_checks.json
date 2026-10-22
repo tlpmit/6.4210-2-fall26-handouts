@@ -1,0 +1,144 @@
+{
+  "confirmatory": {
+    "n": 10,
+    "differences": [
+      0.487313045863182,
+      0.4905943483260784,
+      0.5161850804693815,
+      0.5240094837466245,
+      0.4420540698600002,
+      0.4464504526077646,
+      0.4262647847209746,
+      0.5059536067095349,
+      0.509617444713748,
+      0.442499648353591
+    ],
+    "difference": 0.479094196537088,
+    "training_seed_sd": 0.03623029575897212,
+    "ci95": [
+      0.45721325511886746,
+      0.4998097394763513
+    ],
+    "t": 41.81663006298724,
+    "df": 9,
+    "p": 1.2752884253315306e-11,
+    "exact_sign_p": 0.001953125,
+    "interpretation": "Across independent PPO training runs, conditional on the supplied BC and fixed test goals."
+  },
+  "exploratory": [
+    {
+      "policy": "bc",
+      "success": 1.0,
+      "reward": 1.8320505598202526,
+      "execution_seconds": 87.92406249999945,
+      "pushes": 14.296875,
+      "distance": 0.01451772048622511
+    },
+    {
+      "policy": "bc_sampled",
+      "success": 1.0,
+      "reward": 1.8111569415828428,
+      "execution_seconds": 88.26093749999967,
+      "pushes": 14.828125,
+      "distance": 0.016641138221835845
+    },
+    {
+      "policy": "midpoint",
+      "success": 1.0,
+      "reward": 2.1594284345616552,
+      "execution_seconds": 71.57562500000222,
+      "pushes": 11.302083333333334,
+      "distance": 0.0144563517750064
+    },
+    {
+      "policy": "final",
+      "success": 1.0,
+      "reward": 2.3318156508555066,
+      "execution_seconds": 63.22041666666979,
+      "pushes": 9.869791666666666,
+      "distance": 0.013663894330926
+    },
+    {
+      "policy": "sampled",
+      "success": 1.0,
+      "reward": 2.2920777495732785,
+      "execution_seconds": 64.76229166666953,
+      "pushes": 10.171875,
+      "distance": 0.014998954523260949
+    },
+    {
+      "policy": "selected",
+      "success": 1.0,
+      "reward": 2.3318156508555066,
+      "execution_seconds": 63.22041666666979,
+      "pushes": 9.869791666666666,
+      "distance": 0.013663894330926
+    },
+    {
+      "policy": "midpoint_sampled",
+      "success": 1.0,
+      "reward": 2.127168466177231,
+      "execution_seconds": 72.92229166666867,
+      "pushes": 11.744791666666666,
+      "distance": 0.015255347032670721
+    }
+  ],
+  "confirmatory_metrics": [
+    {
+      "policy": "bc",
+      "success": 1.0,
+      "reward": 1.820531436605716,
+      "execution_seconds": 86.87656249999966,
+      "pushes": 14.140625,
+      "distance": 0.015628691349629048
+    },
+    {
+      "policy": "bc_sampled",
+      "success": 1.0,
+      "reward": 1.8359642207538451,
+      "execution_seconds": 86.07687499999983,
+      "pushes": 14.359375,
+      "distance": 0.015712836227409138
+    },
+    {
+      "policy": "midpoint",
+      "success": 1.0,
+      "reward": 2.1351912007156892,
+      "execution_seconds": 71.53821875000233,
+      "pushes": 11.3734375,
+      "distance": 0.014444757983124973
+    },
+    {
+      "policy": "final",
+      "success": 1.0,
+      "reward": 2.2996256331428038,
+      "execution_seconds": 63.74940625000323,
+      "pushes": 9.98125,
+      "distance": 0.013146030619055105
+    },
+    {
+      "policy": "sampled",
+      "success": 1.0,
+      "reward": 2.264361171518266,
+      "execution_seconds": 64.84434375000306,
+      "pushes": 10.215625,
+      "distance": 0.015150887362736353
+    },
+    {
+      "policy": "selected",
+      "success": 1.0,
+      "reward": 2.299825090878499,
+      "execution_seconds": 63.71887500000323,
+      "pushes": 9.9734375,
+      "distance": 0.013207705708700796
+    },
+    {
+      "policy": "midpoint_sampled",
+      "success": 1.0,
+      "reward": 2.1308018390319052,
+      "execution_seconds": 71.71084375000224,
+      "pushes": 11.5140625,
+      "distance": 0.014585287235692832
+    }
+  ]
+}

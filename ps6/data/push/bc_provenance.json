@@ -1,0 +1,139 @@
+{
+  "plan": {
+    "algorithm": "BC of original analytic in qualified physics",
+    "horizon": 16,
+    "physics": {
+      "mass_scale": 2.15625,
+      "friction": null,
+      "tilt_deg": 0.0,
+      "bump_x": 0.0,
+      "bump_y": 0.0,
+      "bump_radius": 0.0,
+      "bump_height": 0.0,
+      "bump_friction": 0.8,
+      "bump_resolution": 0.003
+    },
+    "timestep": 0.001,
+    "free_time_cost": 0.02,
+    "epochs": 300,
+    "seed": 130,
+    "selection": "Validation imitation loss only",
+    "train_file": "/Users/lpk/Documents/lpkmac/git/fall26_64210/misc/ps6_rl/results/push_guidance/demonstrations.npz",
+    "validation_file": "/Users/lpk/Documents/lpkmac/git/fall26_64210/misc/ps6_rl/results/push_guidance/validation_demonstrations.npz"
+  },
+  "validation": [
+    {
+      "epoch": 0,
+      "loss": 2.168724775314331,
+      "face_accuracy": 0.2521008551120758,
+      "distance_mae_cm": 3.809293031692505,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 20,
+      "loss": 1.6744792461395264,
+      "face_accuracy": 0.529411792755127,
+      "distance_mae_cm": 3.468177556991577,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 40,
+      "loss": 0.9872099757194519,
+      "face_accuracy": 0.7310924530029297,
+      "distance_mae_cm": 2.295703887939453,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 60,
+      "loss": 0.6474237442016602,
+      "face_accuracy": 0.7815126180648804,
+      "distance_mae_cm": 1.4435087442398071,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 80,
+      "loss": 0.5030243396759033,
+      "face_accuracy": 0.8151260614395142,
+      "distance_mae_cm": 0.9708206057548523,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 100,
+      "loss": 0.439012348651886,
+      "face_accuracy": 0.831932783126831,
+      "distance_mae_cm": 0.740533709526062,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 120,
+      "loss": 0.4000016450881958,
+      "face_accuracy": 0.8571428656578064,
+      "distance_mae_cm": 0.6193062663078308,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 140,
+      "loss": 0.37272384762763977,
+      "face_accuracy": 0.8655462265014648,
+      "distance_mae_cm": 0.5374850034713745,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 160,
+      "loss": 0.3487322926521301,
+      "face_accuracy": 0.8739495873451233,
+      "distance_mae_cm": 0.47929468750953674,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 180,
+      "loss": 0.33345967531204224,
+      "face_accuracy": 0.8907563090324402,
+      "distance_mae_cm": 0.44176796078681946,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 200,
+      "loss": 0.3147471249103546,
+      "face_accuracy": 0.8907563090324402,
+      "distance_mae_cm": 0.41096481680870056,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 220,
+      "loss": 0.3079187572002411,
+      "face_accuracy": 0.9159663915634155,
+      "distance_mae_cm": 0.39511314034461975,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 240,
+      "loss": 0.30053839087486267,
+      "face_accuracy": 0.9159663915634155,
+      "distance_mae_cm": 0.3862578868865967,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 260,
+      "loss": 0.2928805649280548,
+      "face_accuracy": 0.9159663915634155,
+      "distance_mae_cm": 0.37863677740097046,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 280,
+      "loss": 0.2895885109901428,
+      "face_accuracy": 0.9075630307197571,
+      "distance_mae_cm": 0.3727051913738251,
+      "critic_rmse": 1.063380479812622
+    },
+    {
+      "epoch": 300,
+      "loss": 0.2784397602081299,
+      "face_accuracy": 0.9075630307197571,
+      "distance_mae_cm": 0.37139755487442017,
+      "critic_rmse": 1.063380479812622
+    }
+  ],
+  "critic": "Untrained, unused by SAC"
+}

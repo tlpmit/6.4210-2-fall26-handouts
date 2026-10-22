@@ -1,0 +1,62 @@
+{
+  "description": "Current homework initializer refit after removing the positive push-distance minimum. No new demonstration collection.",
+  "distance_bounds_m": [
+    0.0,
+    0.125
+  ],
+  "distance_transform": "0.125 * sigmoid(z)",
+  "executor": "No positive stroke floor; 0.035 m contact approach remains; exact zero command accepted.",
+  "raw_initial_mean_m": 0.0625,
+  "bc_checkpoint": "bc_seed130.pt",
+  "bc_checkpoint_sha256": "879e0e20cde400e18ccd4e977b9b3f008036da190174a001818a6be5630219d6",
+  "bc_seed": 130,
+  "bc_epochs": 400,
+  "bc_fit_seconds": 0.3479507500305772,
+  "validation": {
+    "loss": 0.24573898315429688,
+    "face_accuracy": 0.9159663915634155,
+    "distance_mae_cm": 0.5582553148269653
+  },
+  "distance_loss_weight": 1.0,
+  "distance_error_normalization_m": 0.1,
+  "training_episodes": 32,
+  "training_labels": 485,
+  "validation_episodes": 8,
+  "validation_labels": 119,
+  "observation": "13 resting configuration inputs; archived supervised inputs projected onto this representation; no old return targets.",
+  "demonstration_sha256": {
+    "data/push/demonstrations.npz": "3ee3927c2b48a7cd54d4e7fee99b0f0ea71b2cc0b15ecb581afaf6357278e2db",
+    "data/push/validation_demonstrations.npz": "ec4871182447c01a12e38101ef7b72b44880f6e137669b71d27a84117ee05153"
+  },
+  "source_sha256": {
+    "train_hybrid_push.py": "f85a772ceb61fbed1c85961eef3b5f83a27663b2c89cd9b0f84213b1d88019bb",
+    "clone_multi_push.py": "7679c8fd1f2563292c569ce3dd26c048ec100495589958a674037d1bd0104eda",
+    "push_math.py": "3268320fa6a94999038f1b87f69f3206ba90bb00a0825b5af89ae0194b2fe4dc",
+    "multi_push.py": "0ec09e7b6ba18e7efbb8be981b756346332c2b7b391fe3caeb11bc9c5679c278",
+    "push_env.py": "bb02f957cb2e0bdd95a8792e702b8cc384726a6ea1f9145fb7a53e9a25dbe642",
+    "push_reward.py": "28c1d727dfd07463211aeb298eaa9dd21717bf52ff7e08f5d0a584dc090ae162",
+    "model_based_math.py": "18a56b8dac3f306b9943ae0f5bfe33913d020effa0aaefeb010875f596cdef93",
+    "model_based_push.py": "fae115061251d0dd282d4c77f7253690d021a345698a9eb2348f7576ca3eddb3"
+  },
+  "source_note": "Homework implementation checked here; subsequent source edits require a new recorded check.",
+  "local_evaluation_seeds": [
+    122000,
+    122001,
+    122002,
+    122003,
+    122004,
+    122005,
+    122006,
+    122007
+  ],
+  "bc_successes_within_16": 8,
+  "analytic_unchanged_on_local_goals": true,
+  "transition_model_data_range_m": [
+    0.025,
+    0.125
+  ],
+  "transition_model_note": "Recorded transitions remain valid at recorded lengths. Predictions below 0.025 m are extrapolations.",
+  "historical_reference": "data/resting_push_reference: previous [0.025,0.125] range and adapted weight-5 initializer. Reference answers unchanged and labeled separately.",
+  "verification": "smoke_check.json",
+  "ppo_comparison": "No full-budget zero-minimum homework PPO comparison performed by this update."
+}

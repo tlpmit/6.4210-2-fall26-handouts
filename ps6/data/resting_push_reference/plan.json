@@ -1,0 +1,59 @@
+{
+  "physics": {
+    "mass_scale": 2.15625,
+    "friction": null,
+    "tilt_deg": 0.0,
+    "bump_x": 0.0,
+    "bump_y": 0.0,
+    "bump_radius": 0.0,
+    "bump_height": 0.0,
+    "bump_friction": 0.8,
+    "bump_resolution": 0.003
+  },
+  "ppo": {
+    "learning_rate": 0.0003,
+    "epochs": 4,
+    "clip": 0.1,
+    "target_kl": 0.02,
+    "entropy_coef": 0.005,
+    "initial_face_temperature": 2.0,
+    "initial_raw_std": 0.6,
+    "critic_warmup_batches": 2
+  },
+  "methods": [
+    "ppo_raw",
+    "ppo_finetune"
+  ],
+  "seeds": [
+    150,
+    151,
+    152
+  ],
+  "budget": 2048,
+  "rollout_cutoff": 16,
+  "observation": "13 configuration inputs, no velocities or remaining count",
+  "bootstrap": "Critic continuation at cutoff, zero at true terminals",
+  "evaluation": "Observed 16-command prefixes on reused exploratory goals 61000--61099",
+  "source_sha256": {
+    "watch_push.py": "0e0f9955382bdcae00d0943ab19922bac6e868c49992669116dbc7104b0b0064",
+    "homework.py": "e372e4cb6948394c8b17c7eefd3b74e5411fdda668c446c5ed8a9e27d28676fc",
+    "push_geometry.py": "7b38aa595595cb4304d3c3708f238dd18e6ef8fd73df0a1d14b4addd704bf46d",
+    "solution_support.py": "442b068c0432db235eaf47b0f720f62d1572bd133465eaadfc1971c1bcfbb3c3",
+    "clone_multi_push.py": "71c2df7d75d6d4b6d076afd1e84334381bb7e25cf8dc061b92cd4f6192663432",
+    "push_env.py": "bb02f957cb2e0bdd95a8792e702b8cc384726a6ea1f9145fb7a53e9a25dbe642",
+    "push_mass.py": "9a360414ed5d85c7167ffcdf77ac00a3d2bb4aca72ffe13815b85561e009fb3e",
+    "reinforce.py": "8aaf38e9c86d4a92ebb2345c80bbbb00040b6928a131aa221cd51517a1db3728",
+    "learning_curves.py": "8b3849b4366e5ec866c2555f20ed18a65d9df54da1c3c9387676d94f77f29d1e",
+    "push_physics.py": "0535b95e3156e3c9966176abd55354bade3e0d32801bc2e08c3f9ecb29934902",
+    "visualization.py": "57c5da7ebb837bbf1f75bf572d260e5512eadfabfa8e82b8adc3e3eeb976d576",
+    "push_reward.py": "28c1d727dfd07463211aeb298eaa9dd21717bf52ff7e08f5d0a584dc090ae162",
+    "cartpole.py": "080a4f8388af3b684aa34fd89e8c2924ac3f280095967fc5ac853ddc2ac9c046",
+    "run_cache.py": "36d6bccb2ec933f2b8fdc7291a741526887091dc11586454e3b76f86d2349fbe",
+    "push_math.py": "b9d31cc3576dd55da29da62f4bf2006105703cbe58c6b3aa730f542a3a0aac06",
+    "push_primitive.py": "ba97411814c5e78408075149168c9045c92ec27b55d152e04f1b3f085b3b1a47",
+    "model_based_push.py": "c663399bbc581d6e629319b206f8c32de72394415b8f043ac4cf936c8cd08983",
+    "model_based_math.py": "d099efa9eec14b89aacb1daac28dff0324276cca8bce9c5c2fa6bb95cef48a30",
+    "train_hybrid_push.py": "4dea9be17eb43aba0f41a4866933f04a767caf321834786251562643d51d063e",
+    "multi_push.py": "eea7ae9d674480fd5893be2c27d828a2fc30d74753e8835f98385dff5c894741"
+  }
+}

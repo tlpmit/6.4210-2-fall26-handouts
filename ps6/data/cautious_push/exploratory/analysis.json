@@ -1,0 +1,1595 @@
+{
+  "audit": {
+    "frozen_hashes": true,
+    "frozen_bc": true,
+    "finite_checkpoints": true,
+    "initial_actor": true,
+    "monitoring_selection": true,
+    "zero_invalid": true,
+    "paired_initial_critics": true,
+    "midpoint_rng_saved": true,
+    "seed150_prefix_exact": true,
+    "goal_partitions_disjoint": true,
+    "checkpoint_count": 60
+  },
+  "baselines": {
+    "bc": {
+      "success": 1.0,
+      "reward": 1.8320505598202526,
+      "original_reward": 3.3045943098202413,
+      "pushes": 14.296875,
+      "execution_seconds": 87.92406249999945,
+      "free_seconds": 34.122500000000265,
+      "settling_seconds": 7.287187499999932,
+      "travel_m": 6.2978586488321815,
+      "distance": 0.01451772048622511,
+      "invalid": 0.0,
+      "cutoff": 0.0,
+      "mean_command_m": 0.08292652802113375
+    },
+    "bc_sampled": {
+      "success": 1.0,
+      "reward": 1.8111569415828428,
+      "original_reward": 3.2798131915828366,
+      "pushes": 14.828125,
+      "execution_seconds": 88.26093749999967,
+      "free_seconds": 32.59031250000008,
+      "settling_seconds": 7.559687499999927,
+      "travel_m": 6.120965813679803,
+      "distance": 0.016641138221835845,
+      "invalid": 0.0,
+      "cutoff": 0.0,
+      "mean_command_m": 0.08202973290967294
+    }
+  },
+  "per_seed": {
+    "gae_seed150": {
+      "selected": {
+        "success": 1.0,
+        "reward": 2.3675720320369926,
+        "original_reward": 3.4084470320370563,
+        "pushes": 9.578125,
+        "execution_seconds": 61.62187500000317,
+        "free_seconds": 24.1109374999996,
+        "settling_seconds": 4.881874999999983,
+        "travel_m": 4.617731147821093,
+        "distance": 0.013096062153702898,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.10102446292476552
+      },
+      "final": {
+        "success": 1.0,
+        "reward": 2.3675720320369926,
+        "original_reward": 3.4084470320370563,
+        "pushes": 9.578125,
+        "execution_seconds": 61.62187500000317,
+        "free_seconds": 24.1109374999996,
+        "settling_seconds": 4.881874999999983,
+        "travel_m": 4.617731147821093,
+        "distance": 0.013096062153702898,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.10102446292476552
+      },
+      "sampled": {
+        "success": 1.0,
+        "reward": 2.3193274806180355,
+        "original_reward": 3.3858649806180976,
+        "pushes": 9.890625,
+        "execution_seconds": 63.21750000000307,
+        "free_seconds": 24.6278124999996,
+        "settling_seconds": 5.0409374999999805,
+        "travel_m": 4.710723454737719,
+        "distance": 0.015545869866546703,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09960555861406609
+      },
+      "midpoint": {
+        "success": 1.0,
+        "reward": 2.2207953365594086,
+        "original_reward": 3.368901586559459,
+        "pushes": 10.765625,
+        "execution_seconds": 68.17093750000254,
+        "free_seconds": 26.600624999999607,
+        "settling_seconds": 5.48687499999997,
+        "travel_m": 5.033091977847572,
+        "distance": 0.015465378975342415,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09474802989977894
+      },
+      "midpoint_sampled": {
+        "success": 1.0,
+        "reward": 2.1744255212256935,
+        "original_reward": 3.36374427122574,
+        "pushes": 11.28125,
+        "execution_seconds": 70.74718750000233,
+        "free_seconds": 27.33156249999966,
+        "settling_seconds": 5.749062499999965,
+        "travel_m": 5.175773290420246,
+        "distance": 0.014692101275400313,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09329221934809293
+      }
+    },
+    "gae_seed151": {
+      "selected": {
+        "success": 1.0,
+        "reward": 2.3120745021267073,
+        "original_reward": 3.3933682521267685,
+        "pushes": 10.03125,
+        "execution_seconds": 64.09593750000309,
+        "free_seconds": 25.0184374999996,
+        "settling_seconds": 5.113749999999978,
+        "travel_m": 4.77217934435434,
+        "distance": 0.013998504140246053,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09873577809001291
+      },
+      "final": {
+        "success": 1.0,
+        "reward": 2.3120745021267073,
+        "original_reward": 3.3933682521267685,
+        "pushes": 10.03125,
+        "execution_seconds": 64.09593750000309,
+        "free_seconds": 25.0184374999996,
+        "settling_seconds": 5.113749999999978,
+        "travel_m": 4.77217934435434,
+        "distance": 0.013998504140246053,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09873577809001291
+      },
+      "sampled": {
+        "success": 1.0,
+        "reward": 2.2793398768246163,
+        "original_reward": 3.3826398768246717,
+        "pushes": 10.3125,
+        "execution_seconds": 65.47750000000276,
+        "free_seconds": 25.429999999999602,
+        "settling_seconds": 5.255624999999975,
+        "travel_m": 4.8484182084384555,
+        "distance": 0.014764010435560589,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09744197064546598
+      },
+      "midpoint": {
+        "success": 1.0,
+        "reward": 2.1134063561118976,
+        "original_reward": 3.3625751061119367,
+        "pushes": 11.640625,
+        "execution_seconds": 74.09906250000199,
+        "free_seconds": 29.387812499999768,
+        "settling_seconds": 5.935624999999961,
+        "travel_m": 5.493083429366876,
+        "distance": 0.01378935104247074,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09215778530222246
+      },
+      "midpoint_sampled": {
+        "success": 1.0,
+        "reward": 2.10210261251327,
+        "original_reward": 3.342052612513305,
+        "pushes": 11.921875,
+        "execution_seconds": 73.91937500000179,
+        "free_seconds": 28.269687499999733,
+        "settling_seconds": 6.076562499999958,
+        "travel_m": 5.348210935444492,
+        "distance": 0.016023975082265537,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09102334337682269
+      }
+    },
+    "gae_seed152": {
+      "selected": {
+        "success": 1.0,
+        "reward": 2.31580041840282,
+        "original_reward": 3.394669168402882,
+        "pushes": 10.0,
+        "execution_seconds": 63.9434375000031,
+        "free_seconds": 24.9631249999996,
+        "settling_seconds": 5.098124999999979,
+        "travel_m": 4.762635673428041,
+        "distance": 0.013897116698829048,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09889050594306911
+      },
+      "final": {
+        "success": 1.0,
+        "reward": 2.31580041840282,
+        "original_reward": 3.394669168402882,
+        "pushes": 10.0,
+        "execution_seconds": 63.9434375000031,
+        "free_seconds": 24.9631249999996,
+        "settling_seconds": 5.098124999999979,
+        "travel_m": 4.762635673428041,
+        "distance": 0.013897116698829048,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09889050594306911
+      },
+      "sampled": {
+        "success": 1.0,
+        "reward": 2.2775658912771837,
+        "original_reward": 3.3831533912772382,
+        "pushes": 10.3125,
+        "execution_seconds": 65.59187500000274,
+        "free_seconds": 25.531874999999623,
+        "settling_seconds": 5.255937499999975,
+        "travel_m": 4.864470463647654,
+        "distance": 0.014686983267675549,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.0975681503879556
+      },
+      "midpoint": {
+        "success": 1.0,
+        "reward": 2.1440836110136594,
+        "original_reward": 3.3632211110137016,
+        "pushes": 11.5,
+        "execution_seconds": 72.45687500000211,
+        "free_seconds": 28.328124999999684,
+        "settling_seconds": 5.862499999999963,
+        "travel_m": 5.322784218108915,
+        "distance": 0.01411432530720605,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09181066871265373
+      },
+      "midpoint_sampled": {
+        "success": 1.0,
+        "reward": 2.1049772647927294,
+        "original_reward": 3.3463585147927666,
+        "pushes": 12.03125,
+        "execution_seconds": 74.10031250000188,
+        "free_seconds": 28.079062499999687,
+        "settling_seconds": 6.131249999999957,
+        "travel_m": 5.3249087264364,
+        "distance": 0.015049964740346315,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.0904808365639655
+      }
+    }
+  },
+  "diagnostics": {
+    "gae_seed150": {
+      "midpoint_steps": 4107,
+      "final_steps": 8194,
+      "selected_steps": 8194,
+      "midpoint_theta": 0.6909177303314209,
+      "final_theta": 1.2293963432312012,
+      "selected_theta": 1.2293963432312012,
+      "kl_stops": 0,
+      "mean_clip_fraction": 0.11368693587868366,
+      "mean_critic_ev_after": 0.14654038257377092,
+      "training_seconds": 9244.533983916976,
+      "total_seconds": 12009.758629583754
+    },
+    "gae_seed151": {
+      "midpoint_steps": 4103,
+      "final_steps": 8198,
+      "selected_steps": 8198,
+      "midpoint_theta": 0.5348408222198486,
+      "final_theta": 1.0273520946502686,
+      "selected_theta": 1.0273520946502686,
+      "kl_stops": 0,
+      "mean_clip_fraction": 0.10730127060031962,
+      "mean_critic_ev_after": 0.0970026935849871,
+      "training_seconds": 9270.356727708131,
+      "total_seconds": 12143.521021333057
+    },
+    "gae_seed152": {
+      "midpoint_steps": 4098,
+      "final_steps": 8195,
+      "selected_steps": 8195,
+      "midpoint_theta": 0.49822741746902466,
+      "final_theta": 1.0406862497329712,
+      "selected_theta": 1.0406862497329712,
+      "kl_stops": 0,
+      "mean_clip_fraction": 0.11290302392231619,
+      "mean_critic_ev_after": 0.0932897736386555,
+      "training_seconds": 9283.69673716696,
+      "total_seconds": 12137.329232708085
+    }
+  },
+  "aggregate": {
+    "midpoint": {
+      "success": {
+        "mean": 1.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "reward": {
+        "mean": 2.1594284345616552,
+        "seed_sd": 0.055314518778330886,
+        "delta_vs_bc": 0.3273778747414027,
+        "paired_goal_ci95": [
+          0.2918239460842453,
+          0.36007928224153335
+        ]
+      },
+      "original_reward": {
+        "mean": 3.3648992678950322,
+        "seed_sd": 0.0034811272027877463,
+        "delta_vs_bc": 0.06030495807479136,
+        "paired_goal_ci95": [
+          0.048981912305081005,
+          0.07133133039844872
+        ]
+      },
+      "pushes": {
+        "mean": 11.302083333333334,
+        "seed_sd": 0.46987711713631397,
+        "delta_vs_bc": -2.994791666666667,
+        "paired_goal_ci95": [
+          -3.192708333333334,
+          -2.7812500000000004
+        ]
+      },
+      "execution_seconds": {
+        "mean": 71.57562500000222,
+        "seed_sd": 3.0607380933002903,
+        "delta_vs_bc": -16.34843749999723,
+        "paired_goal_ci95": [
+          -18.035658854163366,
+          -14.582947916664285
+        ]
+      },
+      "free_seconds": {
+        "mean": 28.10552083333302,
+        "seed_sd": 1.4068645994914748,
+        "delta_vs_bc": -6.016979166667243,
+        "paired_goal_ci95": [
+          -6.997054687500771,
+          -4.98821354166715
+        ]
+      },
+      "settling_seconds": {
+        "mean": 5.761666666666632,
+        "seed_sd": 0.2407688963681377,
+        "delta_vs_bc": -1.5255208333333012,
+        "paired_goal_ci95": [
+          -1.6280234374999658,
+          -1.4162499999999705
+        ]
+      },
+      "travel_m": {
+        "mean": 5.282986541774455,
+        "seed_sd": 0.23256380876853128,
+        "delta_vs_bc": -1.0148721070577265,
+        "paired_goal_ci95": [
+          -1.1697331815280319,
+          -0.8524950630395642
+        ]
+      },
+      "distance": {
+        "mean": 0.0144563517750064,
+        "seed_sd": 0.0008888216842812248,
+        "delta_vs_bc": -6.136871121870872e-05,
+        "paired_goal_ci95": [
+          -0.0017986678718024576,
+          0.0016538677848451642
+        ]
+      },
+      "invalid": {
+        "mean": 0.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "cutoff": {
+        "mean": 0.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_command_m": {
+        "mean": 0.09290549463821836,
+        "seed_sd": 0.001605093338176633,
+        "delta_vs_bc": 0.009978966617084622,
+        "paired_goal_ci95": [
+          0.0097807826514287,
+          0.010172916366419047
+        ]
+      }
+    },
+    "midpoint_sampled": {
+      "success": {
+        "mean": 1.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "reward": {
+        "mean": 2.127168466177231,
+        "seed_sd": 0.04095104205416538,
+        "delta_vs_bc": 0.31601152459438775,
+        "paired_goal_ci95": [
+          0.27291675216399525,
+          0.3700079248614557
+        ]
+      },
+      "original_reward": {
+        "mean": 3.350718466177271,
+        "seed_sd": 0.011484289115161545,
+        "delta_vs_bc": 0.07090527459443408,
+        "paired_goal_ci95": [
+          0.054751919786779735,
+          0.08741599679570457
+        ]
+      },
+      "pushes": {
+        "mean": 11.744791666666666,
+        "seed_sd": 0.4051467391061334,
+        "delta_vs_bc": -3.0833333333333335,
+        "paired_goal_ci95": [
+          -3.427083333333333,
+          -2.8020833333333335
+        ]
+      },
+      "execution_seconds": {
+        "mean": 72.92229166666867,
+        "seed_sd": 1.8858666964060644,
+        "delta_vs_bc": -15.338645833331015,
+        "paired_goal_ci95": [
+          -17.846260416664055,
+          -13.32514322916435
+        ]
+      },
+      "free_seconds": {
+        "mean": 27.893437499999692,
+        "seed_sd": 0.4958448440540981,
+        "delta_vs_bc": -4.696875000000388,
+        "paired_goal_ci95": [
+          -6.036427083333918,
+          -3.578492187500234
+        ]
+      },
+      "settling_seconds": {
+        "mean": 5.985624999999961,
+        "seed_sd": 0.20668585575396325,
+        "delta_vs_bc": -1.5740624999999673,
+        "paired_goal_ci95": [
+          -1.7493880208332966,
+          -1.4305182291666367
+        ]
+      },
+      "travel_m": {
+        "mean": 5.282964317433712,
+        "seed_sd": 0.09355846001466445,
+        "delta_vs_bc": -0.8380014962460904,
+        "paired_goal_ci95": [
+          -1.0550630790353408,
+          -0.6587100404099651
+        ]
+      },
+      "distance": {
+        "mean": 0.015255347032670721,
+        "seed_sd": 0.0006892810557774946,
+        "delta_vs_bc": -0.0013857911891651217,
+        "paired_goal_ci95": [
+          -0.0035150375465134815,
+          0.0007447977304631367
+        ]
+      },
+      "invalid": {
+        "mean": 0.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "cutoff": {
+        "mean": 0.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_command_m": {
+        "mean": 0.09159879976296037,
+        "seed_sd": 0.0014914190655151236,
+        "delta_vs_bc": 0.009569066853287423,
+        "paired_goal_ci95": [
+          0.009300393704000421,
+          0.009836400962537961
+        ]
+      }
+    },
+    "selected": {
+      "success": {
+        "mean": 1.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "reward": {
+        "mean": 2.3318156508555066,
+        "seed_sd": 0.031021923045178028,
+        "delta_vs_bc": 0.49976509103525396,
+        "paired_goal_ci95": [
+          0.4662238853994752,
+          0.5317901427722014
+        ]
+      },
+      "original_reward": {
+        "mean": 3.3988281508555684,
+        "seed_sd": 0.008355552176669374,
+        "delta_vs_bc": 0.09423384103532728,
+        "paired_goal_ci95": [
+          0.08463359919212436,
+          0.1040707962456888
+        ]
+      },
+      "pushes": {
+        "mean": 9.869791666666666,
+        "seed_sd": 0.25307355444284046,
+        "delta_vs_bc": -4.427083333333334,
+        "paired_goal_ci95": [
+          -4.640625,
+          -4.203125
+        ]
+      },
+      "execution_seconds": {
+        "mean": 63.22041666666979,
+        "seed_sd": 1.386475985205643,
+        "delta_vs_bc": -24.70364583332966,
+        "paired_goal_ci95": [
+          -26.391752604162335,
+          -22.918984374996956
+        ]
+      },
+      "free_seconds": {
+        "mean": 24.697499999999604,
+        "seed_sd": 0.508730324404541,
+        "delta_vs_bc": -9.425000000000665,
+        "paired_goal_ci95": [
+          -10.425106770834098,
+          -8.349367187500551
+        ]
+      },
+      "settling_seconds": {
+        "mean": 5.03124999999998,
+        "seed_sd": 0.12959823735297998,
+        "delta_vs_bc": -2.255937499999953,
+        "paired_goal_ci95": [
+          -2.365315104166617,
+          -2.1412473958332883
+        ]
+      },
+      "travel_m": {
+        "mean": 4.717515388534491,
+        "seed_sd": 0.08654733638159767,
+        "delta_vs_bc": -1.58034326029769,
+        "paired_goal_ci95": [
+          -1.7349128119879347,
+          -1.4137421428480061
+        ]
+      },
+      "distance": {
+        "mean": 0.013663894330926,
+        "seed_sd": 0.0004943631149638062,
+        "delta_vs_bc": -0.0008538261552991102,
+        "paired_goal_ci95": [
+          -0.002434922290885136,
+          0.0007177628468526821
+        ]
+      },
+      "invalid": {
+        "mean": 0.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "cutoff": {
+        "mean": 0.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_command_m": {
+        "mean": 0.09955024898594918,
+        "seed_sd": 0.0012790485644330082,
+        "delta_vs_bc": 0.016623720964815437,
+        "paired_goal_ci95": [
+          0.01626886083563361,
+          0.016949881598530468
+        ]
+      }
+    },
+    "final": {
+      "success": {
+        "mean": 1.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "reward": {
+        "mean": 2.3318156508555066,
+        "seed_sd": 0.031021923045178028,
+        "delta_vs_bc": 0.49976509103525396,
+        "paired_goal_ci95": [
+          0.4656896634277423,
+          0.5330437958338093
+        ]
+      },
+      "original_reward": {
+        "mean": 3.3988281508555684,
+        "seed_sd": 0.008355552176669374,
+        "delta_vs_bc": 0.09423384103532728,
+        "paired_goal_ci95": [
+          0.0845950345249957,
+          0.10415805433836887
+        ]
+      },
+      "pushes": {
+        "mean": 9.869791666666666,
+        "seed_sd": 0.25307355444284046,
+        "delta_vs_bc": -4.427083333333334,
+        "paired_goal_ci95": [
+          -4.640625,
+          -4.203125
+        ]
+      },
+      "execution_seconds": {
+        "mean": 63.22041666666979,
+        "seed_sd": 1.386475985205643,
+        "delta_vs_bc": -24.70364583332966,
+        "paired_goal_ci95": [
+          -26.4351067708291,
+          -22.908432291663566
+        ]
+      },
+      "free_seconds": {
+        "mean": 24.697499999999604,
+        "seed_sd": 0.508730324404541,
+        "delta_vs_bc": -9.425000000000665,
+        "paired_goal_ci95": [
+          -10.446567708334253,
+          -8.356867187500583
+        ]
+      },
+      "settling_seconds": {
+        "mean": 5.03124999999998,
+        "seed_sd": 0.12959823735297998,
+        "delta_vs_bc": -2.255937499999953,
+        "paired_goal_ci95": [
+          -2.36552343749995,
+          -2.1416640624999546
+        ]
+      },
+      "travel_m": {
+        "mean": 4.717515388534491,
+        "seed_sd": 0.08654733638159767,
+        "delta_vs_bc": -1.58034326029769,
+        "paired_goal_ci95": [
+          -1.7386567414116199,
+          -1.4137691036585713
+        ]
+      },
+      "distance": {
+        "mean": 0.013663894330926,
+        "seed_sd": 0.0004943631149638062,
+        "delta_vs_bc": -0.0008538261552991102,
+        "paired_goal_ci95": [
+          -0.0024297400235561407,
+          0.0007137282333575087
+        ]
+      },
+      "invalid": {
+        "mean": 0.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "cutoff": {
+        "mean": 0.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_command_m": {
+        "mean": 0.09955024898594918,
+        "seed_sd": 0.0012790485644330082,
+        "delta_vs_bc": 0.016623720964815437,
+        "paired_goal_ci95": [
+          0.01627441205154316,
+          0.01694826076027922
+        ]
+      }
+    },
+    "sampled": {
+      "success": {
+        "mean": 1.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "reward": {
+        "mean": 2.2920777495732785,
+        "seed_sd": 0.02361562274616787,
+        "delta_vs_bc": 0.4809208079904357,
+        "paired_goal_ci95": [
+          0.43263018628077915,
+          0.5382736830769564
+        ]
+      },
+      "original_reward": {
+        "mean": 3.383886082906669,
+        "seed_sd": 0.0017329025903007756,
+        "delta_vs_bc": 0.10407289132383252,
+        "paired_goal_ci95": [
+          0.08955470444818416,
+          0.11889944928539195
+        ]
+      },
+      "pushes": {
+        "mean": 10.171875,
+        "seed_sd": 0.24356964481437338,
+        "delta_vs_bc": -4.65625,
+        "paired_goal_ci95": [
+          -5.052083333333334,
+          -4.307291666666667
+        ]
+      },
+      "execution_seconds": {
+        "mean": 64.76229166666953,
+        "seed_sd": 1.3390505517745932,
+        "delta_vs_bc": -23.49864583333015,
+        "paired_goal_ci95": [
+          -26.214408854163253,
+          -21.22995833333038
+        ]
+      },
+      "free_seconds": {
+        "mean": 25.19656249999961,
+        "seed_sd": 0.4951788068781401,
+        "delta_vs_bc": -7.393750000000473,
+        "paired_goal_ci95": [
+          -8.805533854167244,
+          -6.214143229166971
+        ]
+      },
+      "settling_seconds": {
+        "mean": 5.184166666666644,
+        "seed_sd": 0.12404019530814425,
+        "delta_vs_bc": -2.3755208333332836,
+        "paired_goal_ci95": [
+          -2.578546874999946,
+          -2.1964557291666207
+        ]
+      },
+      "travel_m": {
+        "mean": 4.807870708941276,
+        "seed_sd": 0.0845139661463904,
+        "delta_vs_bc": -1.3130951047385262,
+        "paired_goal_ci95": [
+          -1.5437312209150653,
+          -1.1236123864100798
+        ]
+      },
+      "distance": {
+        "mean": 0.014998954523260949,
+        "seed_sd": 0.00047520584033566946,
+        "delta_vs_bc": -0.0016421836985748971,
+        "paired_goal_ci95": [
+          -0.003391077119770481,
+          0.00017979800303920425
+        ]
+      },
+      "invalid": {
+        "mean": 0.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "cutoff": {
+        "mean": 0.0,
+        "seed_sd": 0.0,
+        "delta_vs_bc": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_command_m": {
+        "mean": 0.09820522654916257,
+        "seed_sd": 0.0012143631050272516,
+        "delta_vs_bc": 0.016175493639489606,
+        "paired_goal_ci95": [
+          0.015724158193465072,
+          0.016600149281533097
+        ]
+      }
+    }
+  },
+  "growth": {
+    "final_minus_midpoint": {
+      "success": {
+        "delta": 0.0,
+        "training_seed_sd": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "reward": {
+        "delta": 0.17238721629385134,
+        "training_seed_sd": 0.025952220440435225,
+        "paired_goal_ci95": [
+          0.1540494100050494,
+          0.19413088172990572
+        ]
+      },
+      "original_reward": {
+        "delta": 0.033928882960535964,
+        "training_seed_sd": 0.004875095702455684,
+        "paired_goal_ci95": [
+          0.025225236980553116,
+          0.04236452848515659
+        ]
+      },
+      "pushes": {
+        "delta": -1.4322916666666667,
+        "training_seed_sd": 0.21893593288524688,
+        "paired_goal_ci95": [
+          -1.5885416666666667,
+          -1.2916666666666667
+        ]
+      },
+      "execution_seconds": {
+        "delta": -8.355208333332433,
+        "training_seed_sd": 1.7324590299235856,
+        "paired_goal_ci95": [
+          -9.59846614583228,
+          -7.322796874999258
+        ]
+      },
+      "free_seconds": {
+        "delta": -3.408020833333422,
+        "training_seed_sd": 0.9405819307693173,
+        "paired_goal_ci95": [
+          -4.0898307291668194,
+          -2.8373750000000997
+        ]
+      },
+      "settling_seconds": {
+        "delta": -0.7304166666666512,
+        "training_seed_sd": 0.11235465147617518,
+        "paired_goal_ci95": [
+          -0.8114583333333161,
+          -0.6595807291666528
+        ]
+      },
+      "travel_m": {
+        "delta": -0.5654711532399634,
+        "training_seed_sd": 0.15284115214258748,
+        "paired_goal_ci95": [
+          -0.6762879442276386,
+          -0.47427944756513
+        ]
+      },
+      "distance": {
+        "delta": -0.0007924574440804019,
+        "training_seed_sd": 0.001382139717454558,
+        "paired_goal_ci95": [
+          -0.00223938485599198,
+          0.0006792395654677643
+        ]
+      },
+      "invalid": {
+        "delta": 0.0,
+        "training_seed_sd": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "cutoff": {
+        "delta": 0.0,
+        "training_seed_sd": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_command_m": {
+        "delta": 0.006644754347730814,
+        "training_seed_sd": 0.000405841605481032,
+        "paired_goal_ci95": [
+          0.006383044274194137,
+          0.006903409146935827
+        ]
+      }
+    },
+    "sampled_minus_midpoint_sampled": {
+      "success": {
+        "delta": 0.0,
+        "training_seed_sd": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "reward": {
+        "delta": 0.16490928339604793,
+        "training_seed_sd": 0.017482054191465646,
+        "paired_goal_ci95": [
+          0.143151532535025,
+          0.18709009424295092
+        ]
+      },
+      "original_reward": {
+        "delta": 0.03316761672939844,
+        "training_seed_sd": 0.009753008389326513,
+        "paired_goal_ci95": [
+          0.022436440555900983,
+          0.04439786244659962
+        ]
+      },
+      "pushes": {
+        "delta": -1.5729166666666665,
+        "training_seed_sd": 0.16707307221193168,
+        "paired_goal_ci95": [
+          -1.71875,
+          -1.421875
+        ]
+      },
+      "execution_seconds": {
+        "delta": -8.159999999999137,
+        "training_seed_sd": 0.5468802678316762,
+        "paired_goal_ci95": [
+          -9.122726562498828,
+          -7.200585937499448
+        ]
+      },
+      "free_seconds": {
+        "delta": -2.6968750000000847,
+        "training_seed_sd": 0.14637114373659688,
+        "paired_goal_ci95": [
+          -3.2168880208334145,
+          -2.160617187500065
+        ]
+      },
+      "settling_seconds": {
+        "delta": -0.8014583333333165,
+        "training_seed_sd": 0.08527891585604885,
+        "paired_goal_ci95": [
+          -0.8760442708333149,
+          -0.7256249999999846
+        ]
+      },
+      "travel_m": {
+        "delta": -0.4750936084924357,
+        "training_seed_sd": 0.021513983653668828,
+        "paired_goal_ci95": [
+          -0.5577276591531,
+          -0.3908341886701321
+        ]
+      },
+      "distance": {
+        "delta": -0.00025639250940977536,
+        "training_seed_sd": 0.0010608901712788935,
+        "paired_goal_ci95": [
+          -0.0018862931220106367,
+          0.0013353802264750526
+        ]
+      },
+      "invalid": {
+        "delta": 0.0,
+        "training_seed_sd": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "cutoff": {
+        "delta": 0.0,
+        "training_seed_sd": 0.0,
+        "paired_goal_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_command_m": {
+        "delta": 0.006606426786202185,
+        "training_seed_sd": 0.00041977452067854307,
+        "paired_goal_ci95": [
+          0.006346277568723961,
+          0.0068675877595761135
+        ]
+      }
+    }
+  },
+  "per_seed_growth": {
+    "gae_seed150": {
+      "final_minus_midpoint": {
+        "success": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "reward": {
+          "delta": 0.14677669547758418,
+          "paired_goal_ci95": [
+            0.13052917899642186,
+            0.1627731077535308
+          ]
+        },
+        "original_reward": {
+          "delta": 0.03954544547759674,
+          "paired_goal_ci95": [
+            0.026833208475145746,
+            0.05218672510884554
+          ]
+        },
+        "pushes": {
+          "delta": -1.1875,
+          "paired_goal_ci95": [
+            -1.328125,
+            -1.046875
+          ]
+        },
+        "execution_seconds": {
+          "delta": -6.549062499999372,
+          "paired_goal_ci95": [
+            -7.492812499999168,
+            -5.598421874999453
+          ]
+        },
+        "free_seconds": {
+          "delta": -2.489687500000007,
+          "paired_goal_ci95": [
+            -2.99220312500001,
+            -1.9734296874999957
+          ]
+        },
+        "settling_seconds": {
+          "delta": -0.6049999999999872,
+          "paired_goal_ci95": [
+            -0.6756249999999856,
+            -0.5349999999999887
+          ]
+        },
+        "travel_m": {
+          "delta": -0.41536083002647883,
+          "paired_goal_ci95": [
+            -0.49527239096163533,
+            -0.3336864837109105
+          ]
+        },
+        "distance": {
+          "delta": -0.0023693168216395158,
+          "paired_goal_ci95": [
+            -0.004452977049355326,
+            -0.00025947711575192116
+          ]
+        },
+        "invalid": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "cutoff": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "mean_command_m": {
+          "delta": 0.006276433024986587,
+          "paired_goal_ci95": [
+            0.0059470238843345674,
+            0.0065995866895156964
+          ]
+        }
+      },
+      "sampled_minus_midpoint_sampled": {
+        "success": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "reward": {
+          "delta": 0.14490195939234243,
+          "paired_goal_ci95": [
+            0.11192675147025617,
+            0.1782412260756591
+          ]
+        },
+        "original_reward": {
+          "delta": 0.02212070939235737,
+          "paired_goal_ci95": [
+            0.0075693993792592925,
+            0.03678986415715142
+          ]
+        },
+        "pushes": {
+          "delta": -1.390625,
+          "paired_goal_ci95": [
+            -1.625,
+            -1.171875
+          ]
+        },
+        "execution_seconds": {
+          "delta": -7.529687499999251,
+          "paired_goal_ci95": [
+            -9.1687968749988,
+            -5.942499999999304
+          ]
+        },
+        "free_seconds": {
+          "delta": -2.7037500000000554,
+          "paired_goal_ci95": [
+            -3.558507812500048,
+            -1.8671796875000812
+          ]
+        },
+        "settling_seconds": {
+          "delta": -0.7081249999999848,
+          "paired_goal_ci95": [
+            -0.8274999999999822,
+            -0.5956171874999867
+          ]
+        },
+        "travel_m": {
+          "delta": -0.46504983568252567,
+          "paired_goal_ci95": [
+            -0.6051115364501254,
+            -0.3293039332279765
+          ]
+        },
+        "distance": {
+          "delta": 0.0008537685911463868,
+          "paired_goal_ci95": [
+            -0.0013545310820477297,
+            0.0030337755236730895
+          ]
+        },
+        "invalid": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "cutoff": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "mean_command_m": {
+          "delta": 0.006313339265973168,
+          "paired_goal_ci95": [
+            0.0059250878672851654,
+            0.006684802681301643
+          ]
+        }
+      }
+    },
+    "gae_seed151": {
+      "final_minus_midpoint": {
+        "success": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "reward": {
+          "delta": 0.19866814601480956,
+          "paired_goal_ci95": [
+            0.15504260951175608,
+            0.25924796506206355
+          ]
+        },
+        "original_reward": {
+          "delta": 0.030793146014831234,
+          "paired_goal_ci95": [
+            0.018399472595370916,
+            0.04300571740255512
+          ]
+        },
+        "pushes": {
+          "delta": -1.609375,
+          "paired_goal_ci95": [
+            -2.0,
+            -1.328125
+          ]
+        },
+        "execution_seconds": {
+          "delta": -10.003124999998914,
+          "paired_goal_ci95": [
+            -13.271624999998707,
+            -7.618367187499069
+          ]
+        },
+        "free_seconds": {
+          "delta": -4.36937500000017,
+          "paired_goal_ci95": [
+            -6.21659375000032,
+            -3.0584218750000813
+          ]
+        },
+        "settling_seconds": {
+          "delta": -0.8218749999999826,
+          "paired_goal_ci95": [
+            -1.023124999999978,
+            -0.6746874999999859
+          ]
+        },
+        "travel_m": {
+          "delta": -0.7209040850125356,
+          "paired_goal_ci95": [
+            -1.0203059777350605,
+            -0.5065513875664494
+          ]
+        },
+        "distance": {
+          "delta": 0.00020915309777531249,
+          "paired_goal_ci95": [
+            -0.001799294967889503,
+            0.0022813081631565795
+          ]
+        },
+        "invalid": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "cutoff": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "mean_command_m": {
+          "delta": 0.006577992787790466,
+          "paired_goal_ci95": [
+            0.006257060026429612,
+            0.006928090583735551
+          ]
+        }
+      },
+      "sampled_minus_midpoint_sampled": {
+        "success": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "reward": {
+          "delta": 0.1772372643113469,
+          "paired_goal_ci95": [
+            0.14535586837427608,
+            0.21047316057257032
+          ]
+        },
+        "original_reward": {
+          "delta": 0.04058726431136625,
+          "paired_goal_ci95": [
+            0.026135199165247723,
+            0.05528716311414776
+          ]
+        },
+        "pushes": {
+          "delta": -1.609375,
+          "paired_goal_ci95": [
+            -1.828125,
+            -1.390625
+          ]
+        },
+        "execution_seconds": {
+          "delta": -8.441874999999028,
+          "paired_goal_ci95": [
+            -9.972507812498902,
+            -6.92436718749931
+          ]
+        },
+        "free_seconds": {
+          "delta": -2.839687500000133,
+          "paired_goal_ci95": [
+            -3.678453125000132,
+            -2.0249765625000884
+          ]
+        },
+        "settling_seconds": {
+          "delta": -0.8209374999999828,
+          "paired_goal_ci95": [
+            -0.9312499999999804,
+            -0.7109374999999855
+          ]
+        },
+        "travel_m": {
+          "delta": -0.4997927270060364,
+          "paired_goal_ci95": [
+            -0.6350817716486216,
+            -0.3687578737786058
+          ]
+        },
+        "distance": {
+          "delta": -0.0012599646467049465,
+          "paired_goal_ci95": [
+            -0.00339147531785913,
+            0.0008648347621648132
+          ]
+        },
+        "invalid": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "cutoff": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "mean_command_m": {
+          "delta": 0.006418627268643276,
+          "paired_goal_ci95": [
+            0.006097561099692302,
+            0.006739669261451088
+          ]
+        }
+      }
+    },
+    "gae_seed152": {
+      "final_minus_midpoint": {
+        "success": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "reward": {
+          "delta": 0.17171680738916026,
+          "paired_goal_ci95": [
+            0.155151103714915,
+            0.18774713861676368
+          ]
+        },
+        "original_reward": {
+          "delta": 0.03144805738917991,
+          "paired_goal_ci95": [
+            0.019296194239386104,
+            0.04343567114029488
+          ]
+        },
+        "pushes": {
+          "delta": -1.5,
+          "paired_goal_ci95": [
+            -1.640625,
+            -1.34375
+          ]
+        },
+        "execution_seconds": {
+          "delta": -8.513437499999013,
+          "paired_goal_ci95": [
+            -9.530953124998772,
+            -7.479874999999096
+          ]
+        },
+        "free_seconds": {
+          "delta": -3.365000000000088,
+          "paired_goal_ci95": [
+            -3.8965625000000954,
+            -2.8274921875000287
+          ]
+        },
+        "settling_seconds": {
+          "delta": -0.7643749999999838,
+          "paired_goal_ci95": [
+            -0.8378203124999826,
+            -0.6868749999999856
+          ]
+        },
+        "travel_m": {
+          "delta": -0.5601485446808758,
+          "paired_goal_ci95": [
+            -0.6452319872532594,
+            -0.4743014327879496
+          ]
+        },
+        "distance": {
+          "delta": -0.0002172086083770017,
+          "paired_goal_ci95": [
+            -0.0022866496610231546,
+            0.0018632683848363249
+          ]
+        },
+        "invalid": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "cutoff": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "mean_command_m": {
+          "delta": 0.007079837230415387,
+          "paired_goal_ci95": [
+            0.006774059921559556,
+            0.007378012537986908
+          ]
+        }
+      },
+      "sampled_minus_midpoint_sampled": {
+        "success": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "reward": {
+          "delta": 0.17258862648445447,
+          "paired_goal_ci95": [
+            0.14386402659110448,
+            0.20160788126261203
+          ]
+        },
+        "original_reward": {
+          "delta": 0.036794876484471696,
+          "paired_goal_ci95": [
+            0.023963189972650602,
+            0.04997207011708058
+          ]
+        },
+        "pushes": {
+          "delta": -1.71875,
+          "paired_goal_ci95": [
+            -1.90625,
+            -1.53125
+          ]
+        },
+        "execution_seconds": {
+          "delta": -8.508437499999133,
+          "paired_goal_ci95": [
+            -9.807499999998733,
+            -7.188101562499399
+          ]
+        },
+        "free_seconds": {
+          "delta": -2.547187500000066,
+          "paired_goal_ci95": [
+            -3.2587578125001704,
+            -1.802789062500033
+          ]
+        },
+        "settling_seconds": {
+          "delta": -0.8753124999999816,
+          "paired_goal_ci95": [
+            -0.9703124999999795,
+            -0.7790624999999836
+          ]
+        },
+        "travel_m": {
+          "delta": -0.4604382627887452,
+          "paired_goal_ci95": [
+            -0.5739636559561991,
+            -0.34225495103549836
+          ]
+        },
+        "distance": {
+          "delta": -0.0003629814726707659,
+          "paired_goal_ci95": [
+            -0.002291476577758095,
+            0.001548015669780062
+          ]
+        },
+        "invalid": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "cutoff": {
+          "delta": 0.0,
+          "paired_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "mean_command_m": {
+          "delta": 0.007087313823990113,
+          "paired_goal_ci95": [
+            0.006764558338858665,
+            0.007406361085888516
+          ]
+        }
+      }
+    }
+  },
+  "costs": {
+    "summed_worker_seconds": 37836.64588820981,
+    "measured_elapsed_seconds": 12145.601710374933,
+    "calendar_seconds": 15169.367354,
+    "actual_commands": {
+      "gae_seed150": 8194,
+      "gae_seed151": 8198,
+      "gae_seed152": 8195
+    },
+    "bc": "Reuses original 64 training /16 validation successful episodes, 886/221 transitions and 400-epoch BC fit. No new demonstrations or BC fitting. See original study metadata for measured generation/fit costs.",
+    "bc_cost_seconds": {
+      "training_data": 748.7774532088079,
+      "validation_data": 239.18489591637626,
+      "bc_fit": 0.615174874663353
+    }
+  },
+  "limitations": "Three PPO seeds share one BC fit. Goal intervals condition on fitted policies; training-seed variability reported separately. Exploratory hypothesis follows the earlier single-seed GAE result. Fresh tests are independent of that method choice. Monitoring/training goals are reused for within-seed prefix comparison. The restricted actor and scalar LR do not give a controlled comparison with prior full-policy raw PPO. Failed prefixes are not efficient completions."
+}

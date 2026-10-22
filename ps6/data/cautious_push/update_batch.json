@@ -1,0 +1,33 @@
+{
+  "checkpoint": "update_start.pt",
+  "checkpoint_sha256": "ac085944a68a8f94338fe9576813617e898ed3645e084ed56a24193218dce97b",
+  "batch_sha256": "b9c154902a83c672d255b2b2a1dfe52538dac357e5fa0d0ff61406b7d67876b0",
+  "source": {
+    "checkpoint": "misc/ps6_rl/results/push_cautious_gae8192/jobs/gae_seed150/midpoint.pt",
+    "source_sha256": "9af3198d4ac83a2ea6b6e76f7ff9265cb8c69dba2ef84b5e6f31d2ce1a80c1ac"
+  },
+  "goal_seeds": [
+    9670000,
+    9670001,
+    9670002,
+    9670003,
+    9670004,
+    9670005,
+    9670006,
+    9670007,
+    9670008,
+    9670009,
+    9670010,
+    9670011,
+    9670012,
+    9670013,
+    9670014,
+    9670015
+  ],
+  "transitions": 185,
+  "episodes": 16,
+  "collection_seconds": 172.60367929097265,
+  "theta": 0.6909177303314209,
+  "sampling": "Categorical BC face and conditional Normal latent from the recorded checkpoint; NumPy RNG goal+2000000. Whole episodes retained; no outcome-based filtering or batch replacement.",
+  "terminal_handling": "next_values[-1]=0 at terminal, oldV at cutoff; GAE never crosses episode boundaries."
+}

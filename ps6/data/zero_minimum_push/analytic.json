@@ -1,0 +1,109 @@
+{
+  "rows": [
+    {
+      "seed": 122000,
+      "success": false,
+      "reward": 0.3057199941764492,
+      "pushes": 16,
+      "execution_seconds": 103.29999999999659,
+      "free_seconds": 44.160000000001304,
+      "settling_seconds": 8.179999999999914,
+      "travel_m": 7.81851093715571,
+      "distance": 0.026192172818329928,
+      "invalid": 0,
+      "cutoff": true
+    },
+    {
+      "seed": 122001,
+      "success": true,
+      "reward": 1.7013249266684547,
+      "pushes": 15,
+      "execution_seconds": 94.6799999999983,
+      "free_seconds": 38.76000000000046,
+      "settling_seconds": 7.659999999999925,
+      "travel_m": 6.992726185841985,
+      "distance": 0.024618033529453586,
+      "invalid": 0,
+      "cutoff": false
+    },
+    {
+      "seed": 122002,
+      "success": true,
+      "reward": 1.8314625004794236,
+      "pushes": 14,
+      "execution_seconds": 84.02000000000042,
+      "free_seconds": 32.11999999999942,
+      "settling_seconds": 7.119999999999936,
+      "travel_m": 5.947777150223223,
+      "distance": 0.024696818054579517,
+      "invalid": 0,
+      "cutoff": false
+    },
+    {
+      "seed": 122003,
+      "success": true,
+      "reward": 1.4177742467744874,
+      "pushes": 13,
+      "execution_seconds": 83.6000000000005,
+      "free_seconds": 35.399999999999935,
+      "settling_seconds": 6.639999999999946,
+      "travel_m": 6.3248032334607585,
+      "distance": 0.02414048143720766,
+      "invalid": 0,
+      "cutoff": false
+    },
+    {
+      "seed": 122004,
+      "success": false,
+      "reward": 0.5689207769819022,
+      "pushes": 16,
+      "execution_seconds": 101.01999999999704,
+      "free_seconds": 41.5800000000009,
+      "settling_seconds": 8.179999999999914,
+      "travel_m": 7.4434957034539,
+      "distance": 0.02591402001847257,
+      "invalid": 0,
+      "cutoff": true
+    },
+    {
+      "seed": 122005,
+      "success": true,
+      "reward": 1.4425200757749592,
+      "pushes": 16,
+      "execution_seconds": 104.95999999999626,
+      "free_seconds": 45.60000000000153,
+      "settling_seconds": 8.159999999999915,
+      "travel_m": 8.019302680473935,
+      "distance": 0.024392898312371836,
+      "invalid": 0,
+      "cutoff": false
+    },
+    {
+      "seed": 122006,
+      "success": false,
+      "reward": 0.8174406878666116,
+      "pushes": 16,
+      "execution_seconds": 92.31999999999877,
+      "free_seconds": 33.359999999999616,
+      "settling_seconds": 8.099999999999916,
+      "travel_m": 6.2364918335511925,
+      "distance": 0.026303424280227708,
+      "invalid": 0,
+      "cutoff": true
+    },
+    {
+      "seed": 122007,
+      "success": true,
+      "reward": 1.636698456430461,
+      "pushes": 16,
+      "execution_seconds": 94.33999999999837,
+      "free_seconds": 36.20000000000006,
+      "settling_seconds": 8.219999999999914,
+      "travel_m": 6.574334113569902,
+      "distance": 0.02425616331004361,
+      "invalid": 0,
+      "cutoff": false
+    }
+  ],
+  "note": "Reevaluated with zero-minimum executor; matches previous analytic trajectories."
+}

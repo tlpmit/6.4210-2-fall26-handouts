@@ -1,0 +1,47 @@
+{
+  "plan": {
+    "seed": 130,
+    "algorithm": "Behavior cloning of analytic face/distance actions",
+    "horizon": 16,
+    "distance_bounds": [
+      0.0,
+      0.125
+    ],
+    "observation_version": "resting_configuration_v1",
+    "observation_dim": 13,
+    "data_note": "Archived heuristic action labels projected onto configuration inputs; no velocity/countdown inputs. No archived return targets used.",
+    "physics": {
+      "mass_scale": 2.15625,
+      "friction": null,
+      "tilt_deg": 0.0,
+      "bump_x": 0.0,
+      "bump_y": 0.0,
+      "bump_radius": 0.0,
+      "bump_height": 0.0,
+      "bump_friction": 0.8,
+      "bump_resolution": 0.003
+    },
+    "timestep": 0.001,
+    "epochs": 400,
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "distance_loss_weight": 1.0,
+    "distance_normalization_m": 0.1,
+    "raw_distance_std": 0.15,
+    "train_files": [
+      "ps6/data/push/demonstrations.npz"
+    ],
+    "validation_files": [
+      "ps6/data/push/validation_demonstrations.npz"
+    ],
+    "selection": "Lowest held-out demonstration imitation loss, evaluated every 20 epochs",
+    "critic": "Not pretrained; PPO initializes a fresh critic for the current objective",
+    "deployment": "Neural actor only: no analytic action, correction, or fallback"
+  },
+  "validation": {
+    "loss": 0.24573898315429688,
+    "face_accuracy": 0.9159663915634155,
+    "distance_mae_cm": 0.5582553148269653
+  },
+  "seconds": 0.3479507500305772
+}

@@ -1,0 +1,111 @@
+{
+  "rows": [
+    {
+      "seed": 122000,
+      "success": true,
+      "reward": 2.332798770865792,
+      "pushes": 8,
+      "execution_seconds": 57.5800000000034,
+      "free_seconds": 25.379999999999548,
+      "settling_seconds": 4.080000000000001,
+      "travel_m": 4.7550731047577575,
+      "distance": 0.009290356314908038,
+      "invalid": 0,
+      "cutoff": false
+    },
+    {
+      "seed": 122001,
+      "success": true,
+      "reward": 2.434817253902745,
+      "pushes": 9,
+      "execution_seconds": 61.48000000000401,
+      "free_seconds": 25.539999999999544,
+      "settling_seconds": 4.57999999999999,
+      "travel_m": 4.833319013670895,
+      "distance": 0.014194184444292901,
+      "invalid": 0,
+      "cutoff": false
+    },
+    {
+      "seed": 122002,
+      "success": true,
+      "reward": 2.722033751864015,
+      "pushes": 7,
+      "execution_seconds": 42.440000000001035,
+      "free_seconds": 14.099999999999788,
+      "settling_seconds": 3.5400000000000027,
+      "travel_m": 3.0300956349799253,
+      "distance": 0.015851130346888953,
+      "invalid": 0,
+      "cutoff": false
+    },
+    {
+      "seed": 122003,
+      "success": true,
+      "reward": 2.2473300739906064,
+      "pushes": 7,
+      "execution_seconds": 48.30000000000195,
+      "free_seconds": 20.17999999999966,
+      "settling_seconds": 3.5600000000000027,
+      "travel_m": 3.863539214020693,
+      "distance": 0.0056071073547855205,
+      "invalid": 0,
+      "cutoff": false
+    },
+    {
+      "seed": 122004,
+      "success": true,
+      "reward": 2.6739326305965796,
+      "pushes": 8,
+      "execution_seconds": 53.16000000000271,
+      "free_seconds": 20.65999999999965,
+      "settling_seconds": 4.1000000000000005,
+      "travel_m": 4.075141973703271,
+      "distance": 0.0037422419762539708,
+      "invalid": 0,
+      "cutoff": false
+    },
+    {
+      "seed": 122005,
+      "success": true,
+      "reward": 2.4915550491006275,
+      "pushes": 8,
+      "execution_seconds": 55.620000000003095,
+      "free_seconds": 23.199999999999594,
+      "settling_seconds": 4.080000000000001,
+      "travel_m": 4.464345580785671,
+      "distance": 0.015057652313501155,
+      "invalid": 0,
+      "cutoff": false
+    },
+    {
+      "seed": 122006,
+      "success": true,
+      "reward": 2.7072133595066177,
+      "pushes": 8,
+      "execution_seconds": 48.66000000000201,
+      "free_seconds": 16.579999999999735,
+      "settling_seconds": 4.040000000000002,
+      "travel_m": 3.454514714873425,
+      "distance": 0.023817523534217133,
+      "invalid": 0,
+      "cutoff": false
+    },
+    {
+      "seed": 122007,
+      "success": false,
+      "reward": 0.14437736468114307,
+      "pushes": 16,
+      "execution_seconds": 117.37999999999379,
+      "free_seconds": 53.960000000002836,
+      "settling_seconds": 8.239999999999913,
+      "travel_m": 9.781358977477963,
+      "distance": 0.028984327072455057,
+      "invalid": 0,
+      "cutoff": true
+    }
+  ],
+  "seconds": 72.54914904106408,
+  "observation_version": "resting_configuration_v1",
+  "evaluation": "16-command observed prefix; no value estimate added"
+}

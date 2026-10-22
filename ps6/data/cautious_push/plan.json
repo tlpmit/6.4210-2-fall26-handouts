@@ -1,0 +1,42 @@
+{
+  "physics": {
+    "mass_scale": 2.15625,
+    "friction": null,
+    "tilt_deg": 0.0,
+    "bump_x": 0.0,
+    "bump_y": 0.0,
+    "bump_radius": 0.0,
+    "bump_height": 0.0,
+    "bump_friction": 0.8,
+    "bump_resolution": 0.003
+  },
+  "horizon": 32,
+  "timestep": 0.001,
+  "teacher_intended_displacement_cap_m": 0.04,
+  "exploration": {
+    "near_std": 0.2,
+    "far_std": 0.5
+  },
+  "ppo": {
+    "scalar_actor_lr": 0.01,
+    "network_actor_lr": 0.0003,
+    "critic_lr": 0.0003,
+    "clip": 0.1,
+    "target_kl": 0.02,
+    "epochs": 4,
+    "minibatch": 64,
+    "episodes_per_batch": 16,
+    "critic_warmup_batches": 2,
+    "critic_warmup_epochs": 20,
+    "critic_weight": 0.25,
+    "gradient_norm_clip": 0.5,
+    "gamma": 1,
+    "gae_lambda": 0.95
+  },
+  "observation_version": "resting_configuration_v1",
+  "distance_bounds": [
+    0.0,
+    0.125
+  ],
+  "description": "BC followed by scalar residual PPO with GAE; full reference analysis, not mandatory long training."
+}

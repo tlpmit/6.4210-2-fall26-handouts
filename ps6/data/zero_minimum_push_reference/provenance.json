@@ -1,0 +1,470 @@
+{
+  "description": "Current Q12.7 zero-minimum reference results, verified after all eight workers completed.",
+  "source": "misc/ps6_rl/results/push_zero_minimum_reference",
+  "finished": "2026-10-14T01:57:22.159370+00:00",
+  "bc_actor": "zero_minimum_push/bc_seed130.pt",
+  "bc_actor_sha256": "879e0e20cde400e18ccd4e977b9b3f008036da190174a001818a6be5630219d6",
+  "goals": [
+    61000,
+    61001,
+    61002,
+    61003,
+    61004,
+    61005,
+    61006,
+    61007,
+    61008,
+    61009,
+    61010,
+    61011,
+    61012,
+    61013,
+    61014,
+    61015,
+    61016,
+    61017,
+    61018,
+    61019,
+    61020,
+    61021,
+    61022,
+    61023,
+    61024,
+    61025,
+    61026,
+    61027,
+    61028,
+    61029,
+    61030,
+    61031,
+    61032,
+    61033,
+    61034,
+    61035,
+    61036,
+    61037,
+    61038,
+    61039,
+    61040,
+    61041,
+    61042,
+    61043,
+    61044,
+    61045,
+    61046,
+    61047,
+    61048,
+    61049,
+    61050,
+    61051,
+    61052,
+    61053,
+    61054,
+    61055,
+    61056,
+    61057,
+    61058,
+    61059,
+    61060,
+    61061,
+    61062,
+    61063,
+    61064,
+    61065,
+    61066,
+    61067,
+    61068,
+    61069,
+    61070,
+    61071,
+    61072,
+    61073,
+    61074,
+    61075,
+    61076,
+    61077,
+    61078,
+    61079,
+    61080,
+    61081,
+    61082,
+    61083,
+    61084,
+    61085,
+    61086,
+    61087,
+    61088,
+    61089,
+    61090,
+    61091,
+    61092,
+    61093,
+    61094,
+    61095,
+    61096,
+    61097,
+    61098,
+    61099
+  ],
+  "goals_note": "Reused exploratory goals, not fresh confirmation.",
+  "selection": "Monitoring success then observed reward; earliest exact tie; no test selection",
+  "evaluation": "Observed 16-command prefixes on reused exploratory goals; no critic estimate added",
+  "bc": {
+    "description": "Current homework initializer refit after removing the positive push-distance minimum. No new demonstration collection.",
+    "distance_bounds_m": [
+      0.0,
+      0.125
+    ],
+    "distance_transform": "0.125 * sigmoid(z)",
+    "executor": "No positive stroke floor; 0.035 m contact approach remains; exact zero command accepted.",
+    "raw_initial_mean_m": 0.0625,
+    "bc_checkpoint": "bc_seed130.pt",
+    "bc_checkpoint_sha256": "879e0e20cde400e18ccd4e977b9b3f008036da190174a001818a6be5630219d6",
+    "bc_seed": 130,
+    "bc_epochs": 400,
+    "bc_fit_seconds": 0.3479507500305772,
+    "validation": {
+      "loss": 0.24573898315429688,
+      "face_accuracy": 0.9159663915634155,
+      "distance_mae_cm": 0.5582553148269653
+    },
+    "distance_loss_weight": 1.0,
+    "distance_error_normalization_m": 0.1,
+    "training_episodes": 32,
+    "training_labels": 485,
+    "validation_episodes": 8,
+    "validation_labels": 119,
+    "observation": "13 resting configuration inputs; archived supervised inputs projected onto this representation; no old return targets.",
+    "demonstration_sha256": {
+      "data/push/demonstrations.npz": "3ee3927c2b48a7cd54d4e7fee99b0f0ea71b2cc0b15ecb581afaf6357278e2db",
+      "data/push/validation_demonstrations.npz": "ec4871182447c01a12e38101ef7b72b44880f6e137669b71d27a84117ee05153"
+    },
+    "source_sha256": {
+      "train_hybrid_push.py": "f85a772ceb61fbed1c85961eef3b5f83a27663b2c89cd9b0f84213b1d88019bb",
+      "clone_multi_push.py": "7679c8fd1f2563292c569ce3dd26c048ec100495589958a674037d1bd0104eda",
+      "push_math.py": "3268320fa6a94999038f1b87f69f3206ba90bb00a0825b5af89ae0194b2fe4dc",
+      "multi_push.py": "0ec09e7b6ba18e7efbb8be981b756346332c2b7b391fe3caeb11bc9c5679c278",
+      "push_env.py": "bb02f957cb2e0bdd95a8792e702b8cc384726a6ea1f9145fb7a53e9a25dbe642",
+      "push_reward.py": "28c1d727dfd07463211aeb298eaa9dd21717bf52ff7e08f5d0a584dc090ae162",
+      "model_based_math.py": "18a56b8dac3f306b9943ae0f5bfe33913d020effa0aaefeb010875f596cdef93",
+      "model_based_push.py": "fae115061251d0dd282d4c77f7253690d021a345698a9eb2348f7576ca3eddb3"
+    },
+    "source_note": "Homework implementation checked here; subsequent source edits require a new recorded check.",
+    "local_evaluation_seeds": [
+      122000,
+      122001,
+      122002,
+      122003,
+      122004,
+      122005,
+      122006,
+      122007
+    ],
+    "bc_successes_within_16": 8,
+    "analytic_unchanged_on_local_goals": true,
+    "transition_model_data_range_m": [
+      0.025,
+      0.125
+    ],
+    "transition_model_note": "Recorded transitions remain valid at recorded lengths. Predictions below 0.025 m are extrapolations.",
+    "historical_reference": "data/resting_push_reference: previous [0.025,0.125] range and adapted weight-5 initializer. Reference answers unchanged and labeled separately.",
+    "verification": "smoke_check.json",
+    "ppo_comparison": "No full-budget zero-minimum homework PPO comparison performed by this update."
+  },
+  "files": {
+    "plan.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/plan.json",
+      "sha256": "d9fcc7032db7a34c2eca763b9b7c2cf31edc8720255bf0258310c875ee4db1f3"
+    },
+    "analytic.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/baselines/analytic.json",
+      "sha256": "ec43d96683d983eeb8d46f90c67a9eb8a4e2fe158cb373ae596259ede7050594"
+    },
+    "bc.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/baselines/bc.json",
+      "sha256": "94553882ed23e1036bce62dce43bd9142e0aaaf612addd90a1367b130a9cddeb"
+    },
+    "comparison.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/comparison.json",
+      "sha256": "d08623c79f7ab643b59325a1442fff6066a3c3a9bce74ac2599374ef7f635a72"
+    },
+    "comparison.png": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/comparison.png",
+      "sha256": "be3f6b3a42852cbc971c09cb490d856b3b67fc3adb8b24a248579621658c7c3f"
+    },
+    "learning.png": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/learning.png",
+      "sha256": "b67a1416295ac6632e9b443b6d73c596f35b774452576322b14a8d29d1f9076c"
+    },
+    "ppo_raw/seed150.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/ppo_raw/seed150/hybrid_seed150.json",
+      "sha256": "764907c509c54306a419a1c44d72c1ff499e0a046baea0d9b89fba9f51d06f9e"
+    },
+    "ppo_raw/seed151.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/ppo_raw/seed151/hybrid_seed151.json",
+      "sha256": "85ea5bae8556aa48d8547173e12b0e89e651f18927f89769ae06d272fe7abcb1"
+    },
+    "ppo_raw/seed152.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/ppo_raw/seed152/hybrid_seed152.json",
+      "sha256": "06be13a9c7f2ebd0a36346c39b43b7d943e7ec41f40402145bc1bd70758bce48"
+    },
+    "ppo_finetune/seed150.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/ppo_finetune/seed150/hybrid_seed150.json",
+      "sha256": "24c2a26a85210d92c71f26fe032200b480354df243631526e51aae10f00acca7"
+    },
+    "ppo_finetune/seed151.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/ppo_finetune/seed151/hybrid_seed151.json",
+      "sha256": "7b06d759218f59ec7f700f30d27f46ebbc8003d8d3d5133ac06816971cddd6e2"
+    },
+    "ppo_finetune/seed152.json": {
+      "source": "misc/ps6_rl/results/push_zero_minimum_reference/ppo_finetune/seed152/hybrid_seed152.json",
+      "sha256": "d88932beaca39a3f5959c68caac304e205eab2e55832641e37c266d438f14f1d"
+    }
+  },
+  "report_sha256": "cc9f62cfdcf68df8568eb9f80714bbaa2371759e0f2464abf89d747a10eb75fe",
+  "audit": {
+    "source_hash_mismatches": [],
+    "finite_checkpoint_count": 43,
+    "checkpoints": [
+      {
+        "path": "ppo_raw/seed150/hybrid_seed150.pt",
+        "sha256": "8b830b46ed81447ffa673c6c49b558f7553631d561d1f6f15887c0944250df68",
+        "steps": 2048
+      },
+      {
+        "path": "ppo_raw/seed150/hybrid_seed150_best.pt",
+        "sha256": "db0b8fd72a7557863d84b820d985716fc89fda6b3de66775bf34a82d5dbf320b",
+        "steps": 0
+      },
+      {
+        "path": "ppo_raw/seed150/hybrid_seed150_step0.pt",
+        "sha256": "4ceb54e5126e72f1ebc6c578454b37d9aba3d2af01eca9af7fac23dc79d10322",
+        "steps": 0
+      },
+      {
+        "path": "ppo_raw/seed150/hybrid_seed150_step1024.pt",
+        "sha256": "f9bebd49862f310a55b2864ceae413bc1edf089cf946c62f10dfa4a86c891058",
+        "steps": 1024
+      },
+      {
+        "path": "ppo_raw/seed150/hybrid_seed150_step1536.pt",
+        "sha256": "53baafc682ef20d8dd4209f3b28d974f84eccd0fe037f1cc5e619b0b972c4361",
+        "steps": 1536
+      },
+      {
+        "path": "ppo_raw/seed150/hybrid_seed150_step2048.pt",
+        "sha256": "07c5e6e2dd6e73960ae639b581b757c3c89050ea26edd6a344fe2f0228f199c3",
+        "steps": 2048
+      },
+      {
+        "path": "ppo_raw/seed150/hybrid_seed150_step512.pt",
+        "sha256": "02e1530d4392c62c7e0b941b5fe11c6c00a38b50643525d7e5e72061f9d46343",
+        "steps": 512
+      },
+      {
+        "path": "ppo_raw/seed151/hybrid_seed151.pt",
+        "sha256": "677c77a347b1998222fa948fe0ef40ac35a85931e074f00b14c86ca4f5ae0b18",
+        "steps": 2048
+      },
+      {
+        "path": "ppo_raw/seed151/hybrid_seed151_best.pt",
+        "sha256": "0af7cd5029ef4f59037f094314da1ad69c05ad6de0a486e4bf594185e3de2b79",
+        "steps": 1024
+      },
+      {
+        "path": "ppo_raw/seed151/hybrid_seed151_step0.pt",
+        "sha256": "905747b620fd7ecd2947ff285e4b3786e0884b6154daf523076b7647e2501455",
+        "steps": 0
+      },
+      {
+        "path": "ppo_raw/seed151/hybrid_seed151_step1024.pt",
+        "sha256": "f684037b43b8ab3a980304f557ff54a014306cb5f3fb92b518ae731f2c3f5fcc",
+        "steps": 1024
+      },
+      {
+        "path": "ppo_raw/seed151/hybrid_seed151_step1536.pt",
+        "sha256": "1749a016516535dfcf285ac900d7e87a0166fac9d79b8cca73ab5a3668f3d344",
+        "steps": 1536
+      },
+      {
+        "path": "ppo_raw/seed151/hybrid_seed151_step2048.pt",
+        "sha256": "4d27849fe8659e316ac9095e977a6708fc394c079aee089962920a4900f656bb",
+        "steps": 2048
+      },
+      {
+        "path": "ppo_raw/seed151/hybrid_seed151_step512.pt",
+        "sha256": "c9ecce3e329d0ad423223afa6be56430f6df79e97fa9e3c3b11a6f62c0ad3980",
+        "steps": 512
+      },
+      {
+        "path": "ppo_raw/seed152/hybrid_seed152.pt",
+        "sha256": "78da0ec05a60d4f249a048621e333d07e213034d99b4e68e2469ab4ff59e6930",
+        "steps": 2048
+      },
+      {
+        "path": "ppo_raw/seed152/hybrid_seed152_best.pt",
+        "sha256": "b3c90954c15ec5a4a279aadafbde021b62fa00b0b6d21c769618b0f9aca6bb4b",
+        "steps": 2048
+      },
+      {
+        "path": "ppo_raw/seed152/hybrid_seed152_step0.pt",
+        "sha256": "399a82cc421d032c1776067af97a80bf1f88bc6b45d4bb850a58c2349d883f2b",
+        "steps": 0
+      },
+      {
+        "path": "ppo_raw/seed152/hybrid_seed152_step1024.pt",
+        "sha256": "510f40b3e374c4df58efd0ad65f4901312904332a35c127e749f40eef5c11963",
+        "steps": 1024
+      },
+      {
+        "path": "ppo_raw/seed152/hybrid_seed152_step1536.pt",
+        "sha256": "3ccb485369b6f92b6691628c47da9dde33b2d3c501e59840b4095e413e983afe",
+        "steps": 1536
+      },
+      {
+        "path": "ppo_raw/seed152/hybrid_seed152_step2048.pt",
+        "sha256": "d2d69ca5272f32ae37f8d2322a03b017080cf1d56f6a7c5b1a7b482342d6de0a",
+        "steps": 2048
+      },
+      {
+        "path": "ppo_raw/seed152/hybrid_seed152_step512.pt",
+        "sha256": "cc28a002e6c5eea22ea16f1dfdfcbab3154773b5b57145a9ca4469bec76fbd62",
+        "steps": 512
+      },
+      {
+        "path": "ppo_finetune/seed150/hybrid_seed150.pt",
+        "sha256": "504ea93e2f4bfbb31bf1dca1f04d915910e50c58fb6d833ec826472ab1a82cb8",
+        "steps": 2057
+      },
+      {
+        "path": "ppo_finetune/seed150/hybrid_seed150_best.pt",
+        "sha256": "c782f9080f6c52dfb8aed4e74ccbaa07c2f305cdd526ac8de8fbcdd373a09482",
+        "steps": 0
+      },
+      {
+        "path": "ppo_finetune/seed150/hybrid_seed150_step0.pt",
+        "sha256": "b731bc25215018e2493043617e04feff732b00f8c0b9837eb1b25d301de38b02",
+        "steps": 0
+      },
+      {
+        "path": "ppo_finetune/seed150/hybrid_seed150_step1031.pt",
+        "sha256": "29294db0b2807c7058e177b914aecde38964d096b25a3653d9d2d16cac957bcf",
+        "steps": 1031
+      },
+      {
+        "path": "ppo_finetune/seed150/hybrid_seed150_step1628.pt",
+        "sha256": "dbd88008c85baef7e7dd74b7273da728600210a8b8b31c4d211964bc0e10228e",
+        "steps": 1628
+      },
+      {
+        "path": "ppo_finetune/seed150/hybrid_seed150_step2057.pt",
+        "sha256": "1289920610626823e78837d3b422061fcffd4a09d3951d26974ec79177f66e31",
+        "steps": 2057
+      },
+      {
+        "path": "ppo_finetune/seed150/hybrid_seed150_step579.pt",
+        "sha256": "2582f1990b16c09ed42525a64e75612bcbfe898769efc0f2c019e890c8fd7c55",
+        "steps": 579
+      },
+      {
+        "path": "ppo_finetune/seed151/hybrid_seed151.pt",
+        "sha256": "3e43019bb4d9b91f05afe095c991be6a34dd45267da83e1ae32c3115156587a5",
+        "steps": 2051
+      },
+      {
+        "path": "ppo_finetune/seed151/hybrid_seed151_best.pt",
+        "sha256": "52d03e61702aa083266161b4ec83202a9c7dc34c6844cecba196fbb24713bd57",
+        "steps": 1616
+      },
+      {
+        "path": "ppo_finetune/seed151/hybrid_seed151_step0.pt",
+        "sha256": "36ce95c29a9ff44e73a64a5ef39497a6892ba008d760d8bfd035c98f035f05cd",
+        "steps": 0
+      },
+      {
+        "path": "ppo_finetune/seed151/hybrid_seed151_step1027.pt",
+        "sha256": "129b861c4f7fd39fc48aa0ede141c9fbcde95121bf95272437fed072a06b84b6",
+        "steps": 1027
+      },
+      {
+        "path": "ppo_finetune/seed151/hybrid_seed151_step1616.pt",
+        "sha256": "0276c47a3d958c7c3a88c2b4550a3bade65a5a1aa27b856b4d7c050d2324c854",
+        "steps": 1616
+      },
+      {
+        "path": "ppo_finetune/seed151/hybrid_seed151_step2051.pt",
+        "sha256": "6fd838cfc385f341c19bddd5a2181a1bc66e264da6da5b533694eefd67eca0fc",
+        "steps": 2051
+      },
+      {
+        "path": "ppo_finetune/seed151/hybrid_seed151_step596.pt",
+        "sha256": "9f4a2130bfbd6a17a6ad951f220c923e68978ca27c334f8c76d82e087e34675e",
+        "steps": 596
+      },
+      {
+        "path": "ppo_finetune/seed152/hybrid_seed152.pt",
+        "sha256": "bd1fa954eeb351f4696ba46156f39693466941c471540a641a43df8601a922ab",
+        "steps": 2052
+      },
+      {
+        "path": "ppo_finetune/seed152/hybrid_seed152_best.pt",
+        "sha256": "decbcf1ce16f6f94fc8e48099c98be08e2aaed633e44180018679f0788573a30",
+        "steps": 1628
+      },
+      {
+        "path": "ppo_finetune/seed152/hybrid_seed152_step0.pt",
+        "sha256": "aae013ee0f960801e92820c2d27c924e807bbccab53065c1d6b9c0a2cbff92b1",
+        "steps": 0
+      },
+      {
+        "path": "ppo_finetune/seed152/hybrid_seed152_step1061.pt",
+        "sha256": "14d034dc0ac798b7ce714ec174d0ef5068803fab6ad5cb5faa77c478e3517333",
+        "steps": 1061
+      },
+      {
+        "path": "ppo_finetune/seed152/hybrid_seed152_step1628.pt",
+        "sha256": "41593f2f927b19a6a04b3c92d6e094727b0dca340187e8cb4692c6564a9a0ea9",
+        "steps": 1628
+      },
+      {
+        "path": "ppo_finetune/seed152/hybrid_seed152_step2052.pt",
+        "sha256": "40413a0bdefeb8fd0000e3a3817628c4c57ca5337847b09c9bb70e5374ec11bb",
+        "steps": 2052
+      },
+      {
+        "path": "ppo_finetune/seed152/hybrid_seed152_step602.pt",
+        "sha256": "21c78591bed85a0a8d9d6cbf9d5c747273e849bf80679b772991394ec079f260",
+        "steps": 602
+      }
+    ],
+    "baseline_bc_matches_frozen_copy": true,
+    "invalid_counts": {
+      "online": 0,
+      "monitor": 0,
+      "test": 0,
+      "baseline": 0
+    },
+    "note": "Test totals count selected/final/sampled evaluation records, including identical selected/final policies."
+  },
+  "compute": {
+    "actual_online_pushes": 12304,
+    "elapsed_seconds": 7333.782265,
+    "overlapping_training_and_monitoring_worker_seconds": 17700.21023374889,
+    "overlapping_training_and_test_worker_seconds": 35775.04413354164,
+    "baseline_worker_seconds": {
+      "analytic": 1349.6014879168943,
+      "bc": 841.7579609579407
+    },
+    "shared_bc": {
+      "training_episodes": 32,
+      "training_transitions": 485,
+      "validation_episodes": 8,
+      "validation_transitions": 119,
+      "collection_seconds_approx": 441.7,
+      "fit_epochs": 400,
+      "fit_seconds": 0.3479507500305772,
+      "fit_time_note": "Current unweighted BC fit reused by all three assisted runs; no new collection or repeated cloning per PPO seed."
+    },
+    "student_runtime": "The 1024-push local preset with fewer evaluation goals has not been validated to fit a total 30\u201345 minute laptop/Colab budget."
+  }
+}

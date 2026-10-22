@@ -1,0 +1,9 @@
+{
+  "state": "complete",
+  "expected_seeds": [
+    150,
+    151,
+    152
+  ],
+  "purpose": "Exploratory method development and paired4096/8192 growth"
+}

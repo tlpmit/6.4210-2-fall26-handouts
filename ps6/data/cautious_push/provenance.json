@@ -1,0 +1,387 @@
+{
+  "origins": {
+    "train.npz": {
+      "source": "misc/ps6_rl/results/push_cautious_cap/data/train.npz",
+      "source_sha256": "719f9364cfc08570a40839e58f3d94e14eb0cb1518ee38704087b8fca97e1c05"
+    },
+    "validation.npz": {
+      "source": "misc/ps6_rl/results/push_cautious_cap/data/validation.npz",
+      "source_sha256": "ecccc77fb290d3e1ca98834b197466060fe5c40166bc56bf8c4c1f6ad8719955"
+    },
+    "calibration.json": {
+      "source": "misc/ps6_rl/results/push_cautious_cap/calibration.json",
+      "source_sha256": "c8edfb0b71b6c0af4d60f56a34a42333ad69e2642ee3ce61347611a7ad86e23f"
+    },
+    "bc.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_gae8192/bc.pt",
+      "source_sha256": "a091fdabfc610efe19cb6b6a9e47d693d17c91889d7dd92144a655119dab1c71",
+      "packaged_sha256": "2efd0eda4a68897626d02cdae1ed1a567a0529e4a097cb505f8bd54faf421a35",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed150_step0.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_gae8192/jobs/gae_seed150/step0.pt",
+      "source_sha256": "094d2adedbcda30f4abf0e5624ce8e2d0fa702306011a683815e6e861911195a",
+      "packaged_sha256": "729825122f1d175a806733d594e0c78a0aafd92cbeb2ed7bf55fd200dc09144a",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed150_midpoint.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_gae8192/jobs/gae_seed150/midpoint.pt",
+      "source_sha256": "9af3198d4ac83a2ea6b6e76f7ff9265cb8c69dba2ef84b5e6f31d2ce1a80c1ac",
+      "packaged_sha256": "b7c12072c0bb3238297fa3d2df66568d2b4054ab1c498398e80b6286282e8f00",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed150_final.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_gae8192/jobs/gae_seed150/final.pt",
+      "source_sha256": "24b57e4827561ed5d4099013659cef766a1fecf6f24095fbd34c729dc15cda94",
+      "packaged_sha256": "8d588792717f0a146ed8bf97a1ab9ac66a0bcc58a43e3a4d3e203c33a1d5078a",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed150_best.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_gae8192/jobs/gae_seed150/best.pt",
+      "source_sha256": "976254b601eec3e6b1ca8609e5faaed169ab780c93d3eba093b9087b07a73ac2",
+      "packaged_sha256": "f94cd1c17b0af215aa9f05b43c19a61e35664dbd4574b2ccaa5d5bc9fdc3535e",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed151_step0.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_gae8192/jobs/gae_seed151/step0.pt",
+      "source_sha256": "756106a9ba0b120f599b4e04c9685627d3d5b55e909c17dd2fc3bc758ca853ce",
+      "packaged_sha256": "2ee5c11596d606f6129701426c5aac7380047b1ee2c3976c62bc5bc2b2e45cda",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed151_midpoint.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_gae8192/jobs/gae_seed151/midpoint.pt",
+      "source_sha256": "df135a343dbe217f381dea4be12e068e1b01b8b500d78acf486a6a8b37d312dd",
+      "packaged_sha256": "9bfcc64bc239ad4632c44ab15f7abbea00a8ad8ade92b91dd6c6adc1e7191a6f",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed151_final.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_gae8192/jobs/gae_seed151/final.pt",
+      "source_sha256": "1b8f85c28c411d98257b97ada31b298ddf64a9848653e74fae537d32dfd07cf7",
+      "packaged_sha256": "d804402e39b8d09f90b47f3f40677dab58a5cbc6ddb01fd11201376ed445c664",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed151_best.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_gae8192/jobs/gae_seed151/best.pt",
+      "source_sha256": "6b6819d89b323b30d11230a425446fe4f9c3320bbdbbb69ebd0f4743f6620e44",
+      "packaged_sha256": "f07ccb6a7750eb31d152e8dca8cba74ff8d3b430ef4e4a2505e3beaa5b12f4e0",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed152_step0.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_gae8192/jobs/gae_seed152/step0.pt",
+      "source_sha256": "af00ae21af8ff5666e4a84ee4421489ba9c6c04c50cae870d78cb31490423c81",
+      "packaged_sha256": "a5a06a0d2fa66c9fd6a56f48904b57e80f6ce51e858aea0e335e280b97ad5fe4",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed152_midpoint.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_gae8192/jobs/gae_seed152/midpoint.pt",
+      "source_sha256": "a671b02034d149a91316bd66356aa42d2ca6cac5d9cdb0d96b26ec499a7b1169",
+      "packaged_sha256": "8d7144c932d3e1e768e52a10a3d05d7ceb01a2843c04f75004fdcbe8f5d71e21",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed152_final.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_gae8192/jobs/gae_seed152/final.pt",
+      "source_sha256": "deb7e2209ed73dde6821e7205ea391e69e4bc26427cbd88ccbb1a29393be37b7",
+      "packaged_sha256": "218960a9fdfaf55a9a64e4897df2c28badc8383eea6cfe4757dedea7f2797975",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed152_best.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_gae8192/jobs/gae_seed152/best.pt",
+      "source_sha256": "9f8018a8e38a5e6e69f277bc14141e8827dc446cd8e6dc00af5723dec87b802f",
+      "packaged_sha256": "05005b0b340c214f4e5f6357aabc1d6895e9ad876341974f70f4878c7d138420",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed250_step0.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed250/step0.pt",
+      "source_sha256": "5dfe06d385c91b004308388635c955b4cda94554636f0ffdac89adc5a71f455e",
+      "packaged_sha256": "a7c4b4f82a2e1b6c57ad966e41a7c16691a76fe18d37bf94bc21255a7e2bc7f3",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed250_midpoint.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed250/midpoint.pt",
+      "source_sha256": "b26f640d2c636687300bc2d5bc7eb64df279c4f5c1fc2ef6e60394c95f0ce915",
+      "packaged_sha256": "8d286d2db6aec24f06f4110d4222ab833838a700c1106c252102c54561525303",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed250_final.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed250/final.pt",
+      "source_sha256": "1c216b207f5cde09f6ede6c43423e5b96973627e9363c8509579919a1059d8b0",
+      "packaged_sha256": "3b8c9353bad135fe43c833b1445c8be7e5470270f613d4162c17ab8ea52f7d18",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed250_best.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed250/best.pt",
+      "source_sha256": "f4a6e77636fd4df1beb108559f20dd58dcbf0b12b72fce80bf6a59857d753507",
+      "packaged_sha256": "c6b0c6c21e7efb6f98ee30bf56ba446bcab3a44fb5adb8778e7d02755733502e",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed251_step0.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed251/step0.pt",
+      "source_sha256": "b19a9d16fbdbd581555610554fac25b5c5fdde6351dffae160b8170aa00ca6c9",
+      "packaged_sha256": "7de98c6d759de005453d9b8234eaa53456ada91a813d119564b412f7ead9925f",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed251_midpoint.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed251/midpoint.pt",
+      "source_sha256": "3d63bbba08e2742b39dcc8ec7b98941f671ece3ddfc1b43bb7c53959074af9b7",
+      "packaged_sha256": "643bf4d1db74d592d85e25896c7bfff362b7626daa462b6d1dfb9ac46e2ace92",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed251_final.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed251/final.pt",
+      "source_sha256": "fdd82e280e0ebe1a6cb4c25217e486fff4a9d826e228ed101ae9bfde622e2d37",
+      "packaged_sha256": "4a74d02771ba5f3cdabc8913867b69bcb6d766b8837cad1947b72e65e9a60e71",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed251_best.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed251/best.pt",
+      "source_sha256": "4ca90daa7e9052c994424c0c421118d6920ef9252d17d6235b8c4030c3230c2a",
+      "packaged_sha256": "e2f0896894fc48be8847cc527d509769e8bce05f3e82e5c1b6db3691ae11516f",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed252_step0.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed252/step0.pt",
+      "source_sha256": "8e2841ac62b31c14001e6a7994615da7b6c020e9a3a253167ac82d846c40148a",
+      "packaged_sha256": "3fe907927be4315ccfd704ccdd176ee0025627ac28cf854648c9a96ebc543746",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed252_midpoint.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed252/midpoint.pt",
+      "source_sha256": "07d2ad9b016c60cb0076d9f32c53c4262b6609ea166c3836c73d3dfb5d78bd75",
+      "packaged_sha256": "ed1f04e2bf61ea73a2e6462487c4acda0b76ad3923d876bff916e507395489dd",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed252_final.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed252/final.pt",
+      "source_sha256": "59194f12f47533e9f9cd2b06a7a61d1c18ececcbfcea0130f079b61cfe4f63e4",
+      "packaged_sha256": "63dc0c3c8f346468aa65afc09b0a6c1da9177b0db34304d2ff8e8ab86391e5f7",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed252_best.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed252/best.pt",
+      "source_sha256": "a59b45b06970927178691f15571ca5027bf00698d765a351a0111a538988a589",
+      "packaged_sha256": "ff5dc7ac2bb9bf60e8e6a20ca60fb195cee37f5352aa64ab7638e1a042d84002",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed253_step0.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed253/step0.pt",
+      "source_sha256": "f13e571a1577b3840d375e95e639cbd53bb73c619801b2c3da596be3c7e95b90",
+      "packaged_sha256": "3c0929595e79423bc6c8973c96adeab7be601a31fbe08b73a62a5d0d3bf39612",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed253_midpoint.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed253/midpoint.pt",
+      "source_sha256": "aa039678c46de3db37fcc694b59da570f11a8b155c20b339d55741a8aa32da68",
+      "packaged_sha256": "ecff396fd61000bdaa271d67e499241b0b5e08fecfeed5c6bd0ea93148ebc233",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed253_final.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed253/final.pt",
+      "source_sha256": "04c7acead1dcc58518f84127c9a1ad846dc97454787a6c2a6ff879f265deffad",
+      "packaged_sha256": "6601b1816e7cd0d09961b11cf4f79046f35f119c83a36e36a8ffed34309eb73f",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed253_best.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed253/best.pt",
+      "source_sha256": "f0c87225e076db06923d3ea9749a00bca6e285f3a16eddc5ba96c95eb2857d6b",
+      "packaged_sha256": "7ee96a64655aae0d762e3cc7a1d82551995bcb70d520d0e313185c4791083b49",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed254_step0.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed254/step0.pt",
+      "source_sha256": "ebd62e7e2ea30a2bc1c3d0b35529426ab945a416423dc739ff5543977d5b59d5",
+      "packaged_sha256": "6526db00359d2995382adfc5349e0c9988f24c734f1c3ab02344c75d4f3d9d1f",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed254_midpoint.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed254/midpoint.pt",
+      "source_sha256": "59a9c3b430b5621ea87acb221f479fcbe3a159279c410349dbdde7225f61530c",
+      "packaged_sha256": "78ca4a9506b5978fa737beaac4ef7b7f0337eb58dd7309873c3a85c31e8893dd",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed254_final.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed254/final.pt",
+      "source_sha256": "b563b0120096ef953d2e5acd2fa2b17eac035a45a8d37665d4903b8258c39988",
+      "packaged_sha256": "f98436a146dbc6589e60ea922320579dfe2334dd231fe5e926b78f4ea0e60b39",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed254_best.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed254/best.pt",
+      "source_sha256": "0cf222e5493974d0d3c293def2693341c7996b119b1a30045416cf2e961c81cf",
+      "packaged_sha256": "00aef7d29db716551e2909021f58c533c19bf30ede1ebd9678883f084b8389e7",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed255_step0.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed255/step0.pt",
+      "source_sha256": "7206444d6b6bfb225ba6cae7bd733f035adb4a768570c3ea0c9a94793340099e",
+      "packaged_sha256": "30c88f196283807d7c00c6c4cbe5cd16cc47c164ca4b238be71ca2b559f55309",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed255_midpoint.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed255/midpoint.pt",
+      "source_sha256": "456c1418238b5aff765fa14e5e7bf45cb90d2a4ad9f72fbe83d2d5b55f595bec",
+      "packaged_sha256": "47284ba7c833188e0164a77d6cb05e0e402ef47858c21d9cffdd9802bc6752e7",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed255_final.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed255/final.pt",
+      "source_sha256": "79c29804e709c5a57e19f08b416c3881f4fbf7c896131d95fff1a652a322efb7",
+      "packaged_sha256": "678c22247a9b4f50123bb1f96715d0a20fd1fe05f540393fd4e90136357ee2b8",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed255_best.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed255/best.pt",
+      "source_sha256": "2ab6fc750692f39205529ae1bdb641f67dbc75bd4b54324cc33506efc2c1b863",
+      "packaged_sha256": "36de254d9bd61ae761b7652678486e82612af9ec9d2ed92165433761068af4b5",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed256_step0.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed256/step0.pt",
+      "source_sha256": "f628867ac64c70dd06fd3c688532fd996b6308f7af5776b7de6c44d7d7e0110a",
+      "packaged_sha256": "c30c4c1147c0e6148e6ce8e6a713cea3bea77b842ffdf38c3d1cd9818e7707e3",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed256_midpoint.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed256/midpoint.pt",
+      "source_sha256": "0f971bf8509926b21b3abca486c6fed61a65170a2fac6dfb0c5042336caa2de9",
+      "packaged_sha256": "10162a59599902759c9132c80bf34319045bf70f10bcb5f846d760f6e2e99e90",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed256_final.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed256/final.pt",
+      "source_sha256": "2915e030764fde036988f5022a4afb7849cbb04e6c187998ebdfb60aaed0493f",
+      "packaged_sha256": "22ac3e7e7bc5ed8539f6d27806eb4cadd71bdb61314dc43aba73f20bbcb4276f",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed256_best.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed256/best.pt",
+      "source_sha256": "1cca50b3222a6cbcde3a85574542fa94a8bd9d4fe0253c32a871edffe907f821",
+      "packaged_sha256": "bfe0b61da9b9dda2a552e5ca8b2540211b8c3aa72302061640ca0c55e4401465",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed257_step0.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed257/step0.pt",
+      "source_sha256": "9cd139a1daa219faa462c98fdb4314a6039bcf0f453804d026c45c66edd8e483",
+      "packaged_sha256": "47576e91d1202047860e96ea66fb74f238525a381046ae0b8c3fa4155b729431",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed257_midpoint.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed257/midpoint.pt",
+      "source_sha256": "ebaad68459061a018702c13c9d037262eedf16ececf21cf19ce83593be35bc47",
+      "packaged_sha256": "bebcc0880520dce01bf5c1b34a894ebf551bd192b11b01bc2a8982943d5ab715",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed257_final.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed257/final.pt",
+      "source_sha256": "1c7e7697c54bb3f466995103fee8df557fa14de5cb0873163a4a859d07816e74",
+      "packaged_sha256": "3914c793cf164a14d273c5409a3597f2637b4d5fc355f42bc7ae35d5c82e2ce8",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed257_best.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed257/best.pt",
+      "source_sha256": "f93183028071a3d4fa7898fec5a764fee3aa0d9a3e7f56e188800b717f2723bd",
+      "packaged_sha256": "c897a7f7db7a11d9c666bad15af6e3e0ad58d1d1964cbdacc94afc31207fddd5",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed258_step0.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed258/step0.pt",
+      "source_sha256": "1cc0eb063fafdbc565821011072633a8a01bc61423f8c0e411184d4c0c958b09",
+      "packaged_sha256": "2d6cb3f9230f2ed55db4db7f24287ad81f88f9ec1f7786308a67a14db8e7f153",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed258_midpoint.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed258/midpoint.pt",
+      "source_sha256": "b3d9ce0f4e8e06e0c63679f77a2ed7c02e95d3e5452b7d9028f740eb09f1b81b",
+      "packaged_sha256": "0bbf3e03dfab832f13ce7ef02f6ec69666e9314449f4aea86591fd4ad89b0c27",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed258_final.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed258/final.pt",
+      "source_sha256": "f34dc9d2be0ca80e4d3aad0784cd73760549e88a9f282ba108e32bdc388fee58",
+      "packaged_sha256": "48a0b423414c233574bf01c709b7855143135a59da22dbcb9677a9e695187e44",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed258_best.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed258/best.pt",
+      "source_sha256": "069eef550159512ede790ec7be3f10a84396f7bc0d79aedadba426c5f8ca185b",
+      "packaged_sha256": "20f515d62e795c5f235631a5c555b01422f6851196060f0c0b8c4270166cf721",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed259_step0.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed259/step0.pt",
+      "source_sha256": "3fc576a8c1f8b4fad76a0e59dde53b58f361ad979348f85efd874e651807f8b0",
+      "packaged_sha256": "71b6b3ecd427dee5dc0b27a1c52611be0dcf6919e5f44a2683da2e04fd478759",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed259_midpoint.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed259/midpoint.pt",
+      "source_sha256": "dc9f00042e1d360e7bc8d352be4b8a0c930f1743185e52f9873207ebb084f5a5",
+      "packaged_sha256": "1456ae2abf10a710256cbf43019e52de62ccd41807eb3533653f092a1dfd926a",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed259_final.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed259/final.pt",
+      "source_sha256": "07f362df2a9f05d06d190954a2607b3fd3a7b084861f7245d40db61698f1880f",
+      "packaged_sha256": "c7056462f18b48a31fc599064e909ccd6126aa85ff31432c6531d9ad67442f92",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "checkpoints/seed259_best.pt": {
+      "source": "misc/ps6_rl/results/push_cautious_confirm10/jobs/gae_seed259/best.pt",
+      "source_sha256": "f2653f1fc39bc19c7355c373d6733478a1026778b965df6f598236b1f97d0ef0",
+      "packaged_sha256": "dfff33104986519dfc595faf38e47f51a9fa8a489b25ddf1884816e860623235",
+      "adaptation": "Metadata paths made portable; residual optimizer/RNG state omitted; model tensors unchanged"
+    },
+    "update_start.pt": {
+      "checkpoint": "misc/ps6_rl/results/push_cautious_gae8192/jobs/gae_seed150/midpoint.pt",
+      "source_sha256": "9af3198d4ac83a2ea6b6e76f7ff9265cb8c69dba2ef84b5e6f31d2ce1a80c1ac"
+    }
+  },
+  "source_plan_sha256": "e11aa850e5903c5a40f8fa7d121e4bc987f8fcb06669d6ce9e0930ecf67d8f5b",
+  "frozen_source_sha256": {
+    "cautious_residual_core.py": "7f9d8e3c64d27fb73c6e592614a2a576cb7306ea9b19ed9184715f1e199be367",
+    "watch_push.py": "0e0f9955382bdcae00d0943ab19922bac6e868c49992669116dbc7104b0b0064",
+    "homework.py": "4e5ad9d0b4adf40a1870f2dbc765244dab836db2ba2bfa757f0d9957f232474f",
+    "cautious_gae_core.py": "bf394f1eb8852e099d5080da5124ef9742cafb37b7f7bb698bda66656f6e36e2",
+    "push_geometry.py": "7b38aa595595cb4304d3c3708f238dd18e6ef8fd73df0a1d14b4addd704bf46d",
+    "solution_support.py": "442b068c0432db235eaf47b0f720f62d1572bd133465eaadfc1971c1bcfbb3c3",
+    "clone_multi_push.py": "7679c8fd1f2563292c569ce3dd26c048ec100495589958a674037d1bd0104eda",
+    "push_env.py": "bb02f957cb2e0bdd95a8792e702b8cc384726a6ea1f9145fb7a53e9a25dbe642",
+    "push_mass.py": "9a360414ed5d85c7167ffcdf77ac00a3d2bb4aca72ffe13815b85561e009fb3e",
+    "reinforce.py": "68705dc7736449c2bf18367f0939616efd5171a86b1e835b913179edefa889dc",
+    "learning_curves.py": "8b3849b4366e5ec866c2555f20ed18a65d9df54da1c3c9387676d94f77f29d1e",
+    "push_physics.py": "0535b95e3156e3c9966176abd55354bade3e0d32801bc2e08c3f9ecb29934902",
+    "visualization.py": "57c5da7ebb837bbf1f75bf572d260e5512eadfabfa8e82b8adc3e3eeb976d576",
+    "push_reward.py": "28c1d727dfd07463211aeb298eaa9dd21717bf52ff7e08f5d0a584dc090ae162",
+    "cartpole.py": "080a4f8388af3b684aa34fd89e8c2924ac3f280095967fc5ac853ddc2ac9c046",
+    "run_cache.py": "36d6bccb2ec933f2b8fdc7291a741526887091dc11586454e3b76f86d2349fbe",
+    "push_math.py": "12c138ec45c1a4aaccbddd459e3a2c74a64f780a7b079bd246b889360d85630f",
+    "push_primitive.py": "ba97411814c5e78408075149168c9045c92ec27b55d152e04f1b3f085b3b1a47",
+    "model_based_push.py": "fae115061251d0dd282d4c77f7253690d021a345698a9eb2348f7576ca3eddb3",
+    "model_based_math.py": "18a56b8dac3f306b9943ae0f5bfe33913d020effa0aaefeb010875f596cdef93",
+    "train_hybrid_push.py": "acab68988c45378107ed463febaef5f9b7af62282203cfc4caa5c1818cc71f6f",
+    "multi_push.py": "0ec09e7b6ba18e7efbb8be981b756346332c2b7b391fe3caeb11bc9c5679c278"
+  },
+  "demonstration_audit": {
+    "train": {
+      "episodes": 64,
+      "transitions": 886,
+      "all_valid": true,
+      "all_finished": true,
+      "labels_verified": true,
+      "within_episode_continuity": true
+    },
+    "validation": {
+      "episodes": 16,
+      "transitions": 221,
+      "all_valid": true,
+      "all_finished": true,
+      "labels_verified": true,
+      "within_episode_continuity": true
+    },
+    "calibration": {
+      "alpha": 0.9483996857869914,
+      "beta": -0.039236481839841846,
+      "rmse_m": 0.0020949007399916363
+    }
+  },
+  "notes": "No labels or physics changed. One BC fit is shared. Earlier exploratory seeds never enter the fresh fixed10-run confirmation. No absolute paths are runtime dependencies."
+}

@@ -1,0 +1,4936 @@
+{
+  "plan": {
+    "created": "2026-10-13T23:54:47.871361+00:00",
+    "methods": [
+      "ppo_raw",
+      "ppo_finetune"
+    ],
+    "seeds": [
+      150,
+      151,
+      152
+    ],
+    "budget": 2048,
+    "parallel_training_workers": 6,
+    "parallel_baseline_workers": 2,
+    "numerical_threads_per_worker": 1,
+    "physics": {
+      "mass_scale": 2.15625,
+      "friction": null,
+      "tilt_deg": 0.0,
+      "bump_x": 0.0,
+      "bump_y": 0.0,
+      "bump_radius": 0.0,
+      "bump_height": 0.0,
+      "bump_friction": 0.8,
+      "bump_resolution": 0.003
+    },
+    "ppo": {
+      "learning_rate": 0.0003,
+      "epochs": 4,
+      "clip": 0.1,
+      "target_kl": 0.02,
+      "entropy_coef": 0.005,
+      "initial_face_temperature": 2.0,
+      "initial_raw_std": 0.6,
+      "critic_warmup_batches": 2
+    },
+    "timestep": 0.001,
+    "rollout_cutoff": 16,
+    "training_goal_start_by_seed": {
+      "150": 70000,
+      "151": 80000,
+      "152": 90000
+    },
+    "monitoring_goals": [
+      60000,
+      60001,
+      60002,
+      60003,
+      60004,
+      60005,
+      60006,
+      60007,
+      60008,
+      60009,
+      60010,
+      60011,
+      60012,
+      60013,
+      60014,
+      60015
+    ],
+    "test_goals": [
+      61000,
+      61001,
+      61002,
+      61003,
+      61004,
+      61005,
+      61006,
+      61007,
+      61008,
+      61009,
+      61010,
+      61011,
+      61012,
+      61013,
+      61014,
+      61015,
+      61016,
+      61017,
+      61018,
+      61019,
+      61020,
+      61021,
+      61022,
+      61023,
+      61024,
+      61025,
+      61026,
+      61027,
+      61028,
+      61029,
+      61030,
+      61031,
+      61032,
+      61033,
+      61034,
+      61035,
+      61036,
+      61037,
+      61038,
+      61039,
+      61040,
+      61041,
+      61042,
+      61043,
+      61044,
+      61045,
+      61046,
+      61047,
+      61048,
+      61049,
+      61050,
+      61051,
+      61052,
+      61053,
+      61054,
+      61055,
+      61056,
+      61057,
+      61058,
+      61059,
+      61060,
+      61061,
+      61062,
+      61063,
+      61064,
+      61065,
+      61066,
+      61067,
+      61068,
+      61069,
+      61070,
+      61071,
+      61072,
+      61073,
+      61074,
+      61075,
+      61076,
+      61077,
+      61078,
+      61079,
+      61080,
+      61081,
+      61082,
+      61083,
+      61084,
+      61085,
+      61086,
+      61087,
+      61088,
+      61089,
+      61090,
+      61091,
+      61092,
+      61093,
+      61094,
+      61095,
+      61096,
+      61097,
+      61098,
+      61099
+    ],
+    "distance_bounds": [
+      0.0,
+      0.125
+    ],
+    "distance_transform": "0.125 * sigmoid(z)",
+    "raw_initial_mean_m": 0.0625,
+    "reward": "Progress/.15 + success - .02 total simulated seconds; no per-push penalty. Invalid -.2; fall/escape extra -1; gamma 1.",
+    "observation": "13 resting configuration inputs; no velocity/countdown",
+    "bootstrap": "Critic continuation at 16-command computational cutoff; zero at success/physical failure",
+    "evaluation": "Observed 16-command prefixes on reused exploratory goals; no critic estimate added",
+    "selection": "Monitoring success then observed reward; earliest exact tie; no test selection",
+    "bc_checkpoint": "bc.pt",
+    "bc_sha256": "879e0e20cde400e18ccd4e977b9b3f008036da190174a001818a6be5630219d6",
+    "bc_provenance": {
+      "description": "Current homework initializer refit after removing the positive push-distance minimum. No new demonstration collection.",
+      "distance_bounds_m": [
+        0.0,
+        0.125
+      ],
+      "distance_transform": "0.125 * sigmoid(z)",
+      "executor": "No positive stroke floor; 0.035 m contact approach remains; exact zero command accepted.",
+      "raw_initial_mean_m": 0.0625,
+      "bc_checkpoint": "bc_seed130.pt",
+      "bc_checkpoint_sha256": "879e0e20cde400e18ccd4e977b9b3f008036da190174a001818a6be5630219d6",
+      "bc_seed": 130,
+      "bc_epochs": 400,
+      "bc_fit_seconds": 0.3479507500305772,
+      "validation": {
+        "loss": 0.24573898315429688,
+        "face_accuracy": 0.9159663915634155,
+        "distance_mae_cm": 0.5582553148269653
+      },
+      "distance_loss_weight": 1.0,
+      "distance_error_normalization_m": 0.1,
+      "training_episodes": 32,
+      "training_labels": 485,
+      "validation_episodes": 8,
+      "validation_labels": 119,
+      "observation": "13 resting configuration inputs; archived supervised inputs projected onto this representation; no old return targets.",
+      "demonstration_sha256": {
+        "data/push/demonstrations.npz": "3ee3927c2b48a7cd54d4e7fee99b0f0ea71b2cc0b15ecb581afaf6357278e2db",
+        "data/push/validation_demonstrations.npz": "ec4871182447c01a12e38101ef7b72b44880f6e137669b71d27a84117ee05153"
+      },
+      "source_sha256": {
+        "train_hybrid_push.py": "f85a772ceb61fbed1c85961eef3b5f83a27663b2c89cd9b0f84213b1d88019bb",
+        "clone_multi_push.py": "7679c8fd1f2563292c569ce3dd26c048ec100495589958a674037d1bd0104eda",
+        "push_math.py": "3268320fa6a94999038f1b87f69f3206ba90bb00a0825b5af89ae0194b2fe4dc",
+        "multi_push.py": "0ec09e7b6ba18e7efbb8be981b756346332c2b7b391fe3caeb11bc9c5679c278",
+        "push_env.py": "bb02f957cb2e0bdd95a8792e702b8cc384726a6ea1f9145fb7a53e9a25dbe642",
+        "push_reward.py": "28c1d727dfd07463211aeb298eaa9dd21717bf52ff7e08f5d0a584dc090ae162",
+        "model_based_math.py": "18a56b8dac3f306b9943ae0f5bfe33913d020effa0aaefeb010875f596cdef93",
+        "model_based_push.py": "fae115061251d0dd282d4c77f7253690d021a345698a9eb2348f7576ca3eddb3"
+      },
+      "source_note": "Homework implementation checked here; subsequent source edits require a new recorded check.",
+      "local_evaluation_seeds": [
+        122000,
+        122001,
+        122002,
+        122003,
+        122004,
+        122005,
+        122006,
+        122007
+      ],
+      "bc_successes_within_16": 8,
+      "analytic_unchanged_on_local_goals": true,
+      "transition_model_data_range_m": [
+        0.025,
+        0.125
+      ],
+      "transition_model_note": "Recorded transitions remain valid at recorded lengths. Predictions below 0.025 m are extrapolations.",
+      "historical_reference": "data/resting_push_reference: previous [0.025,0.125] range and adapted weight-5 initializer. Reference answers unchanged and labeled separately.",
+      "verification": "smoke_check.json",
+      "ppo_comparison": "No full-budget zero-minimum homework PPO comparison performed by this update."
+    },
+    "bc_collection_seconds_approx": 441.7,
+    "comparison": "Current homework package: zero minimum plus unweighted, refit BC. Not an isolated lower-bound ablation of the old study.",
+    "constraints": "Six PPO fits only. No continuing imitation or demonstration replay. Fresh matched critics. Do not restart, tune, extend or duplicate jobs.",
+    "source_sha256": {
+      "watch_push.py": "0e0f9955382bdcae00d0943ab19922bac6e868c49992669116dbc7104b0b0064",
+      "homework.py": "1f689e511c6a0c969e29a006dbdfc2c4ac31e089a9c8788768ffb9a97e68bd48",
+      "push_geometry.py": "7b38aa595595cb4304d3c3708f238dd18e6ef8fd73df0a1d14b4addd704bf46d",
+      "solution_support.py": "442b068c0432db235eaf47b0f720f62d1572bd133465eaadfc1971c1bcfbb3c3",
+      "clone_multi_push.py": "7679c8fd1f2563292c569ce3dd26c048ec100495589958a674037d1bd0104eda",
+      "push_env.py": "bb02f957cb2e0bdd95a8792e702b8cc384726a6ea1f9145fb7a53e9a25dbe642",
+      "push_mass.py": "9a360414ed5d85c7167ffcdf77ac00a3d2bb4aca72ffe13815b85561e009fb3e",
+      "reinforce.py": "68705dc7736449c2bf18367f0939616efd5171a86b1e835b913179edefa889dc",
+      "learning_curves.py": "8b3849b4366e5ec866c2555f20ed18a65d9df54da1c3c9387676d94f77f29d1e",
+      "push_physics.py": "0535b95e3156e3c9966176abd55354bade3e0d32801bc2e08c3f9ecb29934902",
+      "visualization.py": "57c5da7ebb837bbf1f75bf572d260e5512eadfabfa8e82b8adc3e3eeb976d576",
+      "push_reward.py": "28c1d727dfd07463211aeb298eaa9dd21717bf52ff7e08f5d0a584dc090ae162",
+      "cartpole.py": "080a4f8388af3b684aa34fd89e8c2924ac3f280095967fc5ac853ddc2ac9c046",
+      "run_cache.py": "36d6bccb2ec933f2b8fdc7291a741526887091dc11586454e3b76f86d2349fbe",
+      "push_math.py": "3268320fa6a94999038f1b87f69f3206ba90bb00a0825b5af89ae0194b2fe4dc",
+      "zero_minimum_reference_report.py": "d69294b8f86cc9312c3582c054617d00b745d356aaa7d08ea4058722d93889bc",
+      "push_primitive.py": "ba97411814c5e78408075149168c9045c92ec27b55d152e04f1b3f085b3b1a47",
+      "model_based_push.py": "fae115061251d0dd282d4c77f7253690d021a345698a9eb2348f7576ca3eddb3",
+      "model_based_math.py": "18a56b8dac3f306b9943ae0f5bfe33913d020effa0aaefeb010875f596cdef93",
+      "train_hybrid_push.py": "f85a772ceb61fbed1c85961eef3b5f83a27663b2c89cd9b0f84213b1d88019bb",
+      "multi_push.py": "0ec09e7b6ba18e7efbb8be981b756346332c2b7b391fe3caeb11bc9c5679c278"
+    },
+    "runner_sha256": "df6677e7f7e8c014a4e351258e23e72951dfd7ae77a46ac6f6103af674d77294",
+    "data_sha256": {
+      "bc.pt": "879e0e20cde400e18ccd4e977b9b3f008036da190174a001818a6be5630219d6",
+      "bc_provenance.json": "f24872db151ff7755f3f9b1ddc09305da597e3c2f0cbd3f25e7e93314ed5c633",
+      "data/validation_demonstrations.npz": "ec4871182447c01a12e38101ef7b72b44880f6e137669b71d27a84117ee05153",
+      "data/demonstrations.npz": "3ee3927c2b48a7cd54d4e7fee99b0f0ea71b2cc0b15ecb581afaf6357278e2db"
+    }
+  },
+  "test_goals": [
+    61000,
+    61001,
+    61002,
+    61003,
+    61004,
+    61005,
+    61006,
+    61007,
+    61008,
+    61009,
+    61010,
+    61011,
+    61012,
+    61013,
+    61014,
+    61015,
+    61016,
+    61017,
+    61018,
+    61019,
+    61020,
+    61021,
+    61022,
+    61023,
+    61024,
+    61025,
+    61026,
+    61027,
+    61028,
+    61029,
+    61030,
+    61031,
+    61032,
+    61033,
+    61034,
+    61035,
+    61036,
+    61037,
+    61038,
+    61039,
+    61040,
+    61041,
+    61042,
+    61043,
+    61044,
+    61045,
+    61046,
+    61047,
+    61048,
+    61049,
+    61050,
+    61051,
+    61052,
+    61053,
+    61054,
+    61055,
+    61056,
+    61057,
+    61058,
+    61059,
+    61060,
+    61061,
+    61062,
+    61063,
+    61064,
+    61065,
+    61066,
+    61067,
+    61068,
+    61069,
+    61070,
+    61071,
+    61072,
+    61073,
+    61074,
+    61075,
+    61076,
+    61077,
+    61078,
+    61079,
+    61080,
+    61081,
+    61082,
+    61083,
+    61084,
+    61085,
+    61086,
+    61087,
+    61088,
+    61089,
+    61090,
+    61091,
+    61092,
+    61093,
+    61094,
+    61095,
+    61096,
+    61097,
+    61098,
+    61099
+  ],
+  "runs": [
+    {
+      "method": "ppo_raw",
+      "seed": 150,
+      "actual_pushes": 2048,
+      "selected_step": 0,
+      "training_episodes": 128,
+      "policy_batches": 8,
+      "training_and_monitoring_seconds": 3267.0631385827437,
+      "total_worker_seconds": 7184.784264707938,
+      "online_invalid": 0,
+      "monitoring_invalid": 0,
+      "test_invalid": {
+        "selected": 0,
+        "final": 0,
+        "sampled": 0
+      }
+    },
+    {
+      "method": "ppo_raw",
+      "seed": 151,
+      "actual_pushes": 2048,
+      "selected_step": 1024,
+      "training_episodes": 128,
+      "policy_batches": 8,
+      "training_and_monitoring_seconds": 3313.8095594588667,
+      "total_worker_seconds": 7322.548781333957,
+      "online_invalid": 0,
+      "monitoring_invalid": 0,
+      "test_invalid": {
+        "selected": 0,
+        "final": 0,
+        "sampled": 0
+      }
+    },
+    {
+      "method": "ppo_raw",
+      "seed": 152,
+      "actual_pushes": 2048,
+      "selected_step": 2048,
+      "training_episodes": 128,
+      "policy_batches": 8,
+      "training_and_monitoring_seconds": 3331.2767621250823,
+      "total_worker_seconds": 6272.983599000145,
+      "online_invalid": 0,
+      "monitoring_invalid": 0,
+      "test_invalid": {
+        "selected": 0,
+        "final": 0,
+        "sampled": 0
+      }
+    },
+    {
+      "method": "ppo_finetune",
+      "seed": 150,
+      "actual_pushes": 2057,
+      "selected_step": 0,
+      "training_episodes": 221,
+      "policy_batches": 14,
+      "training_and_monitoring_seconds": 2607.390276124701,
+      "total_worker_seconds": 5053.028994916938,
+      "online_invalid": 0,
+      "monitoring_invalid": 0,
+      "test_invalid": {
+        "selected": 0,
+        "final": 0,
+        "sampled": 0
+      }
+    },
+    {
+      "method": "ppo_finetune",
+      "seed": 151,
+      "actual_pushes": 2051,
+      "selected_step": 1616,
+      "training_episodes": 224,
+      "policy_batches": 14,
+      "training_and_monitoring_seconds": 2590.157061957754,
+      "total_worker_seconds": 4952.008369082585,
+      "online_invalid": 0,
+      "monitoring_invalid": 0,
+      "test_invalid": {
+        "selected": 0,
+        "final": 0,
+        "sampled": 0
+      }
+    },
+    {
+      "method": "ppo_finetune",
+      "seed": 152,
+      "actual_pushes": 2052,
+      "selected_step": 1628,
+      "training_episodes": 220,
+      "policy_batches": 14,
+      "training_and_monitoring_seconds": 2590.5134354997426,
+      "total_worker_seconds": 4989.690124500077,
+      "online_invalid": 0,
+      "monitoring_invalid": 0,
+      "test_invalid": {
+        "selected": 0,
+        "final": 0,
+        "sampled": 0
+      }
+    }
+  ],
+  "summaries": {
+    "selected": {
+      "analytic": {
+        "success": {
+          "mean": 0.84,
+          "seed_means": [
+            0.84
+          ],
+          "seed_se": null
+        },
+        "reward": {
+          "mean": 1.5427784972169558,
+          "seed_means": [
+            1.5427784972169558
+          ],
+          "seed_se": null
+        },
+        "original_reward": {
+          "mean": 3.105306497216928,
+          "seed_means": [
+            3.105306497216928
+          ],
+          "seed_se": null
+        },
+        "pushes": {
+          "mean": 14.97,
+          "seed_means": [
+            14.97
+          ],
+          "seed_se": null
+        },
+        "execution_seconds": {
+          "mean": 93.09639999999861,
+          "seed_means": [
+            93.09639999999861
+          ],
+          "seed_se": null
+        },
+        "free_seconds": {
+          "mean": 37.53180000000031,
+          "seed_means": [
+            37.53180000000031
+          ],
+          "seed_se": null
+        },
+        "settling_seconds": {
+          "mean": 7.631399999999925,
+          "seed_means": [
+            7.631399999999925
+          ],
+          "seed_se": null
+        },
+        "travel_m": {
+          "mean": 6.801611032149197,
+          "seed_means": [
+            6.801611032149197
+          ],
+          "seed_se": null
+        },
+        "distance": {
+          "mean": 0.024759561178398632,
+          "seed_means": [
+            0.024759561178398632
+          ],
+          "seed_se": null
+        },
+        "cutoff": {
+          "mean": 0.16,
+          "seed_means": [
+            0.16
+          ],
+          "seed_se": null
+        },
+        "physical_failure": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        },
+        "invalid": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        }
+      },
+      "bc": {
+        "success": {
+          "mean": 1.0,
+          "seed_means": [
+            1.0
+          ],
+          "seed_se": null
+        },
+        "reward": {
+          "mean": 2.519104596945157,
+          "seed_means": [
+            2.519104596945157
+          ],
+          "seed_se": null
+        },
+        "original_reward": {
+          "mean": 3.43975659694521,
+          "seed_means": [
+            3.43975659694521
+          ],
+          "seed_se": null
+        },
+        "pushes": {
+          "mean": 8.33,
+          "seed_means": [
+            8.33
+          ],
+          "seed_se": null
+        },
+        "execution_seconds": {
+          "mean": 54.362600000002594,
+          "seed_means": [
+            54.362600000002594
+          ],
+          "seed_se": null
+        },
+        "free_seconds": {
+          "mean": 21.23639999999964,
+          "seed_means": [
+            21.23639999999964
+          ],
+          "seed_se": null
+        },
+        "settling_seconds": {
+          "mean": 4.244599999999995,
+          "seed_means": [
+            4.244599999999995
+          ],
+          "seed_se": null
+        },
+        "travel_m": {
+          "mean": 4.1359378141582575,
+          "seed_means": [
+            4.1359378141582575
+          ],
+          "seed_se": null
+        },
+        "distance": {
+          "mean": 0.018512046219156496,
+          "seed_means": [
+            0.018512046219156496
+          ],
+          "seed_se": null
+        },
+        "cutoff": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        },
+        "physical_failure": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        },
+        "invalid": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        }
+      },
+      "ppo_raw": {
+        "success": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        },
+        "reward": {
+          "mean": -1.2138138846112954,
+          "seed_means": [
+            -1.8514516370665188,
+            -1.0783868312293912,
+            -0.7116031855379761
+          ],
+          "seed_se": 0.3359409611840465
+        },
+        "original_reward": {
+          "mean": -0.05796588461124632,
+          "seed_means": [
+            -0.7390556370664614,
+            0.09978916877065343,
+            0.46536881446206896
+          ],
+          "seed_se": 0.3565223497017613
+        },
+        "pushes": {
+          "mean": 16.0,
+          "seed_means": [
+            16.0,
+            16.0,
+            16.0
+          ],
+          "seed_se": 0.0
+        },
+        "execution_seconds": {
+          "mean": 73.79240000000246,
+          "seed_means": [
+            71.61980000000288,
+            74.90880000000224,
+            74.84860000000225
+          ],
+          "seed_se": 1.0864389965998427
+        },
+        "free_seconds": {
+          "mean": 16.330999999999744,
+          "seed_means": [
+            14.339799999999782,
+            17.303399999999723,
+            17.34979999999972
+          ],
+          "seed_se": 0.9956900990435196
+        },
+        "settling_seconds": {
+          "mean": 8.107133333333246,
+          "seed_means": [
+            7.999999999999915,
+            8.31999999999991,
+            8.001399999999915
+          ],
+          "seed_se": 0.10643410063404214
+        },
+        "travel_m": {
+          "mean": 3.6034949541291454,
+          "seed_means": [
+            3.3101873730879188,
+            3.737653076820719,
+            3.7626444124788003
+          ],
+          "seed_se": 0.1468311326396027
+        },
+        "distance": {
+          "mean": 0.3701604184526248,
+          "seed_means": [
+            0.47232388132090714,
+            0.3464971604453398,
+            0.2916602135916275
+          ],
+          "seed_se": 0.053478352455264215
+        },
+        "cutoff": {
+          "mean": 1.0,
+          "seed_means": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "seed_se": 0.0
+        },
+        "physical_failure": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        },
+        "invalid": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        }
+      },
+      "ppo_finetune": {
+        "success": {
+          "mean": 1.0,
+          "seed_means": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "seed_se": 0.0
+        },
+        "reward": {
+          "mean": 2.5324524167831437,
+          "seed_means": [
+            2.5191045969451573,
+            2.5519693029318127,
+            2.526283350472461
+          ],
+          "seed_se": 0.009976058995691041
+        },
+        "original_reward": {
+          "mean": 3.4477430834498626,
+          "seed_means": [
+            3.43975659694521,
+            3.4538413029318646,
+            3.4496313504725125
+          ],
+          "seed_se": 0.004174082731341329
+        },
+        "pushes": {
+          "mean": 8.273333333333333,
+          "seed_means": [
+            8.33,
+            8.13,
+            8.36
+          ],
+          "seed_se": 0.07218802609235869
+        },
+        "execution_seconds": {
+          "mean": 54.03786666666926,
+          "seed_means": [
+            54.362600000002594,
+            53.2236000000026,
+            54.52740000000258
+          ],
+          "seed_se": 0.4099034086762892
+        },
+        "free_seconds": {
+          "mean": 21.08873333333298,
+          "seed_means": [
+            21.23639999999964,
+            20.749599999999646,
+            21.280199999999642
+          ],
+          "seed_se": 0.17003742071804068
+        },
+        "settling_seconds": {
+          "mean": 4.214599999999995,
+          "seed_means": [
+            4.244599999999995,
+            4.141799999999996,
+            4.257399999999994
+          ],
+          "seed_se": 0.03658706510958878
+        },
+        "travel_m": {
+          "mean": 4.114209459591868,
+          "seed_means": [
+            4.1359378141582575,
+            4.059534868055101,
+            4.147155696562247
+          ],
+          "seed_se": 0.02752843040199051
+        },
+        "distance": {
+          "mean": 0.017484073243458544,
+          "seed_means": [
+            0.018512046219156496,
+            0.016999340321158168,
+            0.01694083319006097
+          ],
+          "seed_se": 0.0005142639076619716
+        },
+        "cutoff": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        },
+        "physical_failure": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        },
+        "invalid": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        }
+      }
+    },
+    "final": {
+      "analytic": {
+        "success": {
+          "mean": 0.84,
+          "seed_means": [
+            0.84
+          ],
+          "seed_se": null
+        },
+        "reward": {
+          "mean": 1.5427784972169558,
+          "seed_means": [
+            1.5427784972169558
+          ],
+          "seed_se": null
+        },
+        "original_reward": {
+          "mean": 3.105306497216928,
+          "seed_means": [
+            3.105306497216928
+          ],
+          "seed_se": null
+        },
+        "pushes": {
+          "mean": 14.97,
+          "seed_means": [
+            14.97
+          ],
+          "seed_se": null
+        },
+        "execution_seconds": {
+          "mean": 93.09639999999861,
+          "seed_means": [
+            93.09639999999861
+          ],
+          "seed_se": null
+        },
+        "free_seconds": {
+          "mean": 37.53180000000031,
+          "seed_means": [
+            37.53180000000031
+          ],
+          "seed_se": null
+        },
+        "settling_seconds": {
+          "mean": 7.631399999999925,
+          "seed_means": [
+            7.631399999999925
+          ],
+          "seed_se": null
+        },
+        "travel_m": {
+          "mean": 6.801611032149197,
+          "seed_means": [
+            6.801611032149197
+          ],
+          "seed_se": null
+        },
+        "distance": {
+          "mean": 0.024759561178398632,
+          "seed_means": [
+            0.024759561178398632
+          ],
+          "seed_se": null
+        },
+        "cutoff": {
+          "mean": 0.16,
+          "seed_means": [
+            0.16
+          ],
+          "seed_se": null
+        },
+        "physical_failure": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        },
+        "invalid": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        }
+      },
+      "bc": {
+        "success": {
+          "mean": 1.0,
+          "seed_means": [
+            1.0
+          ],
+          "seed_se": null
+        },
+        "reward": {
+          "mean": 2.519104596945157,
+          "seed_means": [
+            2.519104596945157
+          ],
+          "seed_se": null
+        },
+        "original_reward": {
+          "mean": 3.43975659694521,
+          "seed_means": [
+            3.43975659694521
+          ],
+          "seed_se": null
+        },
+        "pushes": {
+          "mean": 8.33,
+          "seed_means": [
+            8.33
+          ],
+          "seed_se": null
+        },
+        "execution_seconds": {
+          "mean": 54.362600000002594,
+          "seed_means": [
+            54.362600000002594
+          ],
+          "seed_se": null
+        },
+        "free_seconds": {
+          "mean": 21.23639999999964,
+          "seed_means": [
+            21.23639999999964
+          ],
+          "seed_se": null
+        },
+        "settling_seconds": {
+          "mean": 4.244599999999995,
+          "seed_means": [
+            4.244599999999995
+          ],
+          "seed_se": null
+        },
+        "travel_m": {
+          "mean": 4.1359378141582575,
+          "seed_means": [
+            4.1359378141582575
+          ],
+          "seed_se": null
+        },
+        "distance": {
+          "mean": 0.018512046219156496,
+          "seed_means": [
+            0.018512046219156496
+          ],
+          "seed_se": null
+        },
+        "cutoff": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        },
+        "physical_failure": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        },
+        "invalid": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        }
+      },
+      "ppo_raw": {
+        "success": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        },
+        "reward": {
+          "mean": -1.1697578920828768,
+          "seed_means": [
+            -1.8758694006128067,
+            -0.9218010900978483,
+            -0.7116031855379761
+          ],
+          "seed_se": 0.3582321810544804
+        },
+        "original_reward": {
+          "mean": -0.016320558749494063,
+          "seed_means": [
+            -0.7576494006127501,
+            0.24331890990219895,
+            0.46536881446206896
+          ],
+          "seed_se": 0.3761661330061933
+        },
+        "pushes": {
+          "mean": 16.0,
+          "seed_means": [
+            16.0,
+            16.0,
+            16.0
+          ],
+          "seed_se": 0.0
+        },
+        "execution_seconds": {
+          "mean": 73.67186666666915,
+          "seed_means": [
+            71.91100000000283,
+            74.25600000000237,
+            74.84860000000225
+          ],
+          "seed_se": 0.8968987778882642
+        },
+        "free_seconds": {
+          "mean": 16.118999999999748,
+          "seed_means": [
+            14.338199999999784,
+            16.668999999999734,
+            17.34979999999972
+          ],
+          "seed_se": 0.9118312416962355
+        },
+        "settling_seconds": {
+          "mean": 8.02506666666658,
+          "seed_means": [
+            7.999999999999915,
+            8.073799999999915,
+            8.001399999999915
+          ],
+          "seed_se": 0.024370018009385645
+        },
+        "travel_m": {
+          "mean": 3.586483331330218,
+          "seed_means": [
+            3.3307019865572647,
+            3.6661035949545875,
+            3.7626444124788003
+          ],
+          "seed_se": 0.13089194603750576
+        },
+        "distance": {
+          "mean": 0.36391361957336194,
+          "seed_means": [
+            0.4751129458528504,
+            0.324967699275608,
+            0.2916602135916275
+          ],
+          "seed_se": 0.056424919950929
+        },
+        "cutoff": {
+          "mean": 1.0,
+          "seed_means": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "seed_se": 0.0
+        },
+        "physical_failure": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        },
+        "invalid": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        }
+      },
+      "ppo_finetune": {
+        "success": {
+          "mean": 0.9933333333333333,
+          "seed_means": [
+            0.98,
+            1.0,
+            1.0
+          ],
+          "seed_se": 0.006666666666666672
+        },
+        "reward": {
+          "mean": 2.5237329708699874,
+          "seed_means": [
+            2.476338248933588,
+            2.556076621261909,
+            2.538784042414464
+          ],
+          "seed_se": 0.024217439111586567
+        },
+        "original_reward": {
+          "mean": 3.443671637536706,
+          "seed_means": [
+            3.417142248933639,
+            3.4590206212619603,
+            3.454852042414517
+          ],
+          "seed_se": 0.013319166729957468
+        },
+        "pushes": {
+          "mean": 8.316666666666668,
+          "seed_means": [
+            8.54,
+            8.13,
+            8.28
+          ],
+          "seed_se": 0.11976829482147744
+        },
+        "execution_seconds": {
+          "mean": 54.31360000000259,
+          "seed_means": [
+            55.58020000000254,
+            53.27720000000259,
+            54.08340000000262
+          ],
+          "seed_se": 0.6747088952528429
+        },
+        "free_seconds": {
+          "mean": 21.20926666666632,
+          "seed_means": [
+            21.744799999999668,
+            20.787599999999646,
+            21.09539999999964
+          ],
+          "seed_se": 0.2821241885726602
+        },
+        "settling_seconds": {
+          "mean": 4.2368666666666615,
+          "seed_means": [
+            4.351799999999993,
+            4.141799999999996,
+            4.216999999999995
+          ],
+          "seed_se": 0.061430213340920296
+        },
+        "travel_m": {
+          "mean": 4.134418181691067,
+          "seed_means": [
+            4.219564290563813,
+            4.066341742155045,
+            4.117348512354339
+          ],
+          "seed_se": 0.04504744737003486
+        },
+        "distance": {
+          "mean": 0.016964790130432048,
+          "seed_means": [
+            0.018274198420892052,
+            0.016222442571643726,
+            0.01639772939876036
+          ],
+          "seed_se": 0.0006566566635323214
+        },
+        "cutoff": {
+          "mean": 0.006666666666666667,
+          "seed_means": [
+            0.02,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.006666666666666667
+        },
+        "physical_failure": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        },
+        "invalid": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        }
+      }
+    },
+    "sampled": {
+      "analytic": {
+        "success": {
+          "mean": 0.84,
+          "seed_means": [
+            0.84
+          ],
+          "seed_se": null
+        },
+        "reward": {
+          "mean": 1.5427784972169558,
+          "seed_means": [
+            1.5427784972169558
+          ],
+          "seed_se": null
+        },
+        "original_reward": {
+          "mean": 3.105306497216928,
+          "seed_means": [
+            3.105306497216928
+          ],
+          "seed_se": null
+        },
+        "pushes": {
+          "mean": 14.97,
+          "seed_means": [
+            14.97
+          ],
+          "seed_se": null
+        },
+        "execution_seconds": {
+          "mean": 93.09639999999861,
+          "seed_means": [
+            93.09639999999861
+          ],
+          "seed_se": null
+        },
+        "free_seconds": {
+          "mean": 37.53180000000031,
+          "seed_means": [
+            37.53180000000031
+          ],
+          "seed_se": null
+        },
+        "settling_seconds": {
+          "mean": 7.631399999999925,
+          "seed_means": [
+            7.631399999999925
+          ],
+          "seed_se": null
+        },
+        "travel_m": {
+          "mean": 6.801611032149197,
+          "seed_means": [
+            6.801611032149197
+          ],
+          "seed_se": null
+        },
+        "distance": {
+          "mean": 0.024759561178398632,
+          "seed_means": [
+            0.024759561178398632
+          ],
+          "seed_se": null
+        },
+        "cutoff": {
+          "mean": 0.16,
+          "seed_means": [
+            0.16
+          ],
+          "seed_se": null
+        },
+        "physical_failure": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        },
+        "invalid": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        }
+      },
+      "bc": {
+        "success": {
+          "mean": 1.0,
+          "seed_means": [
+            1.0
+          ],
+          "seed_se": null
+        },
+        "reward": {
+          "mean": 2.519104596945157,
+          "seed_means": [
+            2.519104596945157
+          ],
+          "seed_se": null
+        },
+        "original_reward": {
+          "mean": 3.43975659694521,
+          "seed_means": [
+            3.43975659694521
+          ],
+          "seed_se": null
+        },
+        "pushes": {
+          "mean": 8.33,
+          "seed_means": [
+            8.33
+          ],
+          "seed_se": null
+        },
+        "execution_seconds": {
+          "mean": 54.362600000002594,
+          "seed_means": [
+            54.362600000002594
+          ],
+          "seed_se": null
+        },
+        "free_seconds": {
+          "mean": 21.23639999999964,
+          "seed_means": [
+            21.23639999999964
+          ],
+          "seed_se": null
+        },
+        "settling_seconds": {
+          "mean": 4.244599999999995,
+          "seed_means": [
+            4.244599999999995
+          ],
+          "seed_se": null
+        },
+        "travel_m": {
+          "mean": 4.1359378141582575,
+          "seed_means": [
+            4.1359378141582575
+          ],
+          "seed_se": null
+        },
+        "distance": {
+          "mean": 0.018512046219156496,
+          "seed_means": [
+            0.018512046219156496
+          ],
+          "seed_se": null
+        },
+        "cutoff": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        },
+        "physical_failure": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        },
+        "invalid": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0
+          ],
+          "seed_se": null
+        }
+      },
+      "ppo_raw": {
+        "success": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        },
+        "reward": {
+          "mean": -2.035159954146497,
+          "seed_means": [
+            -2.0208139580177145,
+            -2.0417604744573454,
+            -2.042905429964431
+          ],
+          "seed_se": 0.007180608945244656
+        },
+        "original_reward": {
+          "mean": -0.242837287479908,
+          "seed_means": [
+            -0.22681395801779275,
+            -0.2564884744574215,
+            -0.24520942996450976
+          ],
+          "seed_se": 0.008648015696425952
+        },
+        "pushes": {
+          "mean": 16.0,
+          "seed_means": [
+            16.0,
+            16.0,
+            16.0
+          ],
+          "seed_se": 0.0
+        },
+        "execution_seconds": {
+          "mean": 105.61613333332946,
+          "seed_means": [
+            105.6999999999961,
+            105.26359999999619,
+            105.88479999999606
+          ],
+          "seed_se": 0.1841625851734382
+        },
+        "free_seconds": {
+          "mean": 48.18646666666859,
+          "seed_means": [
+            48.23880000000194,
+            47.85600000000188,
+            48.46460000000198
+          ],
+          "seed_se": 0.17762561126647333
+        },
+        "settling_seconds": {
+          "mean": 8.163933333333247,
+          "seed_means": [
+            8.163799999999915,
+            8.164399999999914,
+            8.163599999999915
+          ],
+          "seed_se": 0.00024037008503037242
+        },
+        "travel_m": {
+          "mean": 8.220524468400795,
+          "seed_means": [
+            8.230296580124104,
+            8.170784715559746,
+            8.260492109518534
+          ],
+          "seed_se": 0.026353208270018618
+        },
+        "distance": {
+          "mean": 0.39789112888292405,
+          "seed_means": [
+            0.39548762946360666,
+            0.3999388069295511,
+            0.3982469502556143
+          ],
+          "seed_se": 0.001297202354463925
+        },
+        "cutoff": {
+          "mean": 1.0,
+          "seed_means": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "seed_se": 0.0
+        },
+        "physical_failure": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        },
+        "invalid": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        }
+      },
+      "ppo_finetune": {
+        "success": {
+          "mean": 0.98,
+          "seed_means": [
+            0.97,
+            0.98,
+            0.99
+          ],
+          "seed_se": 0.005773502691896263
+        },
+        "reward": {
+          "mean": 2.3978545249105307,
+          "seed_means": [
+            2.330187262139531,
+            2.4240134248154335,
+            2.4393628877766274
+          ],
+          "seed_se": 0.034122550419963725
+        },
+        "original_reward": {
+          "mean": 3.4077211915772456,
+          "seed_means": [
+            3.3826192621395745,
+            3.410429424815482,
+            3.43011488777668
+          ],
+          "seed_se": 0.013777511980512915
+        },
+        "pushes": {
+          "mean": 9.293333333333333,
+          "seed_means": [
+            9.73,
+            9.06,
+            9.09
+          ],
+          "seed_se": 0.21850502155429857
+        },
+        "execution_seconds": {
+          "mean": 59.786666666669085,
+          "seed_means": [
+            62.351600000002165,
+            58.38080000000244,
+            58.62760000000266
+          ],
+          "seed_se": 1.284444083813743
+        },
+        "free_seconds": {
+          "mean": 23.292799999999698,
+          "seed_means": [
+            24.408399999999748,
+            22.65199999999968,
+            22.817999999999664
+          ],
+          "seed_se": 0.5598546001716526
+        },
+        "settling_seconds": {
+          "mean": 4.735333333333319,
+          "seed_means": [
+            4.959399999999981,
+            4.615599999999988,
+            4.630999999999988
+          ],
+          "seed_se": 0.11212150155572563
+        },
+        "travel_m": {
+          "mean": 4.497808914447368,
+          "seed_means": [
+            4.679627295013656,
+            4.395364484314244,
+            4.418434964014205
+          ],
+          "seed_se": 0.09115281014539488
+        },
+        "distance": {
+          "mean": 0.017427357024351053,
+          "seed_means": [
+            0.01838264644000178,
+            0.017721122038615544,
+            0.016178302594435843
+          ],
+          "seed_se": 0.0006530712978114686
+        },
+        "cutoff": {
+          "mean": 0.02,
+          "seed_means": [
+            0.03,
+            0.02,
+            0.01
+          ],
+          "seed_se": 0.005773502691896258
+        },
+        "physical_failure": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        },
+        "invalid": {
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0
+        }
+      }
+    }
+  },
+  "paired_contrasts": {
+    "selected": {
+      "ppo_finetune minus bc": {
+        "success": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "reward": {
+          "difference": 0.01334781983798651,
+          "seed_differences": [
+            -3.3306690738754695e-17,
+            0.032864705986655675,
+            0.007178753527303888
+          ],
+          "seed_se": 0.00997605899569114,
+          "conditional_goal_ci95": [
+            0.0038384552309454205,
+            0.02467727328818377
+          ]
+        },
+        "original_reward": {
+          "difference": 0.007986486504653055,
+          "seed_differences": [
+            8.881784197001253e-18,
+            0.014084705986655583,
+            0.009874753527303572
+          ],
+          "seed_se": 0.004174082731341699,
+          "conditional_goal_ci95": [
+            0.005252499760030289,
+            0.010892359505337476
+          ]
+        },
+        "pushes": {
+          "difference": -0.05666666666666667,
+          "seed_differences": [
+            0.0,
+            -0.2,
+            0.03
+          ],
+          "seed_se": 0.07218802609235905,
+          "conditional_goal_ci95": [
+            -0.14666666666666667,
+            0.020000000000000004
+          ]
+        },
+        "execution_seconds": {
+          "difference": -0.3247333333333418,
+          "seed_differences": [
+            0.0,
+            -1.1390000000000071,
+            0.16479999999998163
+          ],
+          "seed_se": 0.40990340867629216,
+          "conditional_goal_ci95": [
+            -0.8712316666666444,
+            0.1419416666666215
+          ]
+        },
+        "free_seconds": {
+          "difference": -0.14766666666666461,
+          "seed_differences": [
+            0.0,
+            -0.4867999999999928,
+            0.04379999999999896
+          ],
+          "seed_se": 0.17003742071803948,
+          "conditional_goal_ci95": [
+            -0.40347999999999556,
+            0.06820833333333179
+          ]
+        },
+        "settling_seconds": {
+          "difference": -0.029999999999999583,
+          "seed_differences": [
+            0.0,
+            -0.10279999999999828,
+            0.012799999999999527
+          ],
+          "seed_se": 0.03658706510958873,
+          "conditional_goal_ci95": [
+            -0.07579999999999852,
+            0.009334999999999863
+          ]
+        },
+        "travel_m": {
+          "difference": -0.02172835456638968,
+          "seed_differences": [
+            0.0,
+            -0.07640294610315754,
+            0.0112178824039885
+          ],
+          "seed_se": 0.027528430401990683,
+          "conditional_goal_ci95": [
+            -0.06228809758546272,
+            0.012907254521753885
+          ]
+        },
+        "distance": {
+          "difference": -0.0010279729756979543,
+          "seed_differences": [
+            0.0,
+            -0.0015127058979983326,
+            -0.0015712130290955301
+          ],
+          "seed_se": 0.0005142639076619729,
+          "conditional_goal_ci95": [
+            -0.0013870206288276456,
+            -0.0006757386902075094
+          ]
+        },
+        "cutoff": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 100,
+              "differences": {
+                "execution_seconds": 0.0,
+                "free_seconds": 0.0,
+                "settling_seconds": 0.0,
+                "travel_m": 0.0,
+                "pushes": 0.0
+              }
+            },
+            {
+              "goals": 100,
+              "differences": {
+                "execution_seconds": -1.1390000000000071,
+                "free_seconds": -0.4867999999999928,
+                "settling_seconds": -0.10279999999999828,
+                "travel_m": -0.07640294610315754,
+                "pushes": -0.2
+              }
+            },
+            {
+              "goals": 100,
+              "differences": {
+                "execution_seconds": 0.16479999999998163,
+                "free_seconds": 0.04379999999999896,
+                "settling_seconds": 0.012799999999999527,
+                "travel_m": 0.0112178824039885,
+                "pushes": 0.03
+              }
+            }
+          ],
+          "all_policies_goals": 100,
+          "all_policies_differences": {
+            "execution_seconds": {
+              "difference": -0.3247333333333418,
+              "conditional_goal_ci95": [
+                -0.8712316666666444,
+                0.1419416666666215
+              ]
+            },
+            "free_seconds": {
+              "difference": -0.14766666666666464,
+              "conditional_goal_ci95": [
+                -0.40347999999999556,
+                0.06820833333333179
+              ]
+            },
+            "settling_seconds": {
+              "difference": -0.029999999999999593,
+              "conditional_goal_ci95": [
+                -0.07579999999999852,
+                0.009334999999999863
+              ]
+            },
+            "travel_m": {
+              "difference": -0.021728354566389683,
+              "conditional_goal_ci95": [
+                -0.06228809758546272,
+                0.012907254521753885
+              ]
+            },
+            "pushes": {
+              "difference": -0.05666666666666667,
+              "conditional_goal_ci95": [
+                -0.14666666666666667,
+                0.020000000000000004
+              ]
+            }
+          },
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      },
+      "ppo_finetune minus analytic": {
+        "success": {
+          "difference": 0.16,
+          "seed_differences": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.09,
+            0.23
+          ]
+        },
+        "reward": {
+          "difference": 0.9896739195661879,
+          "seed_differences": [
+            0.9763260997282014,
+            1.0091908057148569,
+            0.9835048532555052
+          ],
+          "seed_se": 0.009976058995691078,
+          "conditional_goal_ci95": [
+            0.9102937515799799,
+            1.0750291393020268
+          ]
+        },
+        "original_reward": {
+          "difference": 0.34243658623293377,
+          "seed_differences": [
+            0.33445009972828077,
+            0.3485348057149363,
+            0.3443248532555843
+          ],
+          "seed_se": 0.0041740827313416825,
+          "conditional_goal_ci95": [
+            0.2739156735621205,
+            0.41702882289415566
+          ]
+        },
+        "pushes": {
+          "difference": -6.696666666666666,
+          "seed_differences": [
+            -6.64,
+            -6.84,
+            -6.61
+          ],
+          "seed_se": 0.072188026092359,
+          "conditional_goal_ci95": [
+            -6.936666666666667,
+            -6.449916666666668
+          ]
+        },
+        "execution_seconds": {
+          "difference": -39.058533333329365,
+          "seed_differences": [
+            -38.73379999999602,
+            -39.872799999996026,
+            -38.56899999999604
+          ],
+          "seed_se": 0.4099034086762915,
+          "conditional_goal_ci95": [
+            -40.59821999999587,
+            -37.53709166666281
+          ]
+        },
+        "free_seconds": {
+          "difference": -16.44306666666733,
+          "seed_differences": [
+            -16.29540000000067,
+            -16.78220000000066,
+            -16.25160000000067
+          ],
+          "seed_se": 0.17003742071803885,
+          "conditional_goal_ci95": [
+            -17.191085000000722,
+            -15.682886666667297
+          ]
+        },
+        "settling_seconds": {
+          "difference": -3.4167999999999306,
+          "seed_differences": [
+            -3.3867999999999308,
+            -3.4895999999999288,
+            -3.373999999999931
+          ],
+          "seed_se": 0.03658706510958872,
+          "conditional_goal_ci95": [
+            -3.5403416666665946,
+            -3.290398333333266
+          ]
+        },
+        "travel_m": {
+          "difference": -2.687401572557329,
+          "seed_differences": [
+            -2.66567321799094,
+            -2.7420761640940965,
+            -2.654455335586951
+          ],
+          "seed_se": 0.02752843040199042,
+          "conditional_goal_ci95": [
+            -2.804483938714809,
+            -2.569603837865381
+          ]
+        },
+        "distance": {
+          "difference": -0.007275487934940089,
+          "seed_differences": [
+            -0.0062475149592421345,
+            -0.007760220857240466,
+            -0.007818727988337666
+          ],
+          "seed_se": 0.000514263907661973,
+          "conditional_goal_ci95": [
+            -0.008217426165399506,
+            -0.006363282831470009
+          ]
+        },
+        "cutoff": {
+          "difference": -0.16,
+          "seed_differences": [
+            -0.16,
+            -0.16,
+            -0.16
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            -0.23,
+            -0.09
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 84,
+              "differences": {
+                "execution_seconds": -38.304047619044006,
+                "free_seconds": -16.031666666667224,
+                "settling_seconds": -3.363333333333264,
+                "travel_m": -2.6252733258067824,
+                "pushes": -6.595238095238095
+              }
+            },
+            {
+              "goals": 84,
+              "differences": {
+                "execution_seconds": -39.00023809523451,
+                "free_seconds": -16.389761904762455,
+                "settling_seconds": -3.4192857142856443,
+                "travel_m": -2.678698299256226,
+                "pushes": -6.7023809523809526
+              }
+            },
+            {
+              "goals": 84,
+              "differences": {
+                "execution_seconds": -38.0349999999964,
+                "free_seconds": -15.944523809524366,
+                "settling_seconds": -3.3416666666665984,
+                "travel_m": -2.6070327661074635,
+                "pushes": -6.5476190476190474
+              }
+            }
+          ],
+          "all_policies_goals": 84,
+          "all_policies_differences": {
+            "execution_seconds": {
+              "difference": -38.446428571424974,
+              "conditional_goal_ci95": [
+                -40.12810515872669,
+                -36.777559523805515
+              ]
+            },
+            "free_seconds": {
+              "difference": -16.121984126984678,
+              "conditional_goal_ci95": [
+                -16.971650793651403,
+                -15.283650793651368
+              ]
+            },
+            "settling_seconds": {
+              "difference": -3.3747619047618365,
+              "conditional_goal_ci95": [
+                -3.5087321428570726,
+                -3.240710317460252
+              ]
+            },
+            "travel_m": {
+              "difference": -2.6370014637234904,
+              "conditional_goal_ci95": [
+                -2.7711047126007076,
+                -2.505824362575356
+              ]
+            },
+            "pushes": {
+              "difference": -6.615079365079365,
+              "conditional_goal_ci95": [
+                -6.8769841269841265,
+                -6.353174603174603
+              ]
+            }
+          },
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      },
+      "ppo_finetune minus ppo_raw": {
+        "success": {
+          "difference": 1.0,
+          "seed_differences": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "reward": {
+          "difference": 3.7462663013944386,
+          "seed_differences": [
+            4.370556234011676,
+            3.630356134161204,
+            3.237886536010436
+          ],
+          "seed_se": 0.33207004097709203,
+          "conditional_goal_ci95": [
+            3.640838282383538,
+            3.852016614479943
+          ]
+        },
+        "original_reward": {
+          "difference": 3.5057089680611084,
+          "seed_differences": [
+            4.17881223401167,
+            3.3540521341612113,
+            2.9842625360104433
+          ],
+          "seed_se": 0.3530755781699396,
+          "conditional_goal_ci95": [
+            3.3922642969906107,
+            3.6206733276131002
+          ]
+        },
+        "pushes": {
+          "difference": -7.726666666666667,
+          "seed_differences": [
+            -7.67,
+            -7.87,
+            -7.64
+          ],
+          "seed_se": 0.07218802609235916,
+          "conditional_goal_ci95": [
+            -7.97,
+            -7.486666666666666
+          ]
+        },
+        "execution_seconds": {
+          "difference": -19.754533333333196,
+          "seed_differences": [
+            -17.257200000000285,
+            -21.68519999999964,
+            -20.32119999999966
+          ],
+          "seed_se": 1.30927834236164,
+          "conditional_goal_ci95": [
+            -21.514174999999966,
+            -18.06858999999968
+          ]
+        },
+        "free_seconds": {
+          "difference": 4.757733333333234,
+          "seed_differences": [
+            6.8965999999998555,
+            3.446199999999926,
+            3.9303999999999193
+          ],
+          "seed_se": 1.0785291486299275,
+          "conditional_goal_ci95": [
+            3.7972183333332548,
+            5.695859999999882
+          ]
+        },
+        "settling_seconds": {
+          "difference": -3.8925333333332532,
+          "seed_differences": [
+            -3.755399999999922,
+            -4.178199999999915,
+            -3.743999999999923
+          ],
+          "seed_se": 0.14287123962194212,
+          "conditional_goal_ci95": [
+            -4.014933333333251,
+            -3.7693333333332557
+          ]
+        },
+        "travel_m": {
+          "difference": 0.5107145054627229,
+          "seed_differences": [
+            0.8257504410703401,
+            0.3218817912343815,
+            0.3845112840834469
+          ],
+          "seed_se": 0.1585521406212668,
+          "conditional_goal_ci95": [
+            0.3563222710066572,
+            0.6593576761471512
+          ]
+        },
+        "distance": {
+          "difference": -0.3526763452091662,
+          "seed_differences": [
+            -0.4538118351017506,
+            -0.3294978201241816,
+            -0.2747193804015665
+          ],
+          "seed_se": 0.05298257528493312,
+          "conditional_goal_ci95": [
+            -0.3700012996402076,
+            -0.33548022529059607
+          ]
+        },
+        "cutoff": {
+          "difference": -1.0,
+          "seed_differences": [
+            -1.0,
+            -1.0,
+            -1.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            -1.0,
+            -1.0
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 0,
+              "differences": {}
+            },
+            {
+              "goals": 0,
+              "differences": {}
+            },
+            {
+              "goals": 0,
+              "differences": {}
+            }
+          ],
+          "all_policies_goals": 0,
+          "all_policies_differences": {},
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      },
+      "bc minus analytic": {
+        "success": {
+          "difference": 0.16,
+          "seed_differences": [
+            0.16
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.09,
+            0.23
+          ]
+        },
+        "reward": {
+          "difference": 0.9763260997282014,
+          "seed_differences": [
+            0.9763260997282014
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.8970108407865485,
+            1.0601906355952206
+          ]
+        },
+        "original_reward": {
+          "difference": 0.33445009972828077,
+          "seed_differences": [
+            0.33445009972828077
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.2659005420256953,
+            0.4087692973757551
+          ]
+        },
+        "pushes": {
+          "difference": -6.64,
+          "seed_differences": [
+            -6.64
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -6.9,
+            -6.37
+          ]
+        },
+        "execution_seconds": {
+          "difference": -38.73379999999602,
+          "seed_differences": [
+            -38.73379999999602
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -40.36980499999603,
+            -37.08499999999626
+          ]
+        },
+        "free_seconds": {
+          "difference": -16.29540000000067,
+          "seed_differences": [
+            -16.29540000000067
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -17.09082000000064,
+            -15.488790000000646
+          ]
+        },
+        "settling_seconds": {
+          "difference": -3.3867999999999308,
+          "seed_differences": [
+            -3.3867999999999308
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -3.520199999999928,
+            -3.251184999999933
+          ]
+        },
+        "travel_m": {
+          "difference": -2.66567321799094,
+          "seed_differences": [
+            -2.66567321799094
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -2.7902260168256188,
+            -2.537568971336863
+          ]
+        },
+        "distance": {
+          "difference": -0.0062475149592421345,
+          "seed_differences": [
+            -0.0062475149592421345
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -0.007224677757682948,
+            -0.005319950849038882
+          ]
+        },
+        "cutoff": {
+          "difference": -0.16,
+          "seed_differences": [
+            -0.16
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -0.23,
+            -0.09
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 84,
+              "differences": {
+                "execution_seconds": -38.304047619044006,
+                "free_seconds": -16.031666666667224,
+                "settling_seconds": -3.363333333333264,
+                "travel_m": -2.6252733258067824,
+                "pushes": -6.595238095238095
+              }
+            }
+          ],
+          "all_policies_goals": 84,
+          "all_policies_differences": {
+            "execution_seconds": {
+              "difference": -38.304047619044006,
+              "conditional_goal_ci95": [
+                -40.11311904761569,
+                -36.47612499999641
+              ]
+            },
+            "free_seconds": {
+              "difference": -16.031666666667224,
+              "conditional_goal_ci95": [
+                -16.93227976190519,
+                -15.129660714286146
+              ]
+            },
+            "settling_seconds": {
+              "difference": -3.363333333333264,
+              "conditional_goal_ci95": [
+                -3.5033392857142154,
+                -3.2171249999999354
+              ]
+            },
+            "travel_m": {
+              "difference": -2.6252733258067824,
+              "conditional_goal_ci95": [
+                -2.768091836813558,
+                -2.482266197954325
+              ]
+            },
+            "pushes": {
+              "difference": -6.595238095238095,
+              "conditional_goal_ci95": [
+                -6.869047619047619,
+                -6.309523809523809
+              ]
+            }
+          },
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      },
+      "ppo_raw minus analytic": {
+        "success": {
+          "difference": -0.84,
+          "seed_differences": [
+            -0.84,
+            -0.84,
+            -0.84
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            -0.91,
+            -0.77
+          ]
+        },
+        "reward": {
+          "difference": -2.7565923818282516,
+          "seed_differences": [
+            -3.3942301342834753,
+            -2.621165328446347,
+            -2.2543816827549317
+          ],
+          "seed_se": 0.33594096118404676,
+          "conditional_goal_ci95": [
+            -2.885024373968771,
+            -2.6280643911238686
+          ]
+        },
+        "original_reward": {
+          "difference": -3.163272381828174,
+          "seed_differences": [
+            -3.844362134283389,
+            -3.0055173284462744,
+            -2.6399376827548586
+          ],
+          "seed_se": 0.3565223497017613,
+          "conditional_goal_ci95": [
+            -3.2916374743456696,
+            -3.0338561353954714
+          ]
+        },
+        "pushes": {
+          "difference": 1.03,
+          "seed_differences": [
+            1.03,
+            1.03,
+            1.03
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.85,
+            1.21
+          ]
+        },
+        "execution_seconds": {
+          "difference": -19.303999999996158,
+          "seed_differences": [
+            -21.476599999995724,
+            -18.187599999996383,
+            -18.247799999996367
+          ],
+          "seed_se": 1.0864389965998376,
+          "conditional_goal_ci95": [
+            -20.764824999995867,
+            -17.815486666663123
+          ]
+        },
+        "free_seconds": {
+          "difference": -21.200800000000566,
+          "seed_differences": [
+            -23.192000000000526,
+            -20.228400000000587,
+            -20.18200000000059
+          ],
+          "seed_se": 0.9956900990435189,
+          "conditional_goal_ci95": [
+            -22.13253500000069,
+            -20.2602633333338
+          ]
+        },
+        "settling_seconds": {
+          "difference": 0.4757333333333232,
+          "seed_differences": [
+            0.3685999999999918,
+            0.6885999999999859,
+            0.3699999999999919
+          ],
+          "seed_se": 0.10643410063404188,
+          "conditional_goal_ci95": [
+            0.38419833333332504,
+            0.5688016666666545
+          ]
+        },
+        "travel_m": {
+          "difference": -3.1981160780200515,
+          "seed_differences": [
+            -3.491423659061279,
+            -3.063957955328478,
+            -3.0389666196703975
+          ],
+          "seed_se": 0.14683113263960285,
+          "conditional_goal_ci95": [
+            -3.3452082791038986,
+            -3.0525231458111435
+          ]
+        },
+        "distance": {
+          "difference": 0.3454008572742262,
+          "seed_differences": [
+            0.44756432014250846,
+            0.32173759926694123,
+            0.2669006524132289
+          ],
+          "seed_se": 0.05347835245526419,
+          "conditional_goal_ci95": [
+            0.32830325815799977,
+            0.36282787975256164
+          ]
+        },
+        "cutoff": {
+          "difference": 0.84,
+          "seed_differences": [
+            0.84,
+            0.84,
+            0.84
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.77,
+            0.91
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 0,
+              "differences": {}
+            },
+            {
+              "goals": 0,
+              "differences": {}
+            },
+            {
+              "goals": 0,
+              "differences": {}
+            }
+          ],
+          "all_policies_goals": 0,
+          "all_policies_differences": {},
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      }
+    },
+    "final": {
+      "ppo_finetune minus bc": {
+        "success": {
+          "difference": -0.006666666666666667,
+          "seed_differences": [
+            -0.02,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.006666666666666667,
+          "conditional_goal_ci95": [
+            -0.016666666666666666,
+            0.0
+          ]
+        },
+        "reward": {
+          "difference": 0.00462837392483001,
+          "seed_differences": [
+            -0.04276634801156924,
+            0.036972024316752006,
+            0.019679445469307267
+          ],
+          "seed_se": 0.024217439111586695,
+          "conditional_goal_ci95": [
+            -0.013686290121898518,
+            0.020573984650120614
+          ]
+        },
+        "original_reward": {
+          "difference": 0.003915040591496377,
+          "seed_differences": [
+            -0.022614348011570345,
+            0.019264024316751827,
+            0.015095445469307647
+          ],
+          "seed_se": 0.01331916672995768,
+          "conditional_goal_ci95": [
+            -0.007784646299489282,
+            0.012684002362786688
+          ]
+        },
+        "pushes": {
+          "difference": -0.013333333333333341,
+          "seed_differences": [
+            0.21,
+            -0.2,
+            -0.05
+          ],
+          "seed_se": 0.11976829482147788,
+          "conditional_goal_ci95": [
+            -0.13999999999999999,
+            0.11000000000000001
+          ]
+        },
+        "execution_seconds": {
+          "difference": -0.04900000000001742,
+          "seed_differences": [
+            1.2175999999999438,
+            -1.0854000000000128,
+            -0.2791999999999833
+          ],
+          "seed_se": 0.6747088952528437,
+          "conditional_goal_ci95": [
+            -0.757210000000028,
+            0.6588233333333126
+          ]
+        },
+        "free_seconds": {
+          "difference": -0.02713333333332199,
+          "seed_differences": [
+            0.5084000000000277,
+            -0.44879999999999354,
+            -0.14100000000000015
+          ],
+          "seed_se": 0.28212418857266003,
+          "conditional_goal_ci95": [
+            -0.3341599999999868,
+            0.28513666666667115
+          ]
+        },
+        "settling_seconds": {
+          "difference": -0.007733333333333395,
+          "seed_differences": [
+            0.10719999999999792,
+            -0.10279999999999839,
+            -0.027599999999999715
+          ],
+          "seed_se": 0.061430213340920276,
+          "conditional_goal_ci95": [
+            -0.07133666666666551,
+            0.055066666666665307
+          ]
+        },
+        "travel_m": {
+          "difference": -0.0015196324671919125,
+          "seed_differences": [
+            0.08362647640555496,
+            -0.06959607200321213,
+            -0.01858930180391856
+          ],
+          "seed_se": 0.04504744737003468,
+          "conditional_goal_ci95": [
+            -0.05193920686121914,
+            0.04874867960567631
+          ]
+        },
+        "distance": {
+          "difference": -0.0015472560887244498,
+          "seed_differences": [
+            -0.0002378477982644419,
+            -0.002289603647512771,
+            -0.002114316820396136
+          ],
+          "seed_se": 0.0006566566635323222,
+          "conditional_goal_ci95": [
+            -0.0020541001699403627,
+            -0.001025369819863555
+          ]
+        },
+        "cutoff": {
+          "difference": 0.006666666666666667,
+          "seed_differences": [
+            0.02,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.006666666666666667,
+          "conditional_goal_ci95": [
+            0.0,
+            0.016666666666666666
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 98,
+              "differences": {
+                "execution_seconds": 0.7157142857143328,
+                "free_seconds": 0.2973469387755131,
+                "settling_seconds": 0.06265306122448866,
+                "travel_m": 0.04902850138393373,
+                "pushes": 0.12244897959183673
+              }
+            },
+            {
+              "goals": 100,
+              "differences": {
+                "execution_seconds": -1.0854000000000128,
+                "free_seconds": -0.44879999999999354,
+                "settling_seconds": -0.10279999999999839,
+                "travel_m": -0.06959607200321213,
+                "pushes": -0.2
+              }
+            },
+            {
+              "goals": 100,
+              "differences": {
+                "execution_seconds": -0.2791999999999833,
+                "free_seconds": -0.14100000000000015,
+                "settling_seconds": -0.027599999999999715,
+                "travel_m": -0.01858930180391856,
+                "pushes": -0.05
+              }
+            }
+          ],
+          "all_policies_goals": 98,
+          "all_policies_differences": {
+            "execution_seconds": {
+              "difference": -0.05625850340135346,
+              "conditional_goal_ci95": [
+                -0.698307823129203,
+                0.5793452380952702
+              ]
+            },
+            "free_seconds": {
+              "difference": -0.023061224489792337,
+              "conditional_goal_ci95": [
+                -0.3040952380952286,
+                0.25892346938775557
+              ]
+            },
+            "settling_seconds": {
+              "difference": -0.009591836734693876,
+              "conditional_goal_ci95": [
+                -0.06816326530612084,
+                0.045714285714284646
+              ]
+            },
+            "travel_m": {
+              "difference": -0.0010816244440196004,
+              "conditional_goal_ci95": [
+                -0.04617414859771835,
+                0.04385644172171364
+              ]
+            },
+            "pushes": {
+              "difference": -0.017006802721088437,
+              "conditional_goal_ci95": [
+                -0.13265306122448978,
+                0.09183673469387756
+              ]
+            }
+          },
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      },
+      "ppo_finetune minus analytic": {
+        "success": {
+          "difference": 0.15333333333333335,
+          "seed_differences": [
+            0.14,
+            0.16,
+            0.16
+          ],
+          "seed_se": 0.006666666666666664,
+          "conditional_goal_ci95": [
+            0.08333333333333334,
+            0.2267499999999988
+          ]
+        },
+        "reward": {
+          "difference": 0.9809544736530312,
+          "seed_differences": [
+            0.9335597517166319,
+            1.0132981240449535,
+            0.9960055451975086
+          ],
+          "seed_se": 0.024217439111586796,
+          "conditional_goal_ci95": [
+            0.8980616484566786,
+            1.0680251662148381
+          ]
+        },
+        "original_reward": {
+          "difference": 0.3383651403197771,
+          "seed_differences": [
+            0.31183575171671035,
+            0.35371412404503255,
+            0.34954554519758835
+          ],
+          "seed_se": 0.013319166729957685,
+          "conditional_goal_ci95": [
+            0.26890454167052,
+            0.41496098007105664
+          ]
+        },
+        "pushes": {
+          "difference": -6.653333333333333,
+          "seed_differences": [
+            -6.43,
+            -6.84,
+            -6.69
+          ],
+          "seed_se": 0.11976829482147795,
+          "conditional_goal_ci95": [
+            -6.8966666666666665,
+            -6.406583333333334
+          ]
+        },
+        "execution_seconds": {
+          "difference": -38.78279999999604,
+          "seed_differences": [
+            -37.516199999996076,
+            -39.81919999999603,
+            -39.012999999996
+          ],
+          "seed_se": 0.6747088952528429,
+          "conditional_goal_ci95": [
+            -40.32043999999585,
+            -37.25052999999606
+          ]
+        },
+        "free_seconds": {
+          "difference": -16.32253333333399,
+          "seed_differences": [
+            -15.787000000000637,
+            -16.74420000000066,
+            -16.43640000000067
+          ],
+          "seed_se": 0.2821241885726609,
+          "conditional_goal_ci95": [
+            -17.093006666667346,
+            -15.531596666667294
+          ]
+        },
+        "settling_seconds": {
+          "difference": -3.3945333333332637,
+          "seed_differences": [
+            -3.2795999999999323,
+            -3.4895999999999288,
+            -3.4143999999999295
+          ],
+          "seed_se": 0.061430213340920276,
+          "conditional_goal_ci95": [
+            -3.518734999999929,
+            -3.2683849999999333
+          ]
+        },
+        "travel_m": {
+          "difference": -2.6671928504581306,
+          "seed_differences": [
+            -2.5820467415853843,
+            -2.7352692899941515,
+            -2.684262519794857
+          ],
+          "seed_se": 0.04504744737003467,
+          "conditional_goal_ci95": [
+            -2.7880889393940227,
+            -2.5443535585633095
+          ]
+        },
+        "distance": {
+          "difference": -0.007794771047966584,
+          "seed_differences": [
+            -0.006485362757506576,
+            -0.008537118606754905,
+            -0.00836183177963827
+          ],
+          "seed_se": 0.0006566566635323222,
+          "conditional_goal_ci95": [
+            -0.008720842051747989,
+            -0.0068963191779168485
+          ]
+        },
+        "cutoff": {
+          "difference": -0.15333333333333335,
+          "seed_differences": [
+            -0.14,
+            -0.16,
+            -0.16
+          ],
+          "seed_se": 0.006666666666666664,
+          "conditional_goal_ci95": [
+            -0.22674999999999998,
+            -0.08333333333333334
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 82,
+              "differences": {
+                "execution_seconds": -37.971463414630506,
+                "free_seconds": -15.864390243902982,
+                "settling_seconds": -3.3395121951218822,
+                "travel_m": -2.598496438687643,
+                "pushes": -6.548780487804878
+              }
+            },
+            {
+              "goals": 84,
+              "differences": {
+                "execution_seconds": -38.962142857139284,
+                "free_seconds": -16.368095238095787,
+                "settling_seconds": -3.4192857142856443,
+                "travel_m": -2.6741015676669804,
+                "pushes": -6.7023809523809526
+              }
+            },
+            {
+              "goals": 84,
+              "differences": {
+                "execution_seconds": -38.46690476190112,
+                "free_seconds": -16.149523809524368,
+                "settling_seconds": -3.377857142857074,
+                "travel_m": -2.6391427376327794,
+                "pushes": -6.619047619047619
+              }
+            }
+          ],
+          "all_policies_goals": 82,
+          "all_policies_differences": {
+            "execution_seconds": {
+              "difference": -38.58666666666306,
+              "conditional_goal_ci95": [
+                -40.18764837398028,
+                -36.96572560975251
+              ]
+            },
+            "free_seconds": {
+              "difference": -16.156991869919246,
+              "conditional_goal_ci95": [
+                -16.99183739837457,
+                -15.303087398374524
+              ]
+            },
+            "settling_seconds": {
+              "difference": -3.392520325203183,
+              "conditional_goal_ci95": [
+                -3.516993902438953,
+                -3.268778455284486
+              ]
+            },
+            "travel_m": {
+              "difference": -2.642726817518909,
+              "conditional_goal_ci95": [
+                -2.772307510535304,
+                -2.5097273038155428
+              ]
+            },
+            "pushes": {
+              "difference": -6.65040650406504,
+              "conditional_goal_ci95": [
+                -6.89430894308943,
+                -6.4105691056910565
+              ]
+            }
+          },
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      },
+      "ppo_finetune minus ppo_raw": {
+        "success": {
+          "difference": 0.9933333333333333,
+          "seed_differences": [
+            0.98,
+            1.0,
+            1.0
+          ],
+          "seed_se": 0.006666666666666672,
+          "conditional_goal_ci95": [
+            0.9833333333333333,
+            1.0
+          ]
+        },
+        "reward": {
+          "difference": 3.6934908629528636,
+          "seed_differences": [
+            4.352207649546394,
+            3.4778777113597563,
+            3.2503872279524404
+          ],
+          "seed_se": 0.3358416460751028,
+          "conditional_goal_ci95": [
+            3.560663699119329,
+            3.8220104125986274
+          ]
+        },
+        "original_reward": {
+          "difference": 3.4599921962861995,
+          "seed_differences": [
+            4.174791649546389,
+            3.2157017113597615,
+            2.9894832279524475
+          ],
+          "seed_se": 0.3633168471846468,
+          "conditional_goal_ci95": [
+            3.32157813693328,
+            3.5962264852047667
+          ]
+        },
+        "pushes": {
+          "difference": -7.683333333333334,
+          "seed_differences": [
+            -7.46,
+            -7.87,
+            -7.72
+          ],
+          "seed_se": 0.11976829482147791,
+          "conditional_goal_ci95": [
+            -7.920083333333334,
+            -7.446666666666667
+          ]
+        },
+        "execution_seconds": {
+          "difference": -19.358266666666562,
+          "seed_differences": [
+            -16.330800000000284,
+            -20.978799999999772,
+            -20.765199999999627
+          ],
+          "seed_se": 1.5149886746916164,
+          "conditional_goal_ci95": [
+            -21.07790000000005,
+            -17.719453333332996
+          ]
+        },
+        "free_seconds": {
+          "difference": 5.090266666666572,
+          "seed_differences": [
+            7.406599999999885,
+            4.118599999999913,
+            3.7455999999999205
+          ],
+          "seed_se": 1.1631612575696828,
+          "conditional_goal_ci95": [
+            4.191164999999926,
+            5.970213333333216
+          ]
+        },
+        "settling_seconds": {
+          "difference": -3.7881999999999216,
+          "seed_differences": [
+            -3.648199999999924,
+            -3.9319999999999196,
+            -3.7843999999999225
+          ],
+          "seed_se": 0.08194803231316651,
+          "conditional_goal_ci95": [
+            -3.9090699999999203,
+            -3.6681949999999244
+          ]
+        },
+        "travel_m": {
+          "difference": 0.5479348503608491,
+          "seed_differences": [
+            0.8888623040065484,
+            0.4002381472004592,
+            0.35470409987553986
+          ],
+          "seed_se": 0.17096976716508713,
+          "conditional_goal_ci95": [
+            0.39871258194312625,
+            0.6925276771456895
+          ]
+        },
+        "distance": {
+          "difference": -0.3469488294429299,
+          "seed_differences": [
+            -0.45683874743195824,
+            -0.30874525670396424,
+            -0.27526248419286714
+          ],
+          "seed_se": 0.055788647502528106,
+          "conditional_goal_ci95": [
+            -0.3676376525527459,
+            -0.3260786395975142
+          ]
+        },
+        "cutoff": {
+          "difference": -0.9933333333333333,
+          "seed_differences": [
+            -0.98,
+            -1.0,
+            -1.0
+          ],
+          "seed_se": 0.006666666666666672,
+          "conditional_goal_ci95": [
+            -1.0,
+            -0.9833333333333333
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 0,
+              "differences": {}
+            },
+            {
+              "goals": 0,
+              "differences": {}
+            },
+            {
+              "goals": 0,
+              "differences": {}
+            }
+          ],
+          "all_policies_goals": 0,
+          "all_policies_differences": {},
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      },
+      "bc minus analytic": {
+        "success": {
+          "difference": 0.16,
+          "seed_differences": [
+            0.16
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.09,
+            0.23
+          ]
+        },
+        "reward": {
+          "difference": 0.9763260997282014,
+          "seed_differences": [
+            0.9763260997282014
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.8970108407865485,
+            1.0601906355952206
+          ]
+        },
+        "original_reward": {
+          "difference": 0.33445009972828077,
+          "seed_differences": [
+            0.33445009972828077
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.2659005420256953,
+            0.4087692973757551
+          ]
+        },
+        "pushes": {
+          "difference": -6.64,
+          "seed_differences": [
+            -6.64
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -6.9,
+            -6.37
+          ]
+        },
+        "execution_seconds": {
+          "difference": -38.73379999999602,
+          "seed_differences": [
+            -38.73379999999602
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -40.36980499999603,
+            -37.08499999999626
+          ]
+        },
+        "free_seconds": {
+          "difference": -16.29540000000067,
+          "seed_differences": [
+            -16.29540000000067
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -17.09082000000064,
+            -15.488790000000646
+          ]
+        },
+        "settling_seconds": {
+          "difference": -3.3867999999999308,
+          "seed_differences": [
+            -3.3867999999999308
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -3.520199999999928,
+            -3.251184999999933
+          ]
+        },
+        "travel_m": {
+          "difference": -2.66567321799094,
+          "seed_differences": [
+            -2.66567321799094
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -2.7902260168256188,
+            -2.537568971336863
+          ]
+        },
+        "distance": {
+          "difference": -0.0062475149592421345,
+          "seed_differences": [
+            -0.0062475149592421345
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -0.007224677757682948,
+            -0.005319950849038882
+          ]
+        },
+        "cutoff": {
+          "difference": -0.16,
+          "seed_differences": [
+            -0.16
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -0.23,
+            -0.09
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 84,
+              "differences": {
+                "execution_seconds": -38.304047619044006,
+                "free_seconds": -16.031666666667224,
+                "settling_seconds": -3.363333333333264,
+                "travel_m": -2.6252733258067824,
+                "pushes": -6.595238095238095
+              }
+            }
+          ],
+          "all_policies_goals": 84,
+          "all_policies_differences": {
+            "execution_seconds": {
+              "difference": -38.304047619044006,
+              "conditional_goal_ci95": [
+                -40.11311904761569,
+                -36.47612499999641
+              ]
+            },
+            "free_seconds": {
+              "difference": -16.031666666667224,
+              "conditional_goal_ci95": [
+                -16.93227976190519,
+                -15.129660714286146
+              ]
+            },
+            "settling_seconds": {
+              "difference": -3.363333333333264,
+              "conditional_goal_ci95": [
+                -3.5033392857142154,
+                -3.2171249999999354
+              ]
+            },
+            "travel_m": {
+              "difference": -2.6252733258067824,
+              "conditional_goal_ci95": [
+                -2.768091836813558,
+                -2.482266197954325
+              ]
+            },
+            "pushes": {
+              "difference": -6.595238095238095,
+              "conditional_goal_ci95": [
+                -6.869047619047619,
+                -6.309523809523809
+              ]
+            }
+          },
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      },
+      "ppo_raw minus analytic": {
+        "success": {
+          "difference": -0.84,
+          "seed_differences": [
+            -0.84,
+            -0.84,
+            -0.84
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            -0.91,
+            -0.77
+          ]
+        },
+        "reward": {
+          "difference": -2.712536389299833,
+          "seed_differences": [
+            -3.4186478978297625,
+            -2.4645795873148044,
+            -2.2543816827549317
+          ],
+          "seed_se": 0.3582321810544804,
+          "conditional_goal_ci95": [
+            -2.8639524239698573,
+            -2.557273095488949
+          ]
+        },
+        "original_reward": {
+          "difference": -3.1216270559664223,
+          "seed_differences": [
+            -3.8629558978296785,
+            -2.8619875873147294,
+            -2.6399376827548586
+          ],
+          "seed_se": 0.37616613300619345,
+          "conditional_goal_ci95": [
+            -3.273046883201408,
+            -2.966952463669686
+          ]
+        },
+        "pushes": {
+          "difference": 1.03,
+          "seed_differences": [
+            1.03,
+            1.03,
+            1.03
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.85,
+            1.21
+          ]
+        },
+        "execution_seconds": {
+          "difference": -19.424533333329467,
+          "seed_differences": [
+            -21.185399999995788,
+            -18.84039999999625,
+            -18.247799999996367
+          ],
+          "seed_se": 0.8968987778882633,
+          "conditional_goal_ci95": [
+            -20.828358333329188,
+            -17.991668333329752
+          ]
+        },
+        "free_seconds": {
+          "difference": -21.412800000000562,
+          "seed_differences": [
+            -23.19360000000053,
+            -20.862800000000576,
+            -20.18200000000059
+          ],
+          "seed_se": 0.9118312416962366,
+          "conditional_goal_ci95": [
+            -22.26189000000068,
+            -20.57012833333382
+          ]
+        },
+        "settling_seconds": {
+          "difference": 0.3936666666666581,
+          "seed_differences": [
+            0.3685999999999918,
+            0.4423999999999906,
+            0.3699999999999919
+          ],
+          "seed_se": 0.02437001800938516,
+          "conditional_goal_ci95": [
+            0.30265666666666,
+            0.4886666666666561
+          ]
+        },
+        "travel_m": {
+          "difference": -3.21512770081898,
+          "seed_differences": [
+            -3.4709090455919327,
+            -3.1355074371946103,
+            -3.0389666196703975
+          ],
+          "seed_se": 0.13089194603750562,
+          "conditional_goal_ci95": [
+            -3.349253285800512,
+            -3.0798615067428288
+          ]
+        },
+        "distance": {
+          "difference": 0.3391540583949633,
+          "seed_differences": [
+            0.4503533846744518,
+            0.30020813809720936,
+            0.2669006524132289
+          ],
+          "seed_se": 0.056424919950929,
+          "conditional_goal_ci95": [
+            0.31825630427338114,
+            0.35965668222831565
+          ]
+        },
+        "cutoff": {
+          "difference": 0.84,
+          "seed_differences": [
+            0.84,
+            0.84,
+            0.84
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.77,
+            0.91
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 0,
+              "differences": {}
+            },
+            {
+              "goals": 0,
+              "differences": {}
+            },
+            {
+              "goals": 0,
+              "differences": {}
+            }
+          ],
+          "all_policies_goals": 0,
+          "all_policies_differences": {},
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      }
+    },
+    "sampled": {
+      "ppo_finetune minus bc": {
+        "success": {
+          "difference": -0.02,
+          "seed_differences": [
+            -0.03,
+            -0.02,
+            -0.01
+          ],
+          "seed_se": 0.005773502691896258,
+          "conditional_goal_ci95": [
+            -0.04,
+            -0.003333333333333333
+          ]
+        },
+        "reward": {
+          "difference": -0.12125007203462677,
+          "seed_differences": [
+            -0.1889173348056264,
+            -0.09509117212972364,
+            -0.0797417091685303
+          ],
+          "seed_se": 0.034122550419963704,
+          "conditional_goal_ci95": [
+            -0.1754738835068626,
+            -0.07017778995293583
+          ]
+        },
+        "original_reward": {
+          "difference": -0.0320354053679637,
+          "seed_differences": [
+            -0.05713733480563521,
+            -0.02932717212972694,
+            -0.009641709168528943
+          ],
+          "seed_se": 0.013777511980513201,
+          "conditional_goal_ci95": [
+            -0.05834328307824302,
+            -0.0081710300284565
+          ]
+        },
+        "pushes": {
+          "difference": 0.9633333333333333,
+          "seed_differences": [
+            1.4,
+            0.73,
+            0.76
+          ],
+          "seed_se": 0.2185050215542985,
+          "conditional_goal_ci95": [
+            0.63,
+            1.3
+          ]
+        },
+        "execution_seconds": {
+          "difference": 5.424066666666484,
+          "seed_differences": [
+            7.988999999999557,
+            4.0181999999998315,
+            4.265000000000064
+          ],
+          "seed_se": 1.2844440838137408,
+          "conditional_goal_ci95": [
+            3.481061666666697,
+            7.401269999999583
+          ]
+        },
+        "free_seconds": {
+          "difference": 2.056400000000057,
+          "seed_differences": [
+            3.1720000000001063,
+            1.415600000000037,
+            1.5816000000000274
+          ],
+          "seed_se": 0.5598546001716522,
+          "conditional_goal_ci95": [
+            1.1664550000000464,
+            2.9689400000001003
+          ]
+        },
+        "settling_seconds": {
+          "difference": 0.4907333333333237,
+          "seed_differences": [
+            0.7147999999999858,
+            0.3709999999999926,
+            0.38639999999999264
+          ],
+          "seed_se": 0.1121215015557257,
+          "conditional_goal_ci95": [
+            0.32125666666666025,
+            0.6618866666666533
+          ]
+        },
+        "travel_m": {
+          "difference": 0.3618711002891098,
+          "seed_differences": [
+            0.5436894808553977,
+            0.25942667015598475,
+            0.2824971498559469
+          ],
+          "seed_se": 0.09115281014539489,
+          "conditional_goal_ci95": [
+            0.21814431318433716,
+            0.5077323942998263
+          ]
+        },
+        "distance": {
+          "difference": -0.0010846891948054413,
+          "seed_differences": [
+            -0.0001293997791547125,
+            -0.0007909241805409581,
+            -0.002333743624720653
+          ],
+          "seed_se": 0.0006530712978114688,
+          "conditional_goal_ci95": [
+            -0.0023405753077238405,
+            0.00018414362562378658
+          ]
+        },
+        "cutoff": {
+          "difference": 0.02,
+          "seed_differences": [
+            0.03,
+            0.02,
+            0.01
+          ],
+          "seed_se": 0.005773502691896258,
+          "conditional_goal_ci95": [
+            0.003333333333333333,
+            0.04
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 97,
+              "differences": {
+                "execution_seconds": 6.745360824741947,
+                "free_seconds": 2.6334020618557514,
+                "settling_seconds": 0.605360824742256,
+                "travel_m": 0.45557609113406955,
+                "pushes": 1.1855670103092784
+              }
+            },
+            {
+              "goals": 98,
+              "differences": {
+                "execution_seconds": 3.2767346938774935,
+                "free_seconds": 1.0961224489796129,
+                "settling_seconds": 0.3061224489795859,
+                "travel_m": 0.20748966687027465,
+                "pushes": 0.6020408163265306
+              }
+            },
+            {
+              "goals": 99,
+              "differences": {
+                "execution_seconds": 3.906060606060726,
+                "free_seconds": 1.4363636363636578,
+                "settling_seconds": 0.3545454545454479,
+                "travel_m": 0.2586843011339229,
+                "pushes": 0.696969696969697
+              }
+            }
+          ],
+          "all_policies_goals": 95,
+          "all_policies_differences": {
+            "execution_seconds": {
+              "difference": 4.481263157894673,
+              "conditional_goal_ci95": [
+                2.6677754385965677,
+                6.4819842105263135
+              ]
+            },
+            "free_seconds": {
+              "difference": 1.6620350877193402,
+              "conditional_goal_ci95": [
+                0.8235070175438978,
+                2.5737964912281557
+              ]
+            },
+            "settling_seconds": {
+              "difference": 0.40568421052630793,
+              "conditional_goal_ci95": [
+                0.25086666666666235,
+                0.5750368421052521
+              ]
+            },
+            "travel_m": {
+              "difference": 0.297641686197857,
+              "conditional_goal_ci95": [
+                0.1623110086122345,
+                0.4468939553292375
+              ]
+            },
+            "pushes": {
+              "difference": 0.7964912280701755,
+              "conditional_goal_ci95": [
+                0.4912280701754386,
+                1.129824561403509
+              ]
+            }
+          },
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      },
+      "ppo_finetune minus analytic": {
+        "success": {
+          "difference": 0.14,
+          "seed_differences": [
+            0.13,
+            0.14,
+            0.15
+          ],
+          "seed_se": 0.005773502691896255,
+          "conditional_goal_ci95": [
+            0.07,
+            0.21666666666666667
+          ]
+        },
+        "reward": {
+          "difference": 0.8550760276935745,
+          "seed_differences": [
+            0.7874087649225747,
+            0.8812349275984777,
+            0.896584390559671
+          ],
+          "seed_se": 0.03412255041996376,
+          "conditional_goal_ci95": [
+            0.7577957238290509,
+            0.9577598489114311
+          ]
+        },
+        "original_reward": {
+          "difference": 0.30241469436031704,
+          "seed_differences": [
+            0.2773127649226455,
+            0.30512292759855375,
+            0.32480839055975186
+          ],
+          "seed_se": 0.013777511980513225,
+          "conditional_goal_ci95": [
+            0.22784423021198158,
+            0.3842721108109133
+          ]
+        },
+        "pushes": {
+          "difference": -5.676666666666667,
+          "seed_differences": [
+            -5.24,
+            -5.91,
+            -5.88
+          ],
+          "seed_se": 0.2185050215542984,
+          "conditional_goal_ci95": [
+            -6.04,
+            -5.303250000000001
+          ]
+        },
+        "execution_seconds": {
+          "difference": -33.309733333329525,
+          "seed_differences": [
+            -30.74479999999646,
+            -34.715599999996186,
+            -34.468799999995944
+          ],
+          "seed_se": 1.28444408381374,
+          "conditional_goal_ci95": [
+            -35.51883333332975,
+            -31.081311666662973
+          ]
+        },
+        "free_seconds": {
+          "difference": -14.23900000000061,
+          "seed_differences": [
+            -13.123400000000563,
+            -14.87980000000063,
+            -14.713800000000642
+          ],
+          "seed_se": 0.5598546001716518,
+          "conditional_goal_ci95": [
+            -15.290341666667276,
+            -13.132865000000562
+          ]
+        },
+        "settling_seconds": {
+          "difference": -2.896066666666607,
+          "seed_differences": [
+            -2.6719999999999446,
+            -3.015799999999938,
+            -3.0003999999999382
+          ],
+          "seed_se": 0.11212150155572578,
+          "conditional_goal_ci95": [
+            -3.0806133333332704,
+            -2.7071933333332767
+          ]
+        },
+        "travel_m": {
+          "difference": -2.3038021177018293,
+          "seed_differences": [
+            -2.1219837371355412,
+            -2.406246547834954,
+            -2.3831760681349925
+          ],
+          "seed_se": 0.09115281014539497,
+          "conditional_goal_ci95": [
+            -2.4722580286041684,
+            -2.1301583225701815
+          ]
+        },
+        "distance": {
+          "difference": -0.007332204154047575,
+          "seed_differences": [
+            -0.006376914738396847,
+            -0.007038439139783093,
+            -0.008581258583962787
+          ],
+          "seed_se": 0.0006530712978114688,
+          "conditional_goal_ci95": [
+            -0.008240800524557085,
+            -0.006429525366647707
+          ]
+        },
+        "cutoff": {
+          "difference": -0.14,
+          "seed_differences": [
+            -0.13,
+            -0.14,
+            -0.15
+          ],
+          "seed_se": 0.005773502691896255,
+          "conditional_goal_ci95": [
+            -0.21666666666666667,
+            -0.07
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 81,
+              "differences": {
+                "execution_seconds": -30.885185185181825,
+                "free_seconds": -13.142716049383209,
+                "settling_seconds": -2.6943209876542658,
+                "travel_m": -2.1272094621522166,
+                "pushes": -5.283950617283951
+              }
+            },
+            {
+              "goals": 82,
+              "differences": {
+                "execution_seconds": -34.36439024389886,
+                "free_seconds": -14.706829268293218,
+                "settling_seconds": -2.992439024390183,
+                "travel_m": -2.378011547860967,
+                "pushes": -5.865853658536586
+              }
+            },
+            {
+              "goals": 83,
+              "differences": {
+                "execution_seconds": -33.55180722891192,
+                "free_seconds": -14.263614457831853,
+                "settling_seconds": -2.9318072289156025,
+                "travel_m": -2.310973523806417,
+                "pushes": -5.746987951807229
+              }
+            }
+          ],
+          "all_policies_goals": 79,
+          "all_policies_differences": {
+            "execution_seconds": {
+              "difference": -32.97248945147322,
+              "conditional_goal_ci95": [
+                -35.321778481009076,
+                -30.604042194089438
+              ]
+            },
+            "free_seconds": {
+              "difference": -14.023206751055367,
+              "conditional_goal_ci95": [
+                -15.204854430380315,
+                -12.853550632911842
+              ]
+            },
+            "settling_seconds": {
+              "difference": -2.8817721518986747,
+              "conditional_goal_ci95": [
+                -3.076210970464072,
+                -2.685632911392349
+              ]
+            },
+            "travel_m": {
+              "difference": -2.2703999601927802,
+              "conditional_goal_ci95": [
+                -2.4563496935906364,
+                -2.0844832587510864
+              ]
+            },
+            "pushes": {
+              "difference": -5.649789029535865,
+              "conditional_goal_ci95": [
+                -6.029641350210972,
+                -5.261603375527427
+              ]
+            }
+          },
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      },
+      "ppo_finetune minus ppo_raw": {
+        "success": {
+          "difference": 0.98,
+          "seed_differences": [
+            0.97,
+            0.98,
+            0.99
+          ],
+          "seed_se": 0.005773502691896263,
+          "conditional_goal_ci95": [
+            0.96,
+            0.9966666666666666
+          ]
+        },
+        "reward": {
+          "difference": 4.433014479057027,
+          "seed_differences": [
+            4.351001220157245,
+            4.4657738992727785,
+            4.482268317741058
+          ],
+          "seed_se": 0.04128214883245,
+          "conditional_goal_ci95": [
+            4.331180960097479,
+            4.535871500164722
+          ]
+        },
+        "original_reward": {
+          "difference": 3.6505584790571532,
+          "seed_differences": [
+            3.6094332201573662,
+            3.6669178992729035,
+            3.6753243177411896
+          ],
+          "seed_se": 0.02070533069483042,
+          "conditional_goal_ci95": [
+            3.548747088932516,
+            3.7519596422777792
+          ]
+        },
+        "pushes": {
+          "difference": -6.706666666666667,
+          "seed_differences": [
+            -6.27,
+            -6.94,
+            -6.91
+          ],
+          "seed_se": 0.21850502155429874,
+          "conditional_goal_ci95": [
+            -7.053333333333333,
+            -6.346666666666668
+          ]
+        },
+        "execution_seconds": {
+          "difference": -45.82946666666037,
+          "seed_differences": [
+            -43.348399999993944,
+            -46.88279999999376,
+            -47.25719999999341
+          ],
+          "seed_se": 1.2452326012078192,
+          "conditional_goal_ci95": [
+            -48.35880833332705,
+            -43.17146333332704
+          ]
+        },
+        "free_seconds": {
+          "difference": -24.89366666666891,
+          "seed_differences": [
+            -23.830400000002204,
+            -25.204000000002207,
+            -25.64660000000232
+          ],
+          "seed_se": 0.5467710347526411,
+          "conditional_goal_ci95": [
+            -26.39887333333577,
+            -23.377831666668698
+          ]
+        },
+        "settling_seconds": {
+          "difference": -3.4285999999999284,
+          "seed_differences": [
+            -3.204399999999933,
+            -3.5487999999999262,
+            -3.5325999999999267
+          ],
+          "seed_se": 0.1121975044285723,
+          "conditional_goal_ci95": [
+            -3.6049999999999263,
+            -3.245124999999934
+          ]
+        },
+        "travel_m": {
+          "difference": -3.7227155539534262,
+          "seed_differences": [
+            -3.550669285110447,
+            -3.7754202312455023,
+            -3.8420571455043286
+          ],
+          "seed_se": 0.08814771419342556,
+          "conditional_goal_ci95": [
+            -3.9594694516752718,
+            -3.479615364739305
+          ]
+        },
+        "distance": {
+          "difference": -0.38046377185857305,
+          "seed_differences": [
+            -0.377104983023605,
+            -0.38221768489093555,
+            -0.38206864766117854
+          ],
+          "seed_se": 0.0016799454209777962,
+          "conditional_goal_ci95": [
+            -0.3960970407817783,
+            -0.36514932838984343
+          ]
+        },
+        "cutoff": {
+          "difference": -0.98,
+          "seed_differences": [
+            -0.97,
+            -0.98,
+            -0.99
+          ],
+          "seed_se": 0.005773502691896263,
+          "conditional_goal_ci95": [
+            -0.9966666666666666,
+            -0.96
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 0,
+              "differences": {}
+            },
+            {
+              "goals": 0,
+              "differences": {}
+            },
+            {
+              "goals": 0,
+              "differences": {}
+            }
+          ],
+          "all_policies_goals": 0,
+          "all_policies_differences": {},
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      },
+      "bc minus analytic": {
+        "success": {
+          "difference": 0.16,
+          "seed_differences": [
+            0.16
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.09,
+            0.23
+          ]
+        },
+        "reward": {
+          "difference": 0.9763260997282014,
+          "seed_differences": [
+            0.9763260997282014
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.8970108407865485,
+            1.0601906355952206
+          ]
+        },
+        "original_reward": {
+          "difference": 0.33445009972828077,
+          "seed_differences": [
+            0.33445009972828077
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.2659005420256953,
+            0.4087692973757551
+          ]
+        },
+        "pushes": {
+          "difference": -6.64,
+          "seed_differences": [
+            -6.64
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -6.9,
+            -6.37
+          ]
+        },
+        "execution_seconds": {
+          "difference": -38.73379999999602,
+          "seed_differences": [
+            -38.73379999999602
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -40.36980499999603,
+            -37.08499999999626
+          ]
+        },
+        "free_seconds": {
+          "difference": -16.29540000000067,
+          "seed_differences": [
+            -16.29540000000067
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -17.09082000000064,
+            -15.488790000000646
+          ]
+        },
+        "settling_seconds": {
+          "difference": -3.3867999999999308,
+          "seed_differences": [
+            -3.3867999999999308
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -3.520199999999928,
+            -3.251184999999933
+          ]
+        },
+        "travel_m": {
+          "difference": -2.66567321799094,
+          "seed_differences": [
+            -2.66567321799094
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -2.7902260168256188,
+            -2.537568971336863
+          ]
+        },
+        "distance": {
+          "difference": -0.0062475149592421345,
+          "seed_differences": [
+            -0.0062475149592421345
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -0.007224677757682948,
+            -0.005319950849038882
+          ]
+        },
+        "cutoff": {
+          "difference": -0.16,
+          "seed_differences": [
+            -0.16
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            -0.23,
+            -0.09
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0
+          ],
+          "seed_se": null,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 84,
+              "differences": {
+                "execution_seconds": -38.304047619044006,
+                "free_seconds": -16.031666666667224,
+                "settling_seconds": -3.363333333333264,
+                "travel_m": -2.6252733258067824,
+                "pushes": -6.595238095238095
+              }
+            }
+          ],
+          "all_policies_goals": 84,
+          "all_policies_differences": {
+            "execution_seconds": {
+              "difference": -38.304047619044006,
+              "conditional_goal_ci95": [
+                -40.11311904761569,
+                -36.47612499999641
+              ]
+            },
+            "free_seconds": {
+              "difference": -16.031666666667224,
+              "conditional_goal_ci95": [
+                -16.93227976190519,
+                -15.129660714286146
+              ]
+            },
+            "settling_seconds": {
+              "difference": -3.363333333333264,
+              "conditional_goal_ci95": [
+                -3.5033392857142154,
+                -3.2171249999999354
+              ]
+            },
+            "travel_m": {
+              "difference": -2.6252733258067824,
+              "conditional_goal_ci95": [
+                -2.768091836813558,
+                -2.482266197954325
+              ]
+            },
+            "pushes": {
+              "difference": -6.595238095238095,
+              "conditional_goal_ci95": [
+                -6.869047619047619,
+                -6.309523809523809
+              ]
+            }
+          },
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      },
+      "ppo_raw minus analytic": {
+        "success": {
+          "difference": -0.84,
+          "seed_differences": [
+            -0.84,
+            -0.84,
+            -0.84
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            -0.91,
+            -0.77
+          ]
+        },
+        "reward": {
+          "difference": -3.577938451363453,
+          "seed_differences": [
+            -3.5635924552346707,
+            -3.5845389716743012,
+            -3.585683927181387
+          ],
+          "seed_se": 0.007180608945244587,
+          "conditional_goal_ci95": [
+            -3.700863208556393,
+            -3.4557994821543128
+          ]
+        },
+        "original_reward": {
+          "difference": -3.3481437846968363,
+          "seed_differences": [
+            -3.3321204552347217,
+            -3.361794971674349,
+            -3.350515927181438
+          ],
+          "seed_se": 0.008648015696425584,
+          "conditional_goal_ci95": [
+            -3.4649484941501707,
+            -3.232366910590622
+          ]
+        },
+        "pushes": {
+          "difference": 1.03,
+          "seed_differences": [
+            1.03,
+            1.03,
+            1.03
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.85,
+            1.21
+          ]
+        },
+        "execution_seconds": {
+          "difference": 12.519733333330842,
+          "seed_differences": [
+            12.603599999997494,
+            12.167199999997576,
+            12.788399999997456
+          ],
+          "seed_se": 0.18416258517344028,
+          "conditional_goal_ci95": [
+            10.750463333331194,
+            14.314079999997148
+          ]
+        },
+        "free_seconds": {
+          "difference": 10.654666666668298,
+          "seed_differences": [
+            10.70700000000164,
+            10.324200000001575,
+            10.932800000001675
+          ],
+          "seed_se": 0.17762561126647314,
+          "conditional_goal_ci95": [
+            9.339983333334784,
+            11.985693333335133
+          ]
+        },
+        "settling_seconds": {
+          "difference": 0.5325333333333226,
+          "seed_differences": [
+            0.5323999999999893,
+            0.5329999999999891,
+            0.5321999999999892
+          ],
+          "seed_se": 0.0002403700850308959,
+          "conditional_goal_ci95": [
+            0.44099833333332444,
+            0.6256033333333205
+          ]
+        },
+        "travel_m": {
+          "difference": 1.4189134362515967,
+          "seed_differences": [
+            1.4286855479749052,
+            1.3691736834105483,
+            1.4588810773693366
+          ],
+          "seed_se": 0.02635320827001858,
+          "conditional_goal_ci95": [
+            1.2173787407306542,
+            1.6209709127300778
+          ]
+        },
+        "distance": {
+          "difference": 0.37313156770452544,
+          "seed_differences": [
+            0.37072806828520816,
+            0.37517924575115247,
+            0.3734873890772157
+          ],
+          "seed_se": 0.0012972023544638907,
+          "conditional_goal_ci95": [
+            0.3577227458419412,
+            0.38885783314420386
+          ]
+        },
+        "cutoff": {
+          "difference": 0.84,
+          "seed_differences": [
+            0.84,
+            0.84,
+            0.84
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.77,
+            0.91
+          ]
+        },
+        "physical_failure": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "invalid": {
+          "difference": 0.0,
+          "seed_differences": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seed_se": 0.0,
+          "conditional_goal_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "common_success": {
+          "per_seed": [
+            {
+              "goals": 0,
+              "differences": {}
+            },
+            {
+              "goals": 0,
+              "differences": {}
+            },
+            {
+              "goals": 0,
+              "differences": {}
+            }
+          ],
+          "all_policies_goals": 0,
+          "all_policies_differences": {},
+          "limitation": "Subset selected by the compared policies succeeding; not an unconditional efficiency estimate."
+        }
+      }
+    }
+  },
+  "compute": {
+    "actual_online_pushes": 12304,
+    "elapsed_seconds": 7333.782265,
+    "overlapping_training_and_monitoring_worker_seconds": 17700.21023374889,
+    "overlapping_training_and_test_worker_seconds": 35775.04413354164,
+    "baseline_worker_seconds": {
+      "analytic": 1349.6014879168943,
+      "bc": 841.7579609579407
+    },
+    "shared_bc": {
+      "training_episodes": 32,
+      "training_transitions": 485,
+      "validation_episodes": 8,
+      "validation_transitions": 119,
+      "collection_seconds_approx": 441.7,
+      "fit_epochs": 400,
+      "fit_seconds": 0.3479507500305772,
+      "fit_time_note": "Current unweighted BC fit reused by all three assisted runs; no new collection or repeated cloning per PPO seed."
+    },
+    "student_runtime": "The 1024-push local preset with fewer evaluation goals has not been validated to fit a total 30\u201345 minute laptop/Colab budget."
+  },
+  "audit": {
+    "source_hash_mismatches": [],
+    "finite_checkpoint_count": 43,
+    "checkpoints": [
+      {
+        "path": "ppo_raw/seed150/hybrid_seed150.pt",
+        "sha256": "8b830b46ed81447ffa673c6c49b558f7553631d561d1f6f15887c0944250df68",
+        "steps": 2048
+      },
+      {
+        "path": "ppo_raw/seed150/hybrid_seed150_best.pt",
+        "sha256": "db0b8fd72a7557863d84b820d985716fc89fda6b3de66775bf34a82d5dbf320b",
+        "steps": 0
+      },
+      {
+        "path": "ppo_raw/seed150/hybrid_seed150_step0.pt",
+        "sha256": "4ceb54e5126e72f1ebc6c578454b37d9aba3d2af01eca9af7fac23dc79d10322",
+        "steps": 0
+      },
+      {
+        "path": "ppo_raw/seed150/hybrid_seed150_step1024.pt",
+        "sha256": "f9bebd49862f310a55b2864ceae413bc1edf089cf946c62f10dfa4a86c891058",
+        "steps": 1024
+      },
+      {
+        "path": "ppo_raw/seed150/hybrid_seed150_step1536.pt",
+        "sha256": "53baafc682ef20d8dd4209f3b28d974f84eccd0fe037f1cc5e619b0b972c4361",
+        "steps": 1536
+      },
+      {
+        "path": "ppo_raw/seed150/hybrid_seed150_step2048.pt",
+        "sha256": "07c5e6e2dd6e73960ae639b581b757c3c89050ea26edd6a344fe2f0228f199c3",
+        "steps": 2048
+      },
+      {
+        "path": "ppo_raw/seed150/hybrid_seed150_step512.pt",
+        "sha256": "02e1530d4392c62c7e0b941b5fe11c6c00a38b50643525d7e5e72061f9d46343",
+        "steps": 512
+      },
+      {
+        "path": "ppo_raw/seed151/hybrid_seed151.pt",
+        "sha256": "677c77a347b1998222fa948fe0ef40ac35a85931e074f00b14c86ca4f5ae0b18",
+        "steps": 2048
+      },
+      {
+        "path": "ppo_raw/seed151/hybrid_seed151_best.pt",
+        "sha256": "0af7cd5029ef4f59037f094314da1ad69c05ad6de0a486e4bf594185e3de2b79",
+        "steps": 1024
+      },
+      {
+        "path": "ppo_raw/seed151/hybrid_seed151_step0.pt",
+        "sha256": "905747b620fd7ecd2947ff285e4b3786e0884b6154daf523076b7647e2501455",
+        "steps": 0
+      },
+      {
+        "path": "ppo_raw/seed151/hybrid_seed151_step1024.pt",
+        "sha256": "f684037b43b8ab3a980304f557ff54a014306cb5f3fb92b518ae731f2c3f5fcc",
+        "steps": 1024
+      },
+      {
+        "path": "ppo_raw/seed151/hybrid_seed151_step1536.pt",
+        "sha256": "1749a016516535dfcf285ac900d7e87a0166fac9d79b8cca73ab5a3668f3d344",
+        "steps": 1536
+      },
+      {
+        "path": "ppo_raw/seed151/hybrid_seed151_step2048.pt",
+        "sha256": "4d27849fe8659e316ac9095e977a6708fc394c079aee089962920a4900f656bb",
+        "steps": 2048
+      },
+      {
+        "path": "ppo_raw/seed151/hybrid_seed151_step512.pt",
+        "sha256": "c9ecce3e329d0ad423223afa6be56430f6df79e97fa9e3c3b11a6f62c0ad3980",
+        "steps": 512
+      },
+      {
+        "path": "ppo_raw/seed152/hybrid_seed152.pt",
+        "sha256": "78da0ec05a60d4f249a048621e333d07e213034d99b4e68e2469ab4ff59e6930",
+        "steps": 2048
+      },
+      {
+        "path": "ppo_raw/seed152/hybrid_seed152_best.pt",
+        "sha256": "b3c90954c15ec5a4a279aadafbde021b62fa00b0b6d21c769618b0f9aca6bb4b",
+        "steps": 2048
+      },
+      {
+        "path": "ppo_raw/seed152/hybrid_seed152_step0.pt",
+        "sha256": "399a82cc421d032c1776067af97a80bf1f88bc6b45d4bb850a58c2349d883f2b",
+        "steps": 0
+      },
+      {
+        "path": "ppo_raw/seed152/hybrid_seed152_step1024.pt",
+        "sha256": "510f40b3e374c4df58efd0ad65f4901312904332a35c127e749f40eef5c11963",
+        "steps": 1024
+      },
+      {
+        "path": "ppo_raw/seed152/hybrid_seed152_step1536.pt",
+        "sha256": "3ccb485369b6f92b6691628c47da9dde33b2d3c501e59840b4095e413e983afe",
+        "steps": 1536
+      },
+      {
+        "path": "ppo_raw/seed152/hybrid_seed152_step2048.pt",
+        "sha256": "d2d69ca5272f32ae37f8d2322a03b017080cf1d56f6a7c5b1a7b482342d6de0a",
+        "steps": 2048
+      },
+      {
+        "path": "ppo_raw/seed152/hybrid_seed152_step512.pt",
+        "sha256": "cc28a002e6c5eea22ea16f1dfdfcbab3154773b5b57145a9ca4469bec76fbd62",
+        "steps": 512
+      },
+      {
+        "path": "ppo_finetune/seed150/hybrid_seed150.pt",
+        "sha256": "504ea93e2f4bfbb31bf1dca1f04d915910e50c58fb6d833ec826472ab1a82cb8",
+        "steps": 2057
+      },
+      {
+        "path": "ppo_finetune/seed150/hybrid_seed150_best.pt",
+        "sha256": "c782f9080f6c52dfb8aed4e74ccbaa07c2f305cdd526ac8de8fbcdd373a09482",
+        "steps": 0
+      },
+      {
+        "path": "ppo_finetune/seed150/hybrid_seed150_step0.pt",
+        "sha256": "b731bc25215018e2493043617e04feff732b00f8c0b9837eb1b25d301de38b02",
+        "steps": 0
+      },
+      {
+        "path": "ppo_finetune/seed150/hybrid_seed150_step1031.pt",
+        "sha256": "29294db0b2807c7058e177b914aecde38964d096b25a3653d9d2d16cac957bcf",
+        "steps": 1031
+      },
+      {
+        "path": "ppo_finetune/seed150/hybrid_seed150_step1628.pt",
+        "sha256": "dbd88008c85baef7e7dd74b7273da728600210a8b8b31c4d211964bc0e10228e",
+        "steps": 1628
+      },
+      {
+        "path": "ppo_finetune/seed150/hybrid_seed150_step2057.pt",
+        "sha256": "1289920610626823e78837d3b422061fcffd4a09d3951d26974ec79177f66e31",
+        "steps": 2057
+      },
+      {
+        "path": "ppo_finetune/seed150/hybrid_seed150_step579.pt",
+        "sha256": "2582f1990b16c09ed42525a64e75612bcbfe898769efc0f2c019e890c8fd7c55",
+        "steps": 579
+      },
+      {
+        "path": "ppo_finetune/seed151/hybrid_seed151.pt",
+        "sha256": "3e43019bb4d9b91f05afe095c991be6a34dd45267da83e1ae32c3115156587a5",
+        "steps": 2051
+      },
+      {
+        "path": "ppo_finetune/seed151/hybrid_seed151_best.pt",
+        "sha256": "52d03e61702aa083266161b4ec83202a9c7dc34c6844cecba196fbb24713bd57",
+        "steps": 1616
+      },
+      {
+        "path": "ppo_finetune/seed151/hybrid_seed151_step0.pt",
+        "sha256": "36ce95c29a9ff44e73a64a5ef39497a6892ba008d760d8bfd035c98f035f05cd",
+        "steps": 0
+      },
+      {
+        "path": "ppo_finetune/seed151/hybrid_seed151_step1027.pt",
+        "sha256": "129b861c4f7fd39fc48aa0ede141c9fbcde95121bf95272437fed072a06b84b6",
+        "steps": 1027
+      },
+      {
+        "path": "ppo_finetune/seed151/hybrid_seed151_step1616.pt",
+        "sha256": "0276c47a3d958c7c3a88c2b4550a3bade65a5a1aa27b856b4d7c050d2324c854",
+        "steps": 1616
+      },
+      {
+        "path": "ppo_finetune/seed151/hybrid_seed151_step2051.pt",
+        "sha256": "6fd838cfc385f341c19bddd5a2181a1bc66e264da6da5b533694eefd67eca0fc",
+        "steps": 2051
+      },
+      {
+        "path": "ppo_finetune/seed151/hybrid_seed151_step596.pt",
+        "sha256": "9f4a2130bfbd6a17a6ad951f220c923e68978ca27c334f8c76d82e087e34675e",
+        "steps": 596
+      },
+      {
+        "path": "ppo_finetune/seed152/hybrid_seed152.pt",
+        "sha256": "bd1fa954eeb351f4696ba46156f39693466941c471540a641a43df8601a922ab",
+        "steps": 2052
+      },
+      {
+        "path": "ppo_finetune/seed152/hybrid_seed152_best.pt",
+        "sha256": "decbcf1ce16f6f94fc8e48099c98be08e2aaed633e44180018679f0788573a30",
+        "steps": 1628
+      },
+      {
+        "path": "ppo_finetune/seed152/hybrid_seed152_step0.pt",
+        "sha256": "aae013ee0f960801e92820c2d27c924e807bbccab53065c1d6b9c0a2cbff92b1",
+        "steps": 0
+      },
+      {
+        "path": "ppo_finetune/seed152/hybrid_seed152_step1061.pt",
+        "sha256": "14d034dc0ac798b7ce714ec174d0ef5068803fab6ad5cb5faa77c478e3517333",
+        "steps": 1061
+      },
+      {
+        "path": "ppo_finetune/seed152/hybrid_seed152_step1628.pt",
+        "sha256": "41593f2f927b19a6a04b3c92d6e094727b0dca340187e8cb4692c6564a9a0ea9",
+        "steps": 1628
+      },
+      {
+        "path": "ppo_finetune/seed152/hybrid_seed152_step2052.pt",
+        "sha256": "40413a0bdefeb8fd0000e3a3817628c4c57ca5337847b09c9bb70e5374ec11bb",
+        "steps": 2052
+      },
+      {
+        "path": "ppo_finetune/seed152/hybrid_seed152_step602.pt",
+        "sha256": "21c78591bed85a0a8d9d6cbf9d5c747273e849bf80679b772991394ec079f260",
+        "steps": 602
+      }
+    ],
+    "baseline_bc_matches_frozen_copy": true,
+    "invalid_counts": {
+      "online": 0,
+      "monitor": 0,
+      "test": 0,
+      "baseline": 0
+    },
+    "note": "Test totals count selected/final/sampled evaluation records, including identical selected/final policies."
+  },
+  "limitations": [
+    "Three RL seeds; all assisted fits condition on one unweighted BC data set and fit.",
+    "Same 100 reused exploratory goals, not fresh confirmation and not 100 training runs.",
+    "Goal-bootstrap intervals condition on fitted policies; seed standard errors reported separately.",
+    "Observed 16-command prefixes only; no critic estimate added. Cutoff means unfinished, not permanent failure.",
+    "Success/physical failure have zero continuation in training. Cutoffs bootstrap from the critic.",
+    "Failed or unfinished prefixes are not efficient successes; common-success comparisons select subsets.",
+    "Raw failure at this interaction budget does not establish inability to learn with more data or other settings.",
+    "Previous resting-state reference used a positive minimum and different BC initializer; comparison does not isolate the effect of the distance minimum."
+  ]
+}

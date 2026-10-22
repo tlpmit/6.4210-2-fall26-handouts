@@ -1,0 +1,11 @@
+# CPU execution. Use the course environment when available.
+drake
+gymnasium
+torch
+numpy>=2
+scipy
+matplotlib
+pandas
+ipython
+ipykernel
+nbformat

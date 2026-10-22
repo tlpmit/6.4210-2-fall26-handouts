@@ -1,0 +1,98 @@
+{
+  "physics": {
+    "mass_scale": 2.15625,
+    "friction": null,
+    "tilt_deg": 0.0,
+    "bump_x": 0.0,
+    "bump_y": 0.0,
+    "bump_radius": 0.0,
+    "bump_height": 0.0,
+    "bump_friction": 0.8,
+    "bump_resolution": 0.003
+  },
+  "timestep": 0.001,
+  "free_time_cost": 0.02,
+  "seeds": [
+    51300,
+    51301,
+    51302,
+    51303,
+    51304,
+    51305,
+    51306,
+    51307
+  ],
+  "transitions": 119,
+  "episodes": [
+    {
+      "seed": 51300,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.311284875303037,
+      "macros": 15,
+      "distance": 0.024710107692676463
+    },
+    {
+      "seed": 51301,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.905505472968366,
+      "macros": 14,
+      "distance": 0.024723589729983075
+    },
+    {
+      "seed": 51302,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.250303117261938,
+      "macros": 15,
+      "distance": 0.02439444659704592
+    },
+    {
+      "seed": 51303,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.5271516601968376,
+      "macros": 14,
+      "distance": 0.024690963506018133
+    },
+    {
+      "seed": 51304,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.559656708468458,
+      "macros": 14,
+      "distance": 0.02458689566770643
+    },
+    {
+      "seed": 51305,
+      "success": false,
+      "invalid": 0,
+      "return_": 1.6658339780121043,
+      "macros": 16,
+      "distance": 0.026225290053454774
+    },
+    {
+      "seed": 51306,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.508371343235188,
+      "macros": 15,
+      "distance": 0.024270602883598984
+    },
+    {
+      "seed": 51307,
+      "success": false,
+      "invalid": 0,
+      "return_": 1.714320199444581,
+      "macros": 16,
+      "distance": 0.026971091084524418
+    }
+  ],
+  "success": 0.75,
+  "mean_distance": 0.025071623401876027,
+  "median_distance": 0.024700535599347297,
+  "mean_macros": 14.875,
+  "mean_return": 2.3053034193613136,
+  "invalid_actions": 0
+}

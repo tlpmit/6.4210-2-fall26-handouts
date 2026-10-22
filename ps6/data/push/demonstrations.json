@@ -1,0 +1,314 @@
+{
+  "physics": {
+    "mass_scale": 2.15625,
+    "friction": null,
+    "tilt_deg": 0.0,
+    "bump_x": 0.0,
+    "bump_y": 0.0,
+    "bump_radius": 0.0,
+    "bump_height": 0.0,
+    "bump_friction": 0.8,
+    "bump_resolution": 0.003
+  },
+  "timestep": 0.001,
+  "free_time_cost": 0.02,
+  "seeds": [
+    51200,
+    51201,
+    51202,
+    51203,
+    51204,
+    51205,
+    51206,
+    51207,
+    51208,
+    51209,
+    51210,
+    51211,
+    51212,
+    51213,
+    51214,
+    51215,
+    51216,
+    51217,
+    51218,
+    51219,
+    51220,
+    51221,
+    51222,
+    51223,
+    51224,
+    51225,
+    51226,
+    51227,
+    51228,
+    51229,
+    51230,
+    51231
+  ],
+  "transitions": 485,
+  "episodes": [
+    {
+      "seed": 51200,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.489336319247251,
+      "macros": 16,
+      "distance": 0.02451064832093474
+    },
+    {
+      "seed": 51201,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.3826319250789805,
+      "macros": 16,
+      "distance": 0.02495746027937165
+    },
+    {
+      "seed": 51202,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.0523889514013933,
+      "macros": 15,
+      "distance": 0.024390934785228895
+    },
+    {
+      "seed": 51203,
+      "success": false,
+      "invalid": 0,
+      "return_": 1.4094117928107708,
+      "macros": 16,
+      "distance": 0.025944031210476677
+    },
+    {
+      "seed": 51204,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.5139334927840418,
+      "macros": 16,
+      "distance": 0.024226436852384736
+    },
+    {
+      "seed": 51205,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.6047576586808696,
+      "macros": 14,
+      "distance": 0.024681205721747635
+    },
+    {
+      "seed": 51206,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.5722666387156514,
+      "macros": 15,
+      "distance": 0.02477437017536217
+    },
+    {
+      "seed": 51207,
+      "success": true,
+      "invalid": 0,
+      "return_": 1.9605534680165604,
+      "macros": 16,
+      "distance": 0.024595126013164683
+    },
+    {
+      "seed": 51208,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.3494239819161167,
+      "macros": 16,
+      "distance": 0.0240600360357901
+    },
+    {
+      "seed": 51209,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.254755689409138,
+      "macros": 15,
+      "distance": 0.024890731295834786
+    },
+    {
+      "seed": 51210,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.1892061146396107,
+      "macros": 14,
+      "distance": 0.02451650658291913
+    },
+    {
+      "seed": 51211,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.3997763298785086,
+      "macros": 16,
+      "distance": 0.02441643389370948
+    },
+    {
+      "seed": 51212,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.310640601207249,
+      "macros": 15,
+      "distance": 0.024815429667254005
+    },
+    {
+      "seed": 51213,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.4894367914627438,
+      "macros": 16,
+      "distance": 0.024758073325242057
+    },
+    {
+      "seed": 51214,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.656775795336569,
+      "macros": 14,
+      "distance": 0.02494909681963321
+    },
+    {
+      "seed": 51215,
+      "success": true,
+      "invalid": 0,
+      "return_": 1.9732945176842973,
+      "macros": 15,
+      "distance": 0.02455698905169662
+    },
+    {
+      "seed": 51216,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.093468595629795,
+      "macros": 15,
+      "distance": 0.02411221972681953
+    },
+    {
+      "seed": 51217,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.8187383188016093,
+      "macros": 16,
+      "distance": 0.024797903438507476
+    },
+    {
+      "seed": 51218,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.665349389199601,
+      "macros": 15,
+      "distance": 0.0247750655757134
+    },
+    {
+      "seed": 51219,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.1460649068216844,
+      "macros": 14,
+      "distance": 0.0244140386674939
+    },
+    {
+      "seed": 51220,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.362278353487921,
+      "macros": 16,
+      "distance": 0.024934251394773288
+    },
+    {
+      "seed": 51221,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.6356740194194783,
+      "macros": 14,
+      "distance": 0.024440892834866706
+    },
+    {
+      "seed": 51222,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.3830571248194152,
+      "macros": 15,
+      "distance": 0.02405592031262378
+    },
+    {
+      "seed": 51223,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.5753956671343503,
+      "macros": 16,
+      "distance": 0.024546846392544945
+    },
+    {
+      "seed": 51224,
+      "success": false,
+      "invalid": 0,
+      "return_": 1.5880338277174895,
+      "macros": 16,
+      "distance": 0.026896894231578282
+    },
+    {
+      "seed": 51225,
+      "success": false,
+      "invalid": 0,
+      "return_": 1.3757303867381847,
+      "macros": 16,
+      "distance": 0.025063110370004544
+    },
+    {
+      "seed": 51226,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.2051162762147363,
+      "macros": 13,
+      "distance": 0.024683896167137617
+    },
+    {
+      "seed": 51227,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.4479544962603192,
+      "macros": 13,
+      "distance": 0.02478855831889033
+    },
+    {
+      "seed": 51228,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.263677390033022,
+      "macros": 14,
+      "distance": 0.024682196968169895
+    },
+    {
+      "seed": 51229,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.958539568614254,
+      "macros": 16,
+      "distance": 0.024761807118748095
+    },
+    {
+      "seed": 51230,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.7825779473976007,
+      "macros": 15,
+      "distance": 0.024716153646713698
+    },
+    {
+      "seed": 51231,
+      "success": true,
+      "invalid": 0,
+      "return_": 2.4745004651780294,
+      "macros": 16,
+      "distance": 0.024264010340686263
+    }
+  ],
+  "success": 0.90625,
+  "mean_distance": 0.024718039860500696,
+  "median_distance": 0.024683046567653757,
+  "mean_macros": 15.15625,
+  "mean_return": 2.3245233375542886,
+  "invalid_actions": 0
+}

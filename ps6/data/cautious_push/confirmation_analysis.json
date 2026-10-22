@@ -1,0 +1,1080 @@
+{
+  "primary": {
+    "n": 10,
+    "differences": [
+      0.487313045863182,
+      0.4905943483260784,
+      0.5161850804693815,
+      0.5240094837466245,
+      0.4420540698600002,
+      0.4464504526077646,
+      0.4262647847209746,
+      0.5059536067095349,
+      0.509617444713748,
+      0.442499648353591
+    ],
+    "difference": 0.479094196537088,
+    "training_seed_sd": 0.03623029575897212,
+    "ci95": [
+      0.45721325511886746,
+      0.4998097394763513
+    ],
+    "t": 41.81663006298724,
+    "df": 9,
+    "p": 1.2752884253315306e-11,
+    "exact_sign_p": 0.001953125,
+    "interpretation": "Across independent PPO training runs, conditional on the supplied BC and fixed test goals."
+  },
+  "aggregate": [
+    {
+      "policy": "bc",
+      "success": 1.0,
+      "reward": 1.820531436605716,
+      "execution_seconds": 86.87656249999966,
+      "pushes": 14.140625,
+      "distance": 0.015628691349629048
+    },
+    {
+      "policy": "bc_sampled",
+      "success": 1.0,
+      "reward": 1.8359642207538451,
+      "execution_seconds": 86.07687499999983,
+      "pushes": 14.359375,
+      "distance": 0.015712836227409138
+    },
+    {
+      "policy": "midpoint",
+      "success": 1.0,
+      "reward": 2.1351912007156892,
+      "execution_seconds": 71.53821875000233,
+      "pushes": 11.3734375,
+      "distance": 0.014444757983124973
+    },
+    {
+      "policy": "final",
+      "success": 1.0,
+      "reward": 2.2996256331428038,
+      "execution_seconds": 63.74940625000323,
+      "pushes": 9.98125,
+      "distance": 0.013146030619055105
+    },
+    {
+      "policy": "sampled",
+      "success": 1.0,
+      "reward": 2.264361171518266,
+      "execution_seconds": 64.84434375000306,
+      "pushes": 10.215625,
+      "distance": 0.015150887362736353
+    },
+    {
+      "policy": "selected",
+      "success": 1.0,
+      "reward": 2.299825090878499,
+      "execution_seconds": 63.71887500000323,
+      "pushes": 9.9734375,
+      "distance": 0.013207705708700796
+    },
+    {
+      "policy": "midpoint_sampled",
+      "success": 1.0,
+      "reward": 2.1308018390319052,
+      "execution_seconds": 71.71084375000224,
+      "pushes": 11.5140625,
+      "distance": 0.014585287235692832
+    }
+  ],
+  "per_seed": {
+    "gae_seed250": {
+      "selected": {
+        "success": 1.0,
+        "reward": 2.307844482468898,
+        "original_reward": 3.3728194824689637,
+        "pushes": 9.890625,
+        "execution_seconds": 63.1393750000033,
+        "free_seconds": 24.606562499999583,
+        "settling_seconds": 5.0487499999999805,
+        "travel_m": 4.703117858721825,
+        "distance": 0.013743296970140801,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09878280373916341
+      },
+      "final": {
+        "success": 1.0,
+        "reward": 2.307844482468898,
+        "original_reward": 3.3728194824689637,
+        "pushes": 9.890625,
+        "execution_seconds": 63.1393750000033,
+        "free_seconds": 24.606562499999583,
+        "settling_seconds": 5.0487499999999805,
+        "travel_m": 4.703117858721825,
+        "distance": 0.013743296970140801,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09878280373916341
+      },
+      "sampled": {
+        "success": 1.0,
+        "reward": 2.269559318516556,
+        "original_reward": 3.351178068516618,
+        "pushes": 10.125,
+        "execution_seconds": 64.20593750000312,
+        "free_seconds": 24.832812499999584,
+        "settling_seconds": 5.168124999999978,
+        "travel_m": 4.753242678925955,
+        "distance": 0.01628638406299269,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09797855789485724
+      },
+      "midpoint": {
+        "success": 1.0,
+        "reward": 2.115689650026168,
+        "original_reward": 3.3341521500262123,
+        "pushes": 11.53125,
+        "execution_seconds": 72.45437500000219,
+        "free_seconds": 28.216562499999647,
+        "settling_seconds": 5.887812499999962,
+        "travel_m": 5.312992101532161,
+        "distance": 0.014621521836553563,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09168671929867546
+      },
+      "midpoint_sampled": {
+        "success": 1.0,
+        "reward": 2.109818029265803,
+        "original_reward": 3.3356867792658447,
+        "pushes": 11.734375,
+        "execution_seconds": 73.02781250000209,
+        "free_seconds": 28.067187499999694,
+        "settling_seconds": 5.99124999999996,
+        "travel_m": 5.30647004642505,
+        "distance": 0.013781952450608738,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09117519751103503
+      }
+    },
+    "gae_seed251": {
+      "selected": {
+        "success": 1.0,
+        "reward": 2.3111257849317943,
+        "original_reward": 3.3736320349318603,
+        "pushes": 9.859375,
+        "execution_seconds": 62.98468750000328,
+        "free_seconds": 24.54843749999958,
+        "settling_seconds": 5.032812499999981,
+        "travel_m": 4.692915129385414,
+        "distance": 0.013715164100706353,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09892265474397258
+      },
+      "final": {
+        "success": 1.0,
+        "reward": 2.3111257849317943,
+        "original_reward": 3.3736320349318603,
+        "pushes": 9.859375,
+        "execution_seconds": 62.98468750000328,
+        "free_seconds": 24.54843749999958,
+        "settling_seconds": 5.032812499999981,
+        "travel_m": 4.692915129385414,
+        "distance": 0.013715164100706353,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09892265474397258
+      },
+      "sampled": {
+        "success": 1.0,
+        "reward": 2.269798292018157,
+        "original_reward": 3.3528232920182193,
+        "pushes": 10.125,
+        "execution_seconds": 64.27625000000312,
+        "free_seconds": 24.89374999999958,
+        "settling_seconds": 5.168437499999977,
+        "travel_m": 4.762739423639548,
+        "distance": 0.016039600537752455,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09807392633585454
+      },
+      "midpoint": {
+        "success": 1.0,
+        "reward": 2.110625277074158,
+        "original_reward": 3.3354190270741997,
+        "pushes": 11.609375,
+        "execution_seconds": 72.8490625000021,
+        "free_seconds": 28.341562499999654,
+        "settling_seconds": 5.927812499999961,
+        "travel_m": 5.3357612365232345,
+        "distance": 0.014197115279355401,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09142286146868361
+      },
+      "midpoint_sampled": {
+        "success": 1.0,
+        "reward": 2.1101253836043847,
+        "original_reward": 3.333281633604428,
+        "pushes": 11.75,
+        "execution_seconds": 72.90781250000214,
+        "free_seconds": 27.908749999999664,
+        "settling_seconds": 5.99812499999996,
+        "travel_m": 5.28247809844528,
+        "distance": 0.01409584929982123,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09096667479097972
+      }
+    },
+    "gae_seed252": {
+      "selected": {
+        "success": 1.0,
+        "reward": 2.3367165170750974,
+        "original_reward": 3.388616517075164,
+        "pushes": 9.734375,
+        "execution_seconds": 62.32937500000331,
+        "free_seconds": 24.313124999999573,
+        "settling_seconds": 4.969062499999982,
+        "travel_m": 4.6571910308759605,
+        "distance": 0.011842491779210812,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09998258240355053
+      },
+      "final": {
+        "success": 1.0,
+        "reward": 2.3367165170750974,
+        "original_reward": 3.388616517075164,
+        "pushes": 9.734375,
+        "execution_seconds": 62.32937500000331,
+        "free_seconds": 24.313124999999573,
+        "settling_seconds": 4.969062499999982,
+        "travel_m": 4.6571910308759605,
+        "distance": 0.011842491779210812,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09998258240355053
+      },
+      "sampled": {
+        "success": 1.0,
+        "reward": 2.287678806917685,
+        "original_reward": 3.3614850569177483,
+        "pushes": 9.96875,
+        "execution_seconds": 63.65906250000316,
+        "free_seconds": 24.78187499999965,
+        "settling_seconds": 5.089062499999979,
+        "travel_m": 4.743137660015073,
+        "distance": 0.015209085802823126,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09932116465512746
+      },
+      "midpoint": {
+        "success": 1.0,
+        "reward": 2.1334186485965896,
+        "original_reward": 3.334312398596636,
+        "pushes": 11.375,
+        "execution_seconds": 71.41968750000231,
+        "free_seconds": 27.732187499999643,
+        "settling_seconds": 5.807812499999963,
+        "travel_m": 5.232204984551103,
+        "distance": 0.015066234550990008,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09207010149939714
+      },
+      "midpoint_sampled": {
+        "success": 1.0,
+        "reward": 2.1154666463134966,
+        "original_reward": 3.335854146313538,
+        "pushes": 11.640625,
+        "execution_seconds": 72.66000000000206,
+        "free_seconds": 28.027187499999677,
+        "settling_seconds": 5.943437499999961,
+        "travel_m": 5.29549278060224,
+        "distance": 0.014038097393454692,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09151175499170726
+      }
+    },
+    "gae_seed253": {
+      "selected": {
+        "success": 1.0,
+        "reward": 2.3445409203523404,
+        "original_reward": 3.392065920352406,
+        "pushes": 9.6875,
+        "execution_seconds": 62.063750000003296,
+        "free_seconds": 24.174687499999578,
+        "settling_seconds": 4.945312499999982,
+        "travel_m": 4.636240790484847,
+        "distance": 0.011465706287624444,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.10036665337167075
+      },
+      "final": {
+        "success": 1.0,
+        "reward": 2.3445409203523404,
+        "original_reward": 3.392065920352406,
+        "pushes": 9.6875,
+        "execution_seconds": 62.063750000003296,
+        "free_seconds": 24.174687499999578,
+        "settling_seconds": 4.945312499999982,
+        "travel_m": 4.636240790484847,
+        "distance": 0.011465706287624444,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.10036665337167075
+      },
+      "sampled": {
+        "success": 1.0,
+        "reward": 2.2949501699924353,
+        "original_reward": 3.3621126699924964,
+        "pushes": 9.875,
+        "execution_seconds": 63.233125000003085,
+        "free_seconds": 24.688437499999683,
+        "settling_seconds": 5.04187499999998,
+        "travel_m": 4.724536124384185,
+        "distance": 0.015396193841610922,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09978733320506347
+      },
+      "midpoint": {
+        "success": 1.0,
+        "reward": 2.181702884628158,
+        "original_reward": 3.3469216346282122,
+        "pushes": 10.96875,
+        "execution_seconds": 69.22968750000273,
+        "free_seconds": 26.937499999999584,
+        "settling_seconds": 5.5990624999999685,
+        "travel_m": 5.09708595312766,
+        "distance": 0.014393599146253586,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09382850559857042
+      },
+      "midpoint_sampled": {
+        "success": 1.0,
+        "reward": 2.1824541679290723,
+        "original_reward": 3.337666667929126,
+        "pushes": 11.015625,
+        "execution_seconds": 68.77625000000265,
+        "free_seconds": 26.359374999999567,
+        "settling_seconds": 5.624062499999967,
+        "travel_m": 5.015838561072745,
+        "distance": 0.01564121915111656,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09346232638097428
+      }
+    },
+    "gae_seed254": {
+      "selected": {
+        "success": 1.0,
+        "reward": 2.262585506465716,
+        "original_reward": 3.363454256465778,
+        "pushes": 10.234375,
+        "execution_seconds": 65.2778125000031,
+        "free_seconds": 25.52999999999956,
+        "settling_seconds": 5.224062499999976,
+        "travel_m": 4.855100556815569,
+        "distance": 0.014116830870618708,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09718035207347585
+      },
+      "final": {
+        "success": 1.0,
+        "reward": 2.262585506465716,
+        "original_reward": 3.363454256465778,
+        "pushes": 10.234375,
+        "execution_seconds": 65.2778125000031,
+        "free_seconds": 25.52999999999956,
+        "settling_seconds": 5.224062499999976,
+        "travel_m": 4.855100556815569,
+        "distance": 0.014116830870618708,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09718035207347585
+      },
+      "sampled": {
+        "success": 1.0,
+        "reward": 2.2346190897967393,
+        "original_reward": 3.354375339796799,
+        "pushes": 10.515625,
+        "execution_seconds": 66.50343750000297,
+        "free_seconds": 25.75031249999959,
+        "settling_seconds": 5.367499999999973,
+        "travel_m": 4.9087831020523005,
+        "distance": 0.014634918370965581,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09639988303408915
+      },
+      "midpoint": {
+        "success": 1.0,
+        "reward": 2.1346387886306015,
+        "original_reward": 3.3353825386306477,
+        "pushes": 11.359375,
+        "execution_seconds": 71.39656250000232,
+        "free_seconds": 27.75406249999964,
+        "settling_seconds": 5.799999999999963,
+        "travel_m": 5.235014365906778,
+        "distance": 0.014952588545888205,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09219234207043242
+      },
+      "midpoint_sampled": {
+        "success": 1.0,
+        "reward": 2.117915767041756,
+        "original_reward": 3.334634517041798,
+        "pushes": 11.59375,
+        "execution_seconds": 72.4296875000021,
+        "free_seconds": 27.95812499999968,
+        "settling_seconds": 5.919374999999961,
+        "travel_m": 5.28292580850768,
+        "distance": 0.014361666784215691,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09167229997349319
+      }
+    },
+    "gae_seed255": {
+      "selected": {
+        "success": 1.0,
+        "reward": 2.2669818892134805,
+        "original_reward": 3.365119389213543,
+        "pushes": 10.1875,
+        "execution_seconds": 65.09437500000314,
+        "free_seconds": 25.499374999999578,
+        "settling_seconds": 5.200937499999977,
+        "travel_m": 4.850550336046207,
+        "distance": 0.014007685958453904,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09761438617452045
+      },
+      "final": {
+        "success": 1.0,
+        "reward": 2.2669818892134805,
+        "original_reward": 3.365119389213543,
+        "pushes": 10.1875,
+        "execution_seconds": 65.09437500000314,
+        "free_seconds": 25.499374999999578,
+        "settling_seconds": 5.200937499999977,
+        "travel_m": 4.850550336046207,
+        "distance": 0.014007685958453904,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09761438617452045
+      },
+      "sampled": {
+        "success": 1.0,
+        "reward": 2.241369154797363,
+        "original_reward": 3.3559066547974226,
+        "pushes": 10.453125,
+        "execution_seconds": 66.18000000000296,
+        "free_seconds": 25.635312499999586,
+        "settling_seconds": 5.336249999999973,
+        "travel_m": 4.890341597429613,
+        "distance": 0.014592721120871992,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09682706191234973
+      },
+      "midpoint": {
+        "success": 1.0,
+        "reward": 2.1686919576641346,
+        "original_reward": 3.3469419576641894,
+        "pushes": 11.03125,
+        "execution_seconds": 69.94375000000275,
+        "free_seconds": 27.395624999999633,
+        "settling_seconds": 5.632812499999968,
+        "travel_m": 5.170733622420267,
+        "distance": 0.014203050690856955,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.0939626194877177
+      },
+      "midpoint_sampled": {
+        "success": 1.0,
+        "reward": 2.1876189625074947,
+        "original_reward": 3.3391689625075487,
+        "pushes": 10.96875,
+        "execution_seconds": 68.54625000000271,
+        "free_seconds": 26.288437499999553,
+        "settling_seconds": 5.599999999999969,
+        "travel_m": 5.003438211334195,
+        "distance": 0.015556499964353092,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09366766476002977
+      }
+    },
+    "gae_seed256": {
+      "selected": {
+        "success": 1.0,
+        "reward": 2.2558635530397693,
+        "original_reward": 3.361426053039831,
+        "pushes": 10.28125,
+        "execution_seconds": 65.55937500000309,
+        "free_seconds": 25.66249999999956,
+        "settling_seconds": 5.248124999999975,
+        "travel_m": 4.876585228568786,
+        "distance": 0.014280436384510754,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09696403760901148
+      },
+      "final": {
+        "success": 1.0,
+        "reward": 2.2467962213266905,
+        "original_reward": 3.360908721326753,
+        "pushes": 10.40625,
+        "execution_seconds": 66.1118750000031,
+        "free_seconds": 25.790624999999565,
+        "settling_seconds": 5.312187499999974,
+        "travel_m": 4.900824103807809,
+        "distance": 0.013983036141472505,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.096270428886015
+      },
+      "sampled": {
+        "success": 1.0,
+        "reward": 2.229363193714395,
+        "original_reward": 3.3541756937144536,
+        "pushes": 10.625,
+        "execution_seconds": 66.86562500000295,
+        "free_seconds": 25.759374999999565,
+        "settling_seconds": 5.422187499999973,
+        "travel_m": 4.913121958677524,
+        "distance": 0.014336740283317332,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09564695643121843
+      },
+      "midpoint": {
+        "success": 1.0,
+        "reward": 2.0752359587618856,
+        "original_reward": 3.3304547087619207,
+        "pushes": 11.96875,
+        "execution_seconds": 74.72968750000177,
+        "free_seconds": 28.994687499999678,
+        "settling_seconds": 6.111874999999957,
+        "travel_m": 5.446734610804664,
+        "distance": 0.013863638026197243,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.08983691863296464
+      },
+      "midpoint_sampled": {
+        "success": 1.0,
+        "reward": 2.0655201627149884,
+        "original_reward": 3.3166139127150243,
+        "pushes": 12.109375,
+        "execution_seconds": 74.6640625000018,
+        "free_seconds": 28.442499999999665,
+        "settling_seconds": 6.181874999999955,
+        "travel_m": 5.376457265166714,
+        "distance": 0.015517882433231784,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.0894593387136117
+      }
+    },
+    "gae_seed257": {
+      "selected": {
+        "success": 1.0,
+        "reward": 2.326485043315251,
+        "original_reward": 3.3854600433153177,
+        "pushes": 9.8125,
+        "execution_seconds": 62.761250000003315,
+        "free_seconds": 24.476562499999577,
+        "settling_seconds": 5.008437499999982,
+        "travel_m": 4.683889543974726,
+        "distance": 0.012081587843187752,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09952522106474038
+      },
+      "final": {
+        "success": 1.0,
+        "reward": 2.326485043315251,
+        "original_reward": 3.3854600433153177,
+        "pushes": 9.8125,
+        "execution_seconds": 62.761250000003315,
+        "free_seconds": 24.476562499999577,
+        "settling_seconds": 5.008437499999982,
+        "travel_m": 4.683889543974726,
+        "distance": 0.012081587843187752,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09952522106474038
+      },
+      "sampled": {
+        "success": 1.0,
+        "reward": 2.285128567374671,
+        "original_reward": 3.3607410673747324,
+        "pushes": 10.015625,
+        "execution_seconds": 63.79625000000307,
+        "free_seconds": 24.77999999999961,
+        "settling_seconds": 5.113124999999979,
+        "travel_m": 4.742156099939177,
+        "distance": 0.01518005923427551,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09879538326511586
+      },
+      "midpoint": {
+        "success": 1.0,
+        "reward": 2.118542869669644,
+        "original_reward": 3.3344428696696884,
+        "pushes": 11.5,
+        "execution_seconds": 72.29500000000218,
+        "free_seconds": 28.15843749999965,
+        "settling_seconds": 5.871874999999962,
+        "travel_m": 5.303003906246359,
+        "distance": 0.014671663890032207,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.0918301684727843
+      },
+      "midpoint_sampled": {
+        "success": 1.0,
+        "reward": 2.113755218356223,
+        "original_reward": 3.3364489683562644,
+        "pushes": 11.6875,
+        "execution_seconds": 72.82218750000209,
+        "free_seconds": 28.029687499999696,
+        "settling_seconds": 5.967187499999961,
+        "travel_m": 5.298111005952787,
+        "distance": 0.013808249087045692,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09133335989092779
+      }
+    },
+    "gae_seed258": {
+      "selected": {
+        "success": 1.0,
+        "reward": 2.330148881319464,
+        "original_reward": 3.383905131319531,
+        "pushes": 9.765625,
+        "execution_seconds": 62.45343750000334,
+        "free_seconds": 24.341249999999576,
+        "settling_seconds": 4.984999999999982,
+        "travel_m": 4.661657091021656,
+        "distance": 0.012455449642555707,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09970708232642107
+      },
+      "final": {
+        "success": 1.0,
+        "reward": 2.330148881319464,
+        "original_reward": 3.383905131319531,
+        "pushes": 9.765625,
+        "execution_seconds": 62.45343750000334,
+        "free_seconds": 24.341249999999576,
+        "settling_seconds": 4.984999999999982,
+        "travel_m": 4.661657091021656,
+        "distance": 0.012455449642555707,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09970708232642107
+      },
+      "sampled": {
+        "success": 1.0,
+        "reward": 2.2962611920596507,
+        "original_reward": 3.361886192059714,
+        "pushes": 9.9375,
+        "execution_seconds": 63.21875000000317,
+        "free_seconds": 24.485624999999583,
+        "settling_seconds": 5.07249999999998,
+        "travel_m": 4.6940806364744585,
+        "distance": 0.01524266553152831,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09901970058437949
+      },
+      "midpoint": {
+        "success": 1.0,
+        "reward": 2.1966455514673147,
+        "original_reward": 3.3515018014673696,
+        "pushes": 10.859375,
+        "execution_seconds": 68.60218750000278,
+        "free_seconds": 26.690937499999578,
+        "settling_seconds": 5.54374999999997,
+        "travel_m": 5.055108357442043,
+        "distance": 0.014034699120379902,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09426472909953114
+      },
+      "midpoint_sampled": {
+        "success": 1.0,
+        "reward": 2.193104450888569,
+        "original_reward": 3.340973200888624,
+        "pushes": 10.921875,
+        "execution_seconds": 68.31531250000276,
+        "free_seconds": 26.21718749999955,
+        "settling_seconds": 5.5756249999999685,
+        "travel_m": 4.990999828904274,
+        "distance": 0.015426489207191724,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09388396570038798
+      }
+    },
+    "gae_seed259": {
+      "selected": {
+        "success": 1.0,
+        "reward": 2.2559583306031827,
+        "original_reward": 3.360839580603245,
+        "pushes": 10.28125,
+        "execution_seconds": 65.52531250000311,
+        "free_seconds": 25.629999999999562,
+        "settling_seconds": 5.248124999999975,
+        "travel_m": 4.871851563475699,
+        "distance": 0.014368407249998704,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09695342201595315
+      },
+      "final": {
+        "success": 1.0,
+        "reward": 2.263031084959307,
+        "original_reward": 3.363906084959369,
+        "pushes": 10.234375,
+        "execution_seconds": 65.27812500000309,
+        "free_seconds": 25.52968749999956,
+        "settling_seconds": 5.224062499999976,
+        "travel_m": 4.855257598755628,
+        "distance": 0.014049056596580067,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09719811694831301
+      },
+      "sampled": {
+        "success": 1.0,
+        "reward": 2.2348839299950063,
+        "original_reward": 3.354671429995065,
+        "pushes": 10.515625,
+        "execution_seconds": 66.50500000000297,
+        "free_seconds": 25.75031249999959,
+        "settling_seconds": 5.367499999999973,
+        "travel_m": 4.908947797351057,
+        "distance": 0.014590504841225616,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09641752521165461
+      },
+      "midpoint": {
+        "success": 1.0,
+        "reward": 2.116720420638241,
+        "original_reward": 3.335339170638285,
+        "pushes": 11.53125,
+        "execution_seconds": 72.4621875000022,
+        "free_seconds": 28.216249999999647,
+        "settling_seconds": 5.887812499999962,
+        "travel_m": 5.313597412872022,
+        "distance": 0.014443468744742644,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.09174666367784154
+      },
+      "midpoint_sampled": {
+        "success": 1.0,
+        "reward": 2.1122396016972664,
+        "original_reward": 3.3370458516973085,
+        "pushes": 11.71875,
+        "execution_seconds": 72.9590625000021,
+        "free_seconds": 28.053437499999696,
+        "settling_seconds": 5.98312499999996,
+        "travel_m": 5.303739426216628,
+        "distance": 0.013624966585889107,
+        "invalid": 0.0,
+        "cutoff": 0.0,
+        "mean_command_m": 0.091239740927468
+      }
+    }
+  },
+  "training_seed_sd": {
+    "midpoint": {
+      "success": 0.0,
+      "reward": 0.03691203439350775,
+      "execution_seconds": 1.8467871586199647,
+      "pushes": 0.33685074510703794,
+      "distance": 0.0003880254349047226
+    },
+    "final": {
+      "success": 0.0,
+      "reward": 0.03623029575897212,
+      "execution_seconds": 1.5104838307623425,
+      "pushes": 0.2574624096079098,
+      "distance": 0.0010548418049403218
+    },
+    "sampled": {
+      "success": 0.0,
+      "reward": 0.026857377379247073,
+      "execution_seconds": 1.4851933230438383,
+      "pushes": 0.2818088583399906,
+      "distance": 0.0006417543673806882
+    },
+    "selected": {
+      "success": 0.0,
+      "reward": 0.03575403069678608,
+      "execution_seconds": 1.4543544321230002,
+      "pushes": 0.24296191152398536,
+      "distance": 0.0011175981111370378
+    },
+    "midpoint_sampled": {
+      "success": 0.0,
+      "reward": 0.042089402608113204,
+      "execution_seconds": 2.267047451212449,
+      "pushes": 0.4013087584616807,
+      "distance": 0.0008430054743663492
+    }
+  },
+  "conditional_goal_intervals": {
+    "final_minus_bc": {
+      "reward": {
+        "difference": 0.4790941965370883,
+        "ci95": [
+          0.45324877112816286,
+          0.5038216541625545
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "success": {
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "execution_seconds": {
+        "difference": -23.127156249996432,
+        "ci95": [
+          -24.468045312495796,
+          -21.746152343746818
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "pushes": {
+        "difference": -4.159375000000001,
+        "ci95": [
+          -4.3516015625,
+          -3.9640234375000003
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "distance": {
+        "difference": -0.0024826607305739453,
+        "ci95": [
+          -0.004366047537970999,
+          -0.0005462393166906588
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      }
+    },
+    "sampled_minus_bc": {
+      "reward": {
+        "difference": 0.42839695076442064,
+        "ci95": [
+          0.3912330178390491,
+          0.4656936878363053
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "success": {
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "execution_seconds": {
+        "difference": -21.23253124999677,
+        "ci95": [
+          -23.10522187499634,
+          -19.411891406247076
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "pushes": {
+        "difference": -4.14375,
+        "ci95": [
+          -4.440625,
+          -3.859375
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "distance": {
+        "difference": -0.0005619488646727854,
+        "ci95": [
+          -0.0020324120443183345,
+          0.0009275602356121012
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      }
+    },
+    "final_minus_midpoint": {
+      "reward": {
+        "difference": 0.1644344324271147,
+        "ci95": [
+          0.14895658309094426,
+          0.18210936109333656
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "success": {
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "execution_seconds": {
+        "difference": -7.788812499999111,
+        "ci95": [
+          -8.680649218748858,
+          -6.95696015624924
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "pushes": {
+        "difference": -1.3921875,
+        "ci95": [
+          -1.5062499999999996,
+          -1.2843749999999998
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "distance": {
+        "difference": -0.0012987273640698669,
+        "ci95": [
+          -0.0027308569899698117,
+          0.00011441622911441484
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      }
+    },
+    "sampled_minus_midpoint": {
+      "reward": {
+        "difference": 0.13355933248636032,
+        "ci95": [
+          0.11011450585433481,
+          0.1552078335929089
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "success": {
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "execution_seconds": {
+        "difference": -6.866499999999189,
+        "ci95": [
+          -7.913514843748939,
+          -5.799409374999376
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "pushes": {
+        "difference": -1.2984375,
+        "ci95": [
+          -1.4421875,
+          -1.1484374999999998
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      },
+      "distance": {
+        "difference": 0.0005656001270435214,
+        "ci95": [
+          -0.0009429042915010651,
+          0.0020447359057738277
+        ],
+        "goals": 64,
+        "interpretation": "Across paired goals, conditional on these fitted policies. These goals are not independent training runs."
+      }
+    }
+  },
+  "costs": {
+    "actual_commands": {
+      "250": 8193,
+      "251": 8196,
+      "252": 8197,
+      "253": 8199,
+      "254": 8192,
+      "255": 8199,
+      "256": 8202,
+      "257": 8193,
+      "258": 8195,
+      "259": 8196
+    },
+    "elapsed_seconds": 26309.661336749792,
+    "summed_worker_seconds": 134591.6992565822,
+    "coordinator_command": [
+      "/Users/lpk/Documents/lpkmac/git/fall26_64210/.venv/bin/python",
+      "-u",
+      "/Users/lpk/Documents/lpkmac/git/fall26_64210/misc/ps6_rl/results/push_cautious_confirm10/runner.py"
+    ],
+    "calendar_seconds": 35919.008591,
+    "original_demonstrations_and_bc_seconds": {
+      "training_data": 748.7774532088079,
+      "validation_data": 239.18489591637626,
+      "bc_fit": 0.615174874663353
+    },
+    "recorded_batch_collection_seconds": 172.60367929097265
+  },
+  "audit": {
+    "frozen_hashes": true,
+    "frozen_base": true,
+    "finite_checkpoints": true,
+    "zero_invalid": true,
+    "initial_zero": true,
+    "all_ten_included": true,
+    "primary_endpoint_final": true,
+    "exact_fresh_initial_critics": true,
+    "initial_actor_means_and_faces_preserved": true,
+    "monitoring_only_selection": true,
+    "midpoint_optimizer_rng_saved_and_counters_continue": true,
+    "two_initial_warmup_batches_only": true,
+    "zero_invalid_including_baselines_and_monitoring": true,
+    "goal_partitions_disjoint": true,
+    "current_physics_matches_frozen": true
+  }
+}

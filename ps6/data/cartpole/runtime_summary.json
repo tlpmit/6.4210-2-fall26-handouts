@@ -1,0 +1,19 @@
+{
+  "training_and_monitoring_seconds": 392.1191848732997,
+  "final_evaluation_seconds": 66.97372899856418,
+  "recorded_collection_span_seconds": 461.1853449344635,
+  "collection_span_measurement": "Last run JSON mtime minus pre-collection plan mtime on the original collection.",
+  "machine": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "processor": "arm",
+    "python": "3.13.13",
+    "torch_threads": 1,
+    "versions": {
+      "drake": "1.57.0",
+      "gymnasium": "1.2.0",
+      "torch": "2.7.1",
+      "numpy": "2.2.6"
+    }
+  },
+  "note": "One local CPU study; slower laptops and Colab not validated."
+}
