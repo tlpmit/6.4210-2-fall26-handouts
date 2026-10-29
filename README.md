@@ -91,7 +91,13 @@ uv pip install drake
 uv pip install "manipulation[letter]"
 uv pip install scipy rtree
 uv pip install torch diffusers einops zarr gdown pymunk
+uv pip install gymnasium pandas ipykernel
 ```
+
+If you made the venv before ps6, add its packages now (ps6 and ps7 need them; without
+them it fails with `No module named 'gymnasium'` or `'pandas'`, and VS Code
+cannot run the notebooks without `ipykernel`):
+`uv pip install torch gymnasium pandas ipykernel`.
 
 If you made the venv before ps5, add its packages now (ps5 needs them; without
 them it fails with `No module named 'torch'`):
@@ -117,6 +123,7 @@ them; without them it fails with `No module named 'shapely'`):
 > uv pip install --python ~/venv64210 "manipulation[letter]"
 > uv pip install --python ~/venv64210 scipy rtree
 > uv pip install --python ~/venv64210 torch diffusers einops zarr gdown pymunk
+> uv pip install --python ~/venv64210 gymnasium pandas ipykernel
 > source ~/venv64210/bin/activate
 > ```
 

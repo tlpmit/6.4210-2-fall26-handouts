@@ -40,6 +40,9 @@ auto/
 misc/_to_delete/
 .claude/
 
+# Local experiment guards prevent accidental duplicate runs.
+/misc/ps6_rl/results/**/run.reservation
+
 # Models, letters and scenarios the pset python writes at run time, and
 # regenerates if deleted (ps2 boxes, ps3 and ps4 letters and scenarios)
 ps*/assets/

@@ -133,6 +133,7 @@ PACKAGES.update({"gymnasium": "gymnasium", "numpy": "numpy>=2",
 
 PSET_PACKAGES = {
     "ps6": ("pydrake", "torch", "gymnasium", "numpy", "scipy", "pandas", "matplotlib"),
+    "ps7": ("pydrake", "manipulation", "torch", "gymnasium", "numpy", "scipy", "pandas", "matplotlib"),
     "ps5": (
         "torch", "diffusers", "einops", "zarr", "gdown", "pymunk", "shapely",
     ),
@@ -168,6 +169,9 @@ def setup(pset: str) -> None:
             [sys.executable, "-m", "pip", "install", "--quiet", *missing],
             check=True,
         )
+    if not (ROOT / ".git").exists():
+        print(f"ready: {ROOT} (uploaded archive; download your edits/results before deleting the runtime)")
+        return
     if subprocess.run(
         ["git", "config", "--global", "user.name"], capture_output=True
     ).returncode:

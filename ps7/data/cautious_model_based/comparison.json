@@ -1,0 +1,61 @@
+{
+ "cost_comparison": {
+  "shared_demonstrations_and_bc_seconds": {
+   "training_data": 748.7774532088079,
+   "validation_data": 239.18489591637626,
+   "bc_fit": 0.615174874663353
+  },
+  "dynamics_fit_seconds": 1.1604810412973166,
+  "dynamics_extra_training_commands": 0,
+  "ppo_training_commands": [
+   8193,
+   8196,
+   8197,
+   8199,
+   8192,
+   8199,
+   8202,
+   8193,
+   8195,
+   8196
+  ],
+  "ppo_training_and_monitoring_seconds": [
+   10550.05290329177,
+   10501.433134791907,
+   10527.365652750246,
+   10514.094879500102,
+   10569.59818633413,
+   10520.995100708678,
+   9580.780082250014,
+   9577.156040625181,
+   9533.036854207981,
+   9593.39210670814
+  ],
+  "ppo_training_and_monitoring_summed_seconds": 101467.90494116815,
+  "mppi_planning_seconds_per_episode": 0.01752205193042755,
+  "mppi_planning_seconds_per_command": 0.0023658466741505553,
+  "timing_scope": "Wall time on the recorded machine. PPO training_seconds includes simulator interaction, optimizer updates, and monitoring; pure optimizer time was not separately recorded. Model fitting excludes the shared demonstration collection and evaluation. MPPI pays planning computation at deployment. Different stages/concurrency: these are measured workload costs, not a controlled speed ratio."
+ },
+ "deployment_prediction_error": {
+  "calibrated": {
+   "n": 457,
+   "position_rmse_m": 0.014203774227222632,
+   "yaw_rmse_rad": 0.1209053020000769,
+   "finger_rmse_m": 0.016737936911428712,
+   "time_rmse_s": 0.5016572610270793,
+   "max_observed_tilt_rad": 2.4980018054066022e-15,
+   "finite": true,
+   "three_step_position_rmse_m": 0.03593514245864186
+  },
+  "mppi": {
+   "n": 474,
+   "position_rmse_m": 0.014019633832545947,
+   "yaw_rmse_rad": 0.1223180715027659,
+   "finger_rmse_m": 0.016737381159875116,
+   "time_rmse_s": 0.4799851102782929,
+   "max_observed_tilt_rad": 2.4424906541753444e-15,
+   "finite": true,
+   "three_step_position_rmse_m": 0.03689624092823531
+  }
+ }
+}

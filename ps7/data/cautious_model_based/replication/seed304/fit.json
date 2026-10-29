@@ -1,0 +1,187 @@
+{
+  "fitting": {
+    "seed": 304,
+    "epochs": 400,
+    "selected_epoch": 391,
+    "validation_loss": 0.035925671458244324,
+    "train_transitions": 886,
+    "validation_transitions": 119,
+    "seconds": 0.5210607498884201,
+    "history": [
+      {
+        "epoch": 1,
+        "validation_loss": 0.1880405992269516
+      },
+      {
+        "epoch": 11,
+        "validation_loss": 0.07241654396057129
+      },
+      {
+        "epoch": 21,
+        "validation_loss": 0.06308867782354355
+      },
+      {
+        "epoch": 31,
+        "validation_loss": 0.060431256890296936
+      },
+      {
+        "epoch": 41,
+        "validation_loss": 0.05903509259223938
+      },
+      {
+        "epoch": 51,
+        "validation_loss": 0.05829533934593201
+      },
+      {
+        "epoch": 61,
+        "validation_loss": 0.05680389702320099
+      },
+      {
+        "epoch": 71,
+        "validation_loss": 0.05676506832242012
+      },
+      {
+        "epoch": 81,
+        "validation_loss": 0.05502792447805405
+      },
+      {
+        "epoch": 91,
+        "validation_loss": 0.05544975399971008
+      },
+      {
+        "epoch": 101,
+        "validation_loss": 0.054012201726436615
+      },
+      {
+        "epoch": 111,
+        "validation_loss": 0.053830940276384354
+      },
+      {
+        "epoch": 121,
+        "validation_loss": 0.05262622982263565
+      },
+      {
+        "epoch": 131,
+        "validation_loss": 0.05334038287401199
+      },
+      {
+        "epoch": 141,
+        "validation_loss": 0.05158250778913498
+      },
+      {
+        "epoch": 151,
+        "validation_loss": 0.049389783293008804
+      },
+      {
+        "epoch": 161,
+        "validation_loss": 0.04925230145454407
+      },
+      {
+        "epoch": 171,
+        "validation_loss": 0.04870478808879852
+      },
+      {
+        "epoch": 181,
+        "validation_loss": 0.05001361295580864
+      },
+      {
+        "epoch": 191,
+        "validation_loss": 0.04727310687303543
+      },
+      {
+        "epoch": 201,
+        "validation_loss": 0.04617723450064659
+      },
+      {
+        "epoch": 211,
+        "validation_loss": 0.045742057263851166
+      },
+      {
+        "epoch": 221,
+        "validation_loss": 0.04410044848918915
+      },
+      {
+        "epoch": 231,
+        "validation_loss": 0.04443569853901863
+      },
+      {
+        "epoch": 241,
+        "validation_loss": 0.04358958825469017
+      },
+      {
+        "epoch": 251,
+        "validation_loss": 0.045580148696899414
+      },
+      {
+        "epoch": 261,
+        "validation_loss": 0.04232759401202202
+      },
+      {
+        "epoch": 271,
+        "validation_loss": 0.04230283945798874
+      },
+      {
+        "epoch": 281,
+        "validation_loss": 0.04224260523915291
+      },
+      {
+        "epoch": 291,
+        "validation_loss": 0.041174180805683136
+      },
+      {
+        "epoch": 301,
+        "validation_loss": 0.04163210839033127
+      },
+      {
+        "epoch": 311,
+        "validation_loss": 0.0412391722202301
+      },
+      {
+        "epoch": 321,
+        "validation_loss": 0.03877712041139603
+      },
+      {
+        "epoch": 331,
+        "validation_loss": 0.040335964411497116
+      },
+      {
+        "epoch": 341,
+        "validation_loss": 0.039297644048929214
+      },
+      {
+        "epoch": 351,
+        "validation_loss": 0.03905988112092018
+      },
+      {
+        "epoch": 361,
+        "validation_loss": 0.03903592377901077
+      },
+      {
+        "epoch": 371,
+        "validation_loss": 0.03712431713938713
+      },
+      {
+        "epoch": 381,
+        "validation_loss": 0.036710917949676514
+      },
+      {
+        "epoch": 391,
+        "validation_loss": 0.035925671458244324
+      },
+      {
+        "epoch": 400,
+        "validation_loss": 0.03622361645102501
+      }
+    ]
+  },
+  "diagnostics": {
+    "n": 102,
+    "position_rmse_m": 0.0011768151350893578,
+    "yaw_rmse_rad": 0.02546920921592004,
+    "finger_rmse_m": 0.0018170091124322173,
+    "time_rmse_s": 0.025330327189748435,
+    "max_observed_tilt_rad": 1.1102230246251565e-15,
+    "finite": true,
+    "three_step_position_rmse_m": 0.004613542222263567
+  }
+}

@@ -1,0 +1,3 @@
+# Full PS7 environment; the model-based exercise also uses PS6.
+-r ../ps6/requirements.txt
+manipulation
